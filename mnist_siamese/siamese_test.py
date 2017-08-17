@@ -37,3 +37,7 @@ one = feat[labels==1]
 acc = np.sqrt(np.sum(np.square(one[0] - one[1])))
 print acc
 
+# for each layer, show the output shape
+for layer_name, blob in net.blobs.iteritems():
+    print layer_name + '\t' + str(blob.data.shape)
+

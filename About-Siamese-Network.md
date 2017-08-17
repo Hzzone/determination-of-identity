@@ -199,3 +199,24 @@ acc = np.sqrt(np.sum(np.square(one[0] - one[1])))
 print acc
 ```
 输出```0.0208408```
+
+ps:
+最后一层的```num_output=2```输出的是提取到的一个样本的特征向量,可以改的,并不是一定要2.  
+通过以下代码输出每一层的输出的大小:
+
+```python
+# for each layer, show the output shape
+for layer_name, blob in net.blobs.iteritems():
+    print layer_name + '\t' + str(blob.data.shape)
+```
+```(batch_size, channel_dim, height, width)```
+```
+data	(10000, 1, 28, 28)
+conv1	(10000, 20, 24, 24)
+pool1	(10000, 20, 12, 12)
+conv2	(10000, 50, 8, 8)
+pool2	(10000, 50, 4, 4)
+ip1	(10000, 500)
+ip2	(10000, 10)
+feat	(10000, 2)
+```
