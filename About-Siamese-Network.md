@@ -1,4 +1,4 @@
-### 参考文献
+## 参考文献
 [Siamese Network Training with Caffe](http://caffe.berkeleyvision.org/gathered/examples/siamese.html)   
 [Github Siamese Network Training with Caffe](https://github.com/BVLC/caffe/tree/master/examples/siamese)    
 [Caffe中的Siamese网络](https://vra.github.io/2016/12/13/siamese-caffe/)     
@@ -9,9 +9,9 @@
 <img src= "http://omoitwcai.bkt.clouddn.com/editor.jpg"/>
 </div>
 
-### 个人理解
+## 个人理解
 
-#### 数据处理
+### 数据处理
 在[convert_mnist_siamese_data.cpp](https://github.com/BVLC/caffe/blob/master/examples/siamese/convert_mnist_siamese_data.cpp)中描述了转化成pair_data的具体过程.  
 对于mnist数据集来说,是一个灰度图,根据tutorial描述的和相关源码的阅读,转化成pair_data是这样的: 
 ```
@@ -40,7 +40,7 @@ We start with a data layer that reads from the LevelDB database we created earli
 ```
 数据处理大概是这样的.
 
-#### 网络结构
+### 网络结构
 Caffe有一个pair_data层表示成对数据
 ```
 layer {
@@ -116,6 +116,8 @@ layer {
 数学公式:
 <div align=center>
 <img src= "http://caffe.berkeleyvision.org/doxygen/form_51.png"/><br>
+</div>
+<div align=center>
 <img src= "http://caffe.berkeleyvision.org/doxygen/form_52.png"/>
 </div>
 
@@ -133,7 +135,7 @@ layer {
 }
 ```
 
-#### 效果
+### 效果
 在示例里面没有输出相似度,而是聚类的效果:
 
 ![](http://omoitwcai.bkt.clouddn.com/FvUMcEdVEaGzJETi3EtR9hbXYtzt)
