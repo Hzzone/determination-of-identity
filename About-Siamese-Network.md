@@ -4,8 +4,10 @@
 [Caffe中的Siamese网络](https://vra.github.io/2016/12/13/siamese-caffe/)     
 [convert_mnist_siamese_data.cpp](https://github.com/BVLC/caffe/blob/master/examples/siamese/convert_mnist_siamese_data.cpp)     
 [基于2-channel  network的图片相似度判别](http://blog.csdn.net/hjimce/article/details/50098483)    
+[机器学习中的相似性度量](http://www.cnblogs.com/heaad/archive/2011/03/08/1977733.html)     
+<div align=center>
 ![Caffe Mnist Siamese Network Example](http://omoitwcai.bkt.clouddn.com/editor.jpg) 
-
+</div>
 
 #### 个人理解
 
@@ -131,6 +133,56 @@ layer {
 ##### 效果
 在示例里面没有输出相似度,而是聚类的效果:
 
-![](http://omoitwcai.bkt.clouddn.com/Screenshot%20from%202017-08-16%2004:20:07.png)
+![](http://omoitwcai.bkt.clouddn.com/FvUMcEdVEaGzJETi3EtR9hbXYtzt)
 
 // TODO 输出相似度,并做一个网络的accuracy输出
+
+通过阅读[Caffe Python 分类示例](https://github.com/Hzzone/determination-of-identity/blob/master/mnist_siamese/mnist_siamese.ipynb)以及结合网络结构,可以很清楚知道,最后一层的输出其实是每一个样本在平面上的坐标,```(x, y)```一个二维向量,例如:
+```
+[[ 0.95238674 -1.03426003]
+ [-1.46469998  0.09684839]
+ [-1.1617192  -1.53521729]
+ ..., 
+ [ 1.65356219  1.25560427]
+ [ 0.2914933   0.75894594]
+ [-1.19767416  2.16366267]]
+(10000, 2)
+```
+(10000, 2)则代表mnist数据集有10000个test样本,我直接输出的最后一层的shape.    
+在平面上相聚越近的点则代表两个样本越相似.所以参考效果图,同一类的点越靠近.  
+看一下LetNet的[train](https://github.com/Hzzone/determination-of-identity/blob/master/mnist_siamese/mnist_siamese_train_test.prototxt)和[deploy](https://github.com/Hzzone/determination-of-identity/blob/master/mnist_siamese/mnist_siamese.prototxt)文件之间的区别, 在测试的时候输入一个样本就行,而不需要两个样本合在一起.  
+至于衡量网络的效果,除了loss收敛之外,可以看一下训练过程中的test loss, 还有更加准确的输出相似度.
+
+在效果图上,为什么会出现聚类的效果,看一段关键代码:
+```python
+feat = out['feat']
+f = plt.figure(figsize=(16,9))
+c = ['#ff0000', '#ffff00', '#00ff00', '#00ffff', '#0000ff',
+     '#ff00ff', '#990000', '#999900', '#009900', '#009999']
+for i in range(10):
+    plt.plot(feat[labels==i,0].flatten(), feat[labels==i,1].flatten(), '.', c=c[i])
+plt.legend(['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'])
+plt.grid()
+plt.show()
+```
+labels是label文件中每一个样本的标签,不同类的点颜色不同,所以才会出现这样的效果,通过example中的效果图可以清晰看到同一类的样本,靠的越近.  
+例如这行代码是输出所有label为1的样本的坐标:
+```python
+print feat[labels==1]
+print feat[labels==1].shape
+```
+我输出的结果是这样的:
+```
+[[-1.1617192  -1.53521729]
+ [-1.17441916 -1.51869309]
+ [-1.04867065 -1.4648124 ]
+ ..., 
+ [-1.0997206  -1.63687563]
+ [-1.27621269 -1.66673696]
+ [-1.22772038 -1.62820733]]
+(1135, 2)
+```
+可以看到输出也是坐标,一共有1135个1的样本集,然后就明白效果图的含义了.
+so....如何衡量相似度呢..可以有很多种方法,既然是坐标,那就算个欧式距离吧..其他的可以看[机器学习中的相似性度量](http://www.cnblogs.com/heaad/archive/2011/03/08/1977733.html).
+
+我自己的测试代码在[siamese_test.py](https://github.com/Hzzone/determination-of-identity/tree/master/mnist_siamese/siamese_test.py)中.
