@@ -220,3 +220,6 @@ ip1	(10000, 500)
 ip2	(10000, 10)
 feat	(10000, 2)
 ```
+
+在这片文章里[人脸识别之caffe-face](http://blog.csdn.net/qq_14845119/article/details/53308996#reply),提到了用softmaxloss+softmaxloss来聚类,然后计算cosine distance代表相似度.
+但是具体的相似度的值如何表示..只是计算特征向量的距离,我还不是很明白.
