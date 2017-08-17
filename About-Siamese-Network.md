@@ -1,4 +1,4 @@
-#### 参考文献
+### 参考文献
 [Siamese Network Training with Caffe](http://caffe.berkeleyvision.org/gathered/examples/siamese.html)   
 [Github Siamese Network Training with Caffe](https://github.com/BVLC/caffe/tree/master/examples/siamese)    
 [Caffe中的Siamese网络](https://vra.github.io/2016/12/13/siamese-caffe/)     
@@ -6,12 +6,12 @@
 [基于2-channel  network的图片相似度判别](http://blog.csdn.net/hjimce/article/details/50098483)    
 [机器学习中的相似性度量](http://www.cnblogs.com/heaad/archive/2011/03/08/1977733.html)     
 <div align=center>
-![Caffe Mnist Siamese Network Example](http://omoitwcai.bkt.clouddn.com/editor.jpg) 
+<img src= "http://omoitwcai.bkt.clouddn.com/editor.jpg"/>
 </div>
 
-#### 个人理解
+### 个人理解
 
-##### 数据处理
+#### 数据处理
 在[convert_mnist_siamese_data.cpp](https://github.com/BVLC/caffe/blob/master/examples/siamese/convert_mnist_siamese_data.cpp)中描述了转化成pair_data的具体过程.  
 对于mnist数据集来说,是一个灰度图,根据tutorial描述的和相关源码的阅读,转化成pair_data是这样的: 
 ```
@@ -40,7 +40,7 @@ We start with a data layer that reads from the LevelDB database we created earli
 ```
 数据处理大概是这样的.
 
-##### 网络结构
+#### 网络结构
 Caffe有一个pair_data层表示成对数据
 ```
 layer {
@@ -112,10 +112,13 @@ layer {
 ![](http://img.blog.csdn.net/20151204202905335?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)
 左边是siamese,右边是文章描述的方法.  
 
-最后是loss层,Caffe中有一个Contrastive Loss Function, 具体实现则是[```CONTRASTIVE_LOSS layer```](http://caffe.berkeleyvision.org/doxygen/classcaffe_1_1ContrastiveLossLayer.html)
+最后是loss层,Caffe中有一个Contrastive Loss Function, 具体实现则是[```CONTRASTIVE_LOSS layer```](http://caffe.berkeleyvision.org/doxygen/classcaffe_1_1ContrastiveLossLayer.html).  
+数学公式:
+<div align=center>
+<img src= "http://caffe.berkeleyvision.org/doxygen/form_51.png"/><br>
+<img src= "http://caffe.berkeleyvision.org/doxygen/form_52.png"/>
+</div>
 
-![](http://caffe.berkeleyvision.org/doxygen/form_51.png)    
-![](http://caffe.berkeleyvision.org/doxygen/form_52.png)
 ```
 layer {
     name: "loss"
@@ -130,7 +133,7 @@ layer {
 }
 ```
 
-##### 效果
+#### 效果
 在示例里面没有输出相似度,而是聚类的效果:
 
 ![](http://omoitwcai.bkt.clouddn.com/FvUMcEdVEaGzJETi3EtR9hbXYtzt)
@@ -186,3 +189,11 @@ print feat[labels==1].shape
 so....如何衡量相似度呢..可以有很多种方法,既然是坐标,那就算个欧式距离吧..其他的可以看[机器学习中的相似性度量](http://www.cnblogs.com/heaad/archive/2011/03/08/1977733.html).
 
 我自己的测试代码在[siamese_test.py](https://github.com/Hzzone/determination-of-identity/tree/master/mnist_siamese/siamese_test.py)中.
+```python
+# 1 of test dataset
+one = feat[labels==1]
+# calculate euclidean distance
+acc = np.sqrt(np.sum(np.square(one[0] - one[1])))
+print acc
+```
+输出```0.0208408```
