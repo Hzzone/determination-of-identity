@@ -234,3 +234,48 @@ feat	(10000, 2)
 可以考虑绘制一下函数曲线图,可以更直观反映.稍后有时间补上.  
 
 //TODO 网络准确度的衡量
+
+通过在样本中随机取样吧，相同的和不同的数目相等,　具体逻辑可以看代码, totals代表总数, threadhold是阈值.最后再绘制阈值不同时的函数变化曲线, 可以得到不同的识别率.        
+不同的, 距离应该小于阈值，相同的则距离应该大于阈值.看一下下面的效果图. 很完美了, 大概取在０.82左右有０.88的准确度.    
+每一次执行结果都有可能不同，因为生成的验证集不一样，但是结果都不会差很多．
+至于说这个函数画出来肯定是一个凸函数,　在[-1, 1]上取极大值...怎么数学证明..高数忘光了...
+```python
+def generate_accuracy_map(features, labels, totals=6000, threadhold=0):
+    # the number of _diff and _same = totals/2
+    _diff = []
+    _same = []
+    unique_labels = set(labels)
+    length = len(unique_labels)
+    diff_features = []
+    for i in range(length):
+        ith_features = features[labels==i]
+        diff_features.append(ith_features)
+        # 每个样本平均取
+        for j in range(totals/(2*length)):
+            x = random.randint(0, len(ith_features)-1)
+            y = random.randint(0, len(ith_features)-1)
+            first = ith_features[x]
+            second = ith_features[y]
+            # 这是所有相同的
+            _same.append(cosine_distnace(first, second))
+    # 这是不相同
+    # 随机抽，不会抽在同一个类中
+    for j in range(totals/2):
+        while True:
+            x = random.randint(0, length-1)
+            y = random.randint(0, length-1)
+            if x != y:
+                break
+        first = random.randint(0, len(diff_features[x])-1)
+        second = random.randint(0, len(diff_features[y])-1)
+        _diff.append(cosine_distnace(diff_features[x][first], diff_features[y][second]))
+    correct = 0
+    for elememt in _diff:
+        if elememt >= threadhold:
+            correct = correct + 1
+    for elememt in _same:
+        if elememt >= threadhold:
+            correct = correct + 1
+    return float(correct)/totals
+```
+![](http://omoitwcai.bkt.clouddn.com/Fm6LOjnaGSu7FaNN2b3INBH7_PUA)
