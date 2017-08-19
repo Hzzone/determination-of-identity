@@ -2,7 +2,8 @@
 import numpy as np
 import os
 # Make sure that caffe is on the python path:
-caffe_root = '/home/bw/code/caffe'  # this file is expected to be in {caffe_root}/examples/siamese
+caffe_root = '/Users/HZzone/caffe'  # this file is expected to be in {caffe_root}/examples/siamese
+# caffe_root = '/Users/HZzone/caffe'  # this file is expected to be in {caffe_root}/examples/siamese
 import sys
 sys.path.insert(0, os.path.join(caffe_root, 'python'))
 import caffe
@@ -64,7 +65,11 @@ def plot_accuracy_map(features, labels, totals=6000):
         y_values.append(generate_accuracy_map(features=features, labels=labels, threadhold=x))
     max_index = np.argmax(y_values)
     print max_index
-    plt.plot(x_vaules, y_values, x_vaules[max_index], y_values[max_index], 'bs', label="(%s, %s)"%(x_vaules[max_index], y_values[max_index]))
+    plt.xlabel("threshold")
+    plt.ylabel("accuracy")
+    plt.plot(x_vaules, y_values)
+    plt.plot(x_vaules[max_index], y_values[max_index], 'o', label="(%s, %s)"%(x_vaules[max_index], y_values[max_index]))
+    plt.legend()
     plt.show()
 
 

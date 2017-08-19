@@ -108,7 +108,7 @@ layer {
 }
 ```
 其实子网络我认为和普通的卷积神经网络是一样的,而且siamese network中两个子网络是一模一样, 但是最重要的是:
-*两个分支提取特征的过程是独立的.    
+**两个分支提取特征的过程是独立的**.    
 [基于2-channel  network的图片相似度判别](http://blog.csdn.net/hjimce/article/details/50098483)这篇文章里描述的方法其他和传统的siamese一样,只是在子网络这层,近似于没有分支了,把两个patch打包在一起,然后输进网络,所以才会有文章中描述的图片:     
 ![](http://img.blog.csdn.net/20151204201146814?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)
 ![](http://img.blog.csdn.net/20151204202905335?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)
@@ -235,12 +235,13 @@ feat	(10000, 2)
 
 //TODO 网络准确度的衡量
 
-通过在样本中随机取样吧，相同的和不同的数目相等,　具体逻辑可以看代码, totals代表总数, threadhold是阈值.最后再绘制阈值不同时的函数变化曲线, 可以得到不同的识别率.        
-不同的, 距离应该小于阈值，相同的则距离应该大于阈值.看一下下面的效果图. 很完美了, 大概取在０.82左右有０.88的准确度.    
-每一次执行结果都有可能不同，因为生成的验证集不一样，但是结果都不会差很多．
-至于说这个函数画出来肯定是一个凸函数,　在[-1, 1]上取极大值...怎么数学证明..高数忘光了...
+通过在样本中随机取样吧，相同的和不同的数目相等, 具体逻辑可以看代码, totals代表总数, threshold是阈值.最后再绘制阈值不同时的函数变化曲线, 可以得到不同的识别率.        
+不同的, 距离应该小于阈值，相同的则距离应该大于阈值.看一下下面的效果图. 很完美了, 大概取在0.82左右有0.88的准确度.    
+每一次执行结果都有可能不同, 因为生成的验证集不一样，但是结果都不会差很多．
+至于说这个函数画出来肯定是一个凸函数, 在(-1, 1)上取极大值...自变量threshold, 因变量_same_number和_diff_number, threshold变化时，肯定一个增大一个减小，在(-1, 1)之间肯定有一个焦点(不管他函数曲线是怎么样的).
+
 ```python
-def generate_accuracy_map(features, labels, totals=6000, threadhold=0):
+def generate_accuracy_map(features, labels, totals=6000, threshold=0):
     # the number of _diff and _same = totals/2
     _diff = []
     _same = []
@@ -278,4 +279,4 @@ def generate_accuracy_map(features, labels, totals=6000, threadhold=0):
             correct = correct + 1
     return float(correct)/totals
 ```
-![](http://omoitwcai.bkt.clouddn.com/Fm6LOjnaGSu7FaNN2b3INBH7_PUA)
+![](http://omoitwcai.bkt.clouddn.com/2017-08-19-Figure_1.png))
