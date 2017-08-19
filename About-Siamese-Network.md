@@ -4,7 +4,9 @@
 [Caffe中的Siamese网络](https://vra.github.io/2016/12/13/siamese-caffe/)     
 [convert_mnist_siamese_data.cpp](https://github.com/BVLC/caffe/blob/master/examples/siamese/convert_mnist_siamese_data.cpp)     
 [基于2-channel  network的图片相似度判别](http://blog.csdn.net/hjimce/article/details/50098483)    
-[机器学习中的相似性度量](http://www.cnblogs.com/heaad/archive/2011/03/08/1977733.html)     
+[机器学习中的相似性度量](http://www.cnblogs.com/heaad/archive/2011/03/08/1977733.html)         
+[人脸识别之caffe-face](http://blog.csdn.net/qq_14845119/article/details/53308996#reply)      
+[caffe-face GitHub](https://github.com/ydwen/caffe-face)    
 <div align=center>
 <img src= "http://omoitwcai.bkt.clouddn.com/editor.jpg"/>
 </div>
