@@ -272,11 +272,14 @@ def generate_accuracy_map(features, labels, totals=6000, threshold=0):
         _diff.append(cosine_distnace(diff_features[x][first], diff_features[y][second]))
     correct = 0
     for elememt in _diff:
-        if elememt >= threadhold:
+        if elememt < threshold:
             correct = correct + 1
     for elememt in _same:
-        if elememt >= threadhold:
+        if elememt >= threshold:
             correct = correct + 1
     return float(correct)/totals
 ```
 ![](http://omoitwcai.bkt.clouddn.com/2017-08-19-Figure_1.png))
+
+通过修改最后一层的输出到10, 重新train一遍，发现精度大大提高.example里面只输出２应该是为了可视化输出到二维平面上.
+![](http://omoitwcai.bkt.clouddn.com/Fh665CIOGl9b-Q-TGhpdaktHBYgJ)
