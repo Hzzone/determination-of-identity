@@ -2,8 +2,8 @@
 import numpy as np
 import os
 # Make sure that caffe is on the python path:
-caffe_root = '/Users/HZzone/caffe'  # this file is expected to be in {caffe_root}/examples/siamese
 # caffe_root = '/Users/HZzone/caffe'  # this file is expected to be in {caffe_root}/examples/siamese
+caffe_root = '/home/bw/code/caffe'  # this file is expected to be in {caffe_root}/examples/siamese
 import sys
 sys.path.insert(0, os.path.join(caffe_root, 'python'))
 import caffe
@@ -19,7 +19,7 @@ def euclidean_distance(v1, v2):
     euc = np.sqrt(np.sum(np.square(v1 - v2)))
     return euc
 
-def generate_accuracy_map(features, labels, totals=6000, threadhold=0):
+def generate_accuracy_map(features, labels, totals=6000, threshold=0):
     # the number of _diff and _same = totals/2
     _diff = []
     _same = []
@@ -50,26 +50,34 @@ def generate_accuracy_map(features, labels, totals=6000, threadhold=0):
         _diff.append(cosine_distnace(diff_features[x][first], diff_features[y][second]))
     correct = 0
     for elememt in _diff:
-        if elememt < threadhold:
+        if elememt < threshold:
             correct = correct + 1
     for elememt in _same:
-        if elememt >= threadhold:
+        if elememt >= threshold:
             correct = correct + 1
     return float(correct)/totals
 
 
 def plot_accuracy_map(features, labels, totals=6000):
-    x_vaules = pylab.arange(-1.0, 1.0, 0.01)
+    x_vaules = pylab.arange(-1.0, 1.01, 0.01)
     y_values = []
     for x in x_vaules:
-        y_values.append(generate_accuracy_map(features=features, labels=labels, threadhold=x))
+        y_values.append(generate_accuracy_map(features=features, labels=labels, threshold=x))
     max_index = np.argmax(y_values)
     print max_index
+<<<<<<< HEAD
     plt.title("threshold-accuracy curve")
     plt.xlabel("threshold")
     plt.ylabel("accuracy")
     plt.plot(x_vaules, y_values)
     plt.plot(x_vaules[max_index], y_values[max_index], '.', label="(%s, %s)"%(x_vaules[max_index], y_values[max_index]))
+=======
+    plt.title("Threshold-Accuracy")
+    plt.xlabel("threshold")
+    plt.ylabel("accuracy")
+    plt.plot(x_vaules, y_values)
+    plt.plot(x_vaules[max_index], y_values[max_index], '*', color='red', label="(%s, %s)"%(x_vaules[max_index], y_values[max_index]))
+>>>>>>> 65559d0140b0d6b4bf2c4f8c0a79c10e9dcd6ccd
     plt.legend()
     plt.show()
 
@@ -99,6 +107,8 @@ out = net.forward_all(data=caffe_in)
 
 # test dataset output n*(x, y)
 feat = out['feat']
+# feat = out['ip2']
+
 
 # 1 of test dataset
 one = feat[labels==1]
@@ -114,5 +124,5 @@ cos = cosine_distnace(one[0], one[1])
 print cos
 
 
-print generate_accuracy_map(features=feat, labels=labels)
+# print generate_accuracy_map(features=feat, labels=labels, threshold=1.0)
 plot_accuracy_map(feat, labels)

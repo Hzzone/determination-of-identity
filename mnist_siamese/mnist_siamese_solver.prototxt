@@ -20,6 +20,6 @@ display: 100
 max_iter: 50000
 # snapshot intermediate results
 snapshot: 5000
-snapshot_prefix: "/home/bw/mnist_siamese/mnist_siamese_train"
+snapshot_prefix: "/home/bw/determination-of-identity/mnist_siamese/mnist_siamese_train"
 # solver mode: CPU or GPU
 solver_mode: GPU
