@@ -279,4 +279,4 @@ def generate_accuracy_map(features, labels, totals=6000, threshold=0):
             correct = correct + 1
     return float(correct)/totals
 ```
-![](http://omoitwcai.bkt.clouddn.com/2017-08-19-Figure_1.png))
+![](http://omoitwcai.bkt.clouddn.com/2017-08-19-Figure_1.png)

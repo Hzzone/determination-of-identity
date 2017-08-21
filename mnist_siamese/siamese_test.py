@@ -65,10 +65,11 @@ def plot_accuracy_map(features, labels, totals=6000):
         y_values.append(generate_accuracy_map(features=features, labels=labels, threadhold=x))
     max_index = np.argmax(y_values)
     print max_index
+    plt.title("threshold-accuracy curve")
     plt.xlabel("threshold")
     plt.ylabel("accuracy")
     plt.plot(x_vaules, y_values)
-    plt.plot(x_vaules[max_index], y_values[max_index], 'o', label="(%s, %s)"%(x_vaules[max_index], y_values[max_index]))
+    plt.plot(x_vaules[max_index], y_values[max_index], '.', label="(%s, %s)"%(x_vaules[max_index], y_values[max_index]))
     plt.legend()
     plt.show()
 
@@ -76,7 +77,7 @@ def plot_accuracy_map(features, labels, totals=6000):
 MODEL_FILE = './mnist_siamese.prototxt'
 # decrease if you want to preview during training
 PRETRAINED_FILE = './mnist_siamese_train_iter_50000.caffemodel'
-caffe.set_mode_gpu()
+caffe.set_mode_cpu()
 net = caffe.Net(MODEL_FILE, PRETRAINED_FILE, caffe.TEST)
 TEST_DATA_FILE = os.path.join(caffe_root, 'data/mnist/t10k-images-idx3-ubyte')
 TEST_LABEL_FILE = os.path.join(caffe_root, 'data/mnist/t10k-labels-idx1-ubyte')
