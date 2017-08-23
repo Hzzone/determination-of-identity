@@ -65,19 +65,16 @@ def plot_accuracy_map(features, labels, totals=6000):
         y_values.append(generate_accuracy_map(features=features, labels=labels, threshold=x))
     max_index = np.argmax(y_values)
     print max_index
-<<<<<<< HEAD
     plt.title("threshold-accuracy curve")
     plt.xlabel("threshold")
     plt.ylabel("accuracy")
     plt.plot(x_vaules, y_values)
     plt.plot(x_vaules[max_index], y_values[max_index], '.', label="(%s, %s)"%(x_vaules[max_index], y_values[max_index]))
-=======
     plt.title("Threshold-Accuracy")
     plt.xlabel("threshold")
     plt.ylabel("accuracy")
     plt.plot(x_vaules, y_values)
     plt.plot(x_vaules[max_index], y_values[max_index], '*', color='red', label="(%s, %s)"%(x_vaules[max_index], y_values[max_index]))
->>>>>>> 65559d0140b0d6b4bf2c4f8c0a79c10e9dcd6ccd
     plt.legend()
     plt.show()
 
