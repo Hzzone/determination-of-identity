@@ -34,6 +34,15 @@ def preprocess(source, IMAGE_SIZE=227):
     im = bytescale(im)
     return im
 
+# read one sample dicom folder and return the dimension*dimension matrix
+def readManyDicom(source, IMAGE_SIZE=227, dimension=150):
+    sample = np.zeros((dimension, IMAGE_SIZE, IMAGE_SIZE))
+    for index, dicom_file in enumerate(os.listdir(source)):
+        path = os.path.join(source, dicom_file)
+        im = preprocess.preprocess(path, IMAGE_SIZE=IMAGE_SIZE)
+        sample[index, :, :] = im
+    return sample
+
 
 def shape(source):
     for root, dirs, files in os.walk(source):

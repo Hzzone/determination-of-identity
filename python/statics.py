@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import dicom
 import os
 import matplotlib.pyplot as plt
@@ -5,7 +6,7 @@ import numpy as np
 import shutil
 
 
-def statics_same(source, target_dir="/Users/HZzone/Desktop/mdzz"):
+def move_same(source, target_dir="/Users/HZzone/Desktop/mdzz"):
     patient_ids = {}
     num = {}
     for root, dirs, files in os.walk(source):
@@ -55,7 +56,10 @@ def statics_slices(source):
     print(values)
 
 
+def removeExceedingSample(source, threshold=200):
+    pass
 if __name__ == "__main__":
     # print(len(statics_same("/Volumes/Hzzone/data")))
-    # statics_slices("/Volumes/Hzzone/data")
-    statics_same("/Volumes/Hzzone/data")
+    # statics_slices("/Users/HZzone/Desktop/mdzz")
+    statics_slices("/Volumes/Hzzone/same")
+    # statics_same("/Volumes/Hzzone/data")

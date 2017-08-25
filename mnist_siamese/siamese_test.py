@@ -19,6 +19,7 @@ def euclidean_distance(v1, v2):
     euc = np.sqrt(np.sum(np.square(v1 - v2)))
     return euc
 
+# 这个函数在生成测试集的时候可能会出现重复的，所以最好还是换成set而不是用tuple
 def generate_accuracy_map(features, labels, totals=6000, threshold=0):
     # the number of _diff and _same = totals/2
     _diff = []
