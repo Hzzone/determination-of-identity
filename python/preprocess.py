@@ -1,8 +1,10 @@
 # -*- coding: utf-8 -*-
 import dicom
-import numpy
 import matplotlib.pyplot as plt
 import os
+import numpy as np
+from skimage.transform import resize
+from scipy.misc import bytescale
 
 def show(source):
     ds = dicom.read_file(source)
@@ -25,10 +27,19 @@ def getPatientID(diretory, targetID="0008441186"):
         if key == targetID:
             return result[key]
 
+def preprocess(source, IMAGE_SIZE=227):
+    ds = dicom.read_file(source)
+    pixel_array = ds.pixel_array
+    im = resize(pixel_array, (IMAGE_SIZE, IMAGE_SIZE))
+    im = bytescale(im)
+    return im
+
+
+def shape(source):
+    for root, dirs, files in os.walk(source):
+        for dicom_file in files:
+            print(dicom.read_file(os.path.join(root, dicom_file)).pixel_array.shape)
 
 
 if __name__ == "__main__":
-    # show("/Users/HZzone/Desktop/mdzz/03300000/00684232")
-    # print getPatientID("/Volumes/Hzzone/data")
-    # print("end "+getPatientID("/Volumes/Hzzone/same"))
-    print("hello world")
+    shape("/Users/HZzone/Desktop/mdzz")
