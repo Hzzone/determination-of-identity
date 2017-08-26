@@ -27,7 +27,7 @@ def getPatientID(diretory, targetID="0008441186"):
         if key == targetID:
             return result[key]
 
-def preprocess(source, IMAGE_SIZE=227):
+def process(source, IMAGE_SIZE=227):
     ds = dicom.read_file(source)
     pixel_array = ds.pixel_array
     im = resize(pixel_array, (IMAGE_SIZE, IMAGE_SIZE))
@@ -39,7 +39,7 @@ def readManyDicom(source, IMAGE_SIZE=227, dimension=150):
     sample = np.zeros((dimension, IMAGE_SIZE, IMAGE_SIZE))
     for index, dicom_file in enumerate(os.listdir(source)):
         path = os.path.join(source, dicom_file)
-        im = preprocess.preprocess(path, IMAGE_SIZE=IMAGE_SIZE)
+        im = process(path, IMAGE_SIZE=IMAGE_SIZE)
         sample[index, :, :] = im
     return sample
 
