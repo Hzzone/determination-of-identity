@@ -58,8 +58,20 @@ def statics_slices(source):
 
 def removeExceedingSample(source, threshold=200):
     pass
+
+def renameFolder(source):
+    samples = os.listdir(source)
+    for s in samples:
+        file_name = np.random.randint(10000000, 100000000)
+        os.rename(os.path.join(source, s), os.path.join(source, str(file_name)))
+        print file_name
+
+
 if __name__ == "__main__":
     # print(len(statics_same("/Volumes/Hzzone/data")))
     # statics_slices("/Users/HZzone/Desktop/mdzz")
-    statics_slices("/Volumes/Hzzone/same")
+    # statics_slices("/Volumes/Hzzone/same")
     # statics_same("/Volumes/Hzzone/data")
+    # renameFolder("/Volumes/Hzzone/same")
+    move_same("/Volumes/Hzzone/data", target_dir="/Users/HZzone/Desktop/temp")
+

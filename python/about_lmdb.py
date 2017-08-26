@@ -36,6 +36,7 @@ def generate_siamese_lmdb(source, target="/Users/HZzone/Desktop/dete-data/siames
     dataset = generate_siamese_dataset(source)
     _same = dataset[0]
     _diff = dataset[1]
+    random.shuffle(_diff)
     with env.begin(write=True) as txn:
         datum = caffe.proto.caffe_pb2.Datum()
         datum.channels = 2*dimension
