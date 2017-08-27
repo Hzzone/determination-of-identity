@@ -9,6 +9,7 @@ import caffe
 import preprocess
 from itertools import combinations
 import random
+import distance
 
 def generate_ordinary_lmdb(source, target="/Users/HZzone/Desktop/dete-data/train_lmdb", dimension=150, IMAGE_SIZE=227):
     env = lmdb.Environment(target, map_size=int(1e12))
@@ -36,7 +37,6 @@ def generate_siamese_lmdb(source, target="/Users/HZzone/Desktop/dete-data/siames
     dataset = generate_siamese_dataset(source)
     _same = dataset[0]
     _diff = dataset[1]
-    random.shuffle(_diff)
     with env.begin(write=True) as txn:
         datum = caffe.proto.caffe_pb2.Datum()
         datum.channels = 2*dimension
@@ -56,7 +56,7 @@ def generate_siamese_lmdb(source, target="/Users/HZzone/Desktop/dete-data/siames
             print same_sample
             print "--------"
         print "***********"
-        for diff_sample in _diff[:len(_same)]:
+        for diff_sample in _diff:
             label = 0
             sample[:dimension, :, :] = preprocess.readManyDicom(diff_sample[0], IMAGE_SIZE, dimension)
             sample[dimension:, :, :] = preprocess.readManyDicom(diff_sample[1], IMAGE_SIZE, dimension)
@@ -86,7 +86,8 @@ def generate_siamese_dataset(source):
             _same.append(one_comination)
         else:
             _diff.append(one_comination)
-    return _same, _diff
+    random.shuffle(_diff)
+    return _same, _diff[:len(_same)]
 
 # not complete
 def generate_hdf5(source, target="/Users/HZzone/Desktop/dete-data/train.h5", dimension=200, IMAGE_SIZE=227):
@@ -107,6 +108,9 @@ def generate_hdf5(source, target="/Users/HZzone/Desktop/dete-data/train.h5", dim
             str_id = "%s" % dicom_files
             txn.put(str_id, datum.SerializeToString())
         print "--------"
+
+
+    # return float(correct) / totals
 if __name__ == "__main__":
     # generate_ordinary_lmdb("/Users/HZzone/Desktop/mdzz", dimension=150)
     generate_siamese_lmdb("/Users/HZzone/Desktop/mdzz", dimension=150)

@@ -8,6 +8,7 @@ sys.path.insert(0, os.path.join(caffe_root, 'python'))
 import caffe
 import preprocess
 import distance
+import about_lmdb
 
 def ordinary_predict_two_sample(source1, source2, caffemodel, deploy_file, dimension=150, IMAGE_SIZE=227, gpu_mode=True, LAST_LAYER_NAME="ip1"):
     if gpu_mode:
@@ -29,10 +30,31 @@ def ordinary_predict_two_sample(source1, source2, caffemodel, deploy_file, dimen
 def siamese_predict_two_sample(source, dimension=150, IMAGE_SIZE=227):
     pass
 
-def ordinary_predict_dataset(source, caffemodel, deploy_file,dimension=150, IMAGE_SIZE=227):
-    pass
+# source: Test dataset
+def ordinary_predict_dataset(source, caffemodel, deploy_file, dimension=150, IMAGE_SIZE=227, gpu_mode=True, LAST_LAYER_NAME="ip1"):
+    if gpu_mode:
+        caffe.set_mode_gpu()
+    else:
+        caffe.set_mode_cpu()
+    net = caffe.Net(deploy_file, caffemodel, caffe.TEST)
+    patch = about_lmdb.generate_siamese_dataset(source)
+    samples = []
+    for root, dirs, files in os.walk(source):
+        for dicom_file in files:
+            samples.append(root)
+            break
+    data = np.zeros((len(samples), dimension, IMAGE_SIZE, IMAGE_SIZE))
+    for index, sample in enumerate(samples):
+        path = os.path.join(source, sample)
+        data[index, :, :, :] = preprocess.readManyDicom(path, IMAGE_SIZE, dimension) * 0.00390625
+    # only for test LeNet
+    # data = data * 0.00390625
+    net.blobs['data'].data[...] = data
+    output = net.forward()
+    features = output[LAST_LAYER_NAME]
+    return features, samples, patch
 
-def ordinary_predict_dataset(source, caffemodel, deploy_file, dimension=150, IMAGE_SIZE=227):
+def siamese_predict_dataset(source, caffemodel, deploy_file, dimension=150, IMAGE_SIZE=227):
     pass
 
 
