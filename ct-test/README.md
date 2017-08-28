@@ -6,3 +6,7 @@ Pay attention to it is trained on the same dataset.
 Test on 2 more person sample, cosine_distance 0.978557.  
 on different person sample, 0.748577.
 
+<div align=center>
+<img src= "http://omoitwcai.bkt.clouddn.com/2017-08-28-Figure_1.png"/>
+</div>
+
