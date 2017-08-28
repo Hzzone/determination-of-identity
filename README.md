@@ -10,6 +10,6 @@ Diterminating two CT images of head is whether a same person. I have two ways to
 
 
 <div align=center>
-<img src= "http://omoitwcai.bkt.clouddn.com/2017-08-21-u-3050626263-205438607%26fm-26%26gp-0.jpg"/>
+<img src= "http://omoitwcai.bkt.clouddn.com/2017-08-27-IMG_0823-1.JPG"/>
 </div>
 

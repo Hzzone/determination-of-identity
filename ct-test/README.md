@@ -3,6 +3,6 @@ Since the limitation of Google protobuf, its max buffer size is only 64MB, but t
 
 Pay attention to it is trained on the same dataset.
 [trained model download.](http://omoitwcai.bkt.clouddn.com/lenet_iter_10000.caffemodel)     
-Test on 2 more person sample, cosine_distance 0.978557  
-on different person sample, 0.748577
+Test on 2 more person sample, cosine_distance 0.978557.  
+on different person sample, 0.748577.
 
