@@ -113,5 +113,6 @@ def generate_hdf5(source, target="/Users/HZzone/Desktop/dete-data/train.h5", dim
     # return float(correct) / totals
 if __name__ == "__main__":
     # generate_ordinary_lmdb("/Users/HZzone/Desktop/mdzz", dimension=150)
-    generate_siamese_lmdb("/Users/HZzone/Desktop/mdzz", dimension=150)
+    generate_siamese_lmdb("/Users/HZzone/Desktop/temp/train", target="/Users/HZzone/Desktop/dete-data/siamese_train_lmdb", dimension=150)
+    generate_siamese_lmdb("/Users/HZzone/Desktop/temp/test", target="/Users/HZzone/Desktop/dete-data/siamese_test_lmdb", dimension=150)
     # print generate_siamese_dataset("/Users/HZzone/Desktop/mdzz")

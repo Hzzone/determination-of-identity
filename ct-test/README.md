@@ -10,3 +10,14 @@ on different person sample, 0.748577.
 <img src= "http://omoitwcai.bkt.clouddn.com/2017-08-28-Figure_1.png"/>
 </div>
 
+------
+Lenet siamese network.      
+
+
+
+```
+[libprotobuf ERROR google/protobuf/io/coded_stream.cc:180] A protocol message was rejected because it was too big (more than 67108864 bytes).  To increase the limit (or to disable these warnings), see CodedInputStream::SetTotalBytesLimit() in google/protobuf/io/coded_stream.h.
+```
+
+ 
+
