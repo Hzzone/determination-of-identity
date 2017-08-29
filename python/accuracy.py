@@ -42,22 +42,22 @@ def plot_accuracy_map(source, caffemodel, deploy_file, dimension=150, IMAGE_SIZE
     y_values = []
     for threshold in x_values:
         correct = 0
+        print "------"*2
         for x in patch[0]:
             s1, s2 = x
             i1 = samples.index(s1)
             i2 = samples.index(s2)
-            print "i1, i2:%s %s" % (i1, i2)
             d = distance.cosine_distnace(features[i1], features[i2])
             print d
             if d >= threshold:
                 correct = correct + 1
-        print "------"
         for x in patch[1]:
             s1, s2 = x
             i1 = samples.index(s1)
             i2 = samples.index(s2)
-            print "i1, i2:%s %s" % (i1, i2)
             d = distance.cosine_distnace(features[i1], features[i2])
+            print d
+            print "------"*2
             if d < threshold:
                 correct = correct + 1
         y_values.append(float(correct)/totals)
@@ -72,6 +72,6 @@ def plot_accuracy_map(source, caffemodel, deploy_file, dimension=150, IMAGE_SIZE
     plt.show()
 
 if __name__ == "__main__":
-    plot_accuracy_map("/Users/HZzone/Desktop/temp", "/Users/HZzone/Downloads/lenet_iter_10000.caffemodel", "../ct-test/lenet.prototxt", gpu_mode=False)
+    plot_accuracy_map("/Users/HZzone/Desktop/temp/test", "/Users/HZzone/Downloads/lenet_siamese_train_iter_15000.caffemodel", "../ct-test/lenet_siamese.prototxt", gpu_mode=False, LAST_LAYER_NAME="feat")
     # print generate_accuracy_with_threshold("/Users/HZzone/Desktop/temp", "/Users/HZzone/Downloads/lenet_iter_10000.caffemodel", "../ct-test/lenet.prototxt", gpu_mode=False, threshold=0.97)
 

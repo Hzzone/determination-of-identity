@@ -47,6 +47,7 @@ def ordinary_predict_dataset(source, caffemodel, deploy_file, dimension=150, IMA
     for index, sample in enumerate(samples):
         path = os.path.join(source, sample)
         data[index, :, :, :] = preprocess.readManyDicom(path, IMAGE_SIZE, dimension) * 0.00390625
+    print data.shape
     # only for test LeNet
     # data = data * 0.00390625
     net.blobs['data'].data[...] = data
