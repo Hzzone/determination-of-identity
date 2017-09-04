@@ -51,15 +51,16 @@ def plot_accuracy_map(source, caffemodel, deploy_file, dimension=150, IMAGE_SIZE
             print d
             if d >= threshold:
                 correct = correct + 1
+        print "******"
         for x in patch[1]:
             s1, s2 = x
             i1 = samples.index(s1)
             i2 = samples.index(s2)
             d = distance.cosine_distnace(features[i1], features[i2])
             print d
-            print "------"*2
             if d < threshold:
                 correct = correct + 1
+        print "------"*2
         y_values.append(float(correct)/totals)
     max_index = np.argmax(y_values)
     print max_index
