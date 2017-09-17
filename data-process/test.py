@@ -3,9 +3,9 @@ import matplotlib.pyplot as plt
 from skimage import measure, feature
 from mpl_toolkits.mplot3d.art3d import Poly3DCollection
 import os
+import numpy as np
 
-def get_bone_pixel_aaray(path):
-    ds = dicom.read_file(path)
+def get_bone_pixel_array(ds):
     pixel_array = ds.pixel_array
     intercept = ds.RescaleIntercept
     slope = ds.RescaleSlope
@@ -17,7 +17,8 @@ def get_bone_pixel_aaray(path):
                 pixel_array[i][j] = 0
             if pixel_value * slope + intercept < 300:
                 pixel_array[i][j] = 0
-    return pixel_array
+    ds.pixel_array = pixel_array
+    return ds
 
 def plot_3d(image):
     # Position the scan upright,
@@ -36,7 +37,10 @@ def plot_3d(image):
     ax.set_zlim(0, p.shape[2])
     plt.show()
 
-path = "/Users/HZzone/Desktop/data/0000494780/20120320"
+path = "../data/0000494780/20120320"
 slices = [os.path.join(path, s) for s in os.listdir(path)]
-bone_images = [get_bone_pixel_aaray(dicom_file) for dicom_file in slices]
+bone_ds = [get_bone_pixel_array(dicom.read_file(dicom_file)) for dicom_file in slices]
+bone_ds.sort(key=lambda x: int(x.ImagePositionPatient[2]))
+bone_images = [ds.pixel_array for ds in bone_ds]
+bone_images = np.array(bone_images, dtype=np.int16)
 plot_3d(bone_images)
