@@ -10,6 +10,7 @@ import preprocess
 from itertools import combinations
 import random
 import distance
+import statics
 
 def generate_ordinary_lmdb(source, target="/Users/HZzone/Desktop/dete-data/train_lmdb", dimension=150, IMAGE_SIZE=227):
     env = lmdb.Environment(target, map_size=int(1e12))
@@ -37,36 +38,66 @@ def generate_siamese_lmdb(source, target="/Users/HZzone/Desktop/dete-data/siames
     dataset = generate_siamese_dataset(source)
     _same = dataset[0]
     _diff = dataset[1]
+    with open("data.txt", "w") as f:
+        f.write(str(_same)+'\n'+str(_diff))
     with env.begin(write=True) as txn:
         datum = caffe.proto.caffe_pb2.Datum()
         datum.channels = 2*dimension
         datum.height = IMAGE_SIZE
         datum.width = IMAGE_SIZE
         sample = np.zeros((2*dimension, IMAGE_SIZE, IMAGE_SIZE))
-        index = 0
+        # index = 0
+        # for same_sample in _same:
+        #     label = 1
+        #     sample[:dimension, :, :] = preprocess.readManyDicom_sorted(same_sample[0], IMAGE_SIZE, dimension)
+        #     sample[dimension:, :, :] = preprocess.readManyDicom_sorted(same_sample[1], IMAGE_SIZE, dimension)
+        #     datum.data = sample.tobytes()
+        #     datum.label = label
+        #     str_id = "%8d" % index
+        #     txn.put(str_id, datum.SerializeToString())
+        #     index = index + 1
+        #     print same_sample
+        #     print "--------"
+        # print "***********"
+        # for diff_sample in _diff:
+        #     label = 0
+        #     sample[:dimension, :, :] = preprocess.readManyDicom_sorted(diff_sample[0], IMAGE_SIZE, dimension)
+        #     sample[dimension:, :, :] = preprocess.readManyDicom_sorted(diff_sample[1], IMAGE_SIZE, dimension)
+        #     datum.data = sample.tobytes()
+        #     datum.label = label
+        #     str_id = "%8d" % index
+        #     txn.put(str_id, datum.SerializeToString())
+        #     index = index + 1
+        #     print diff_sample
+        #     print "--------"
+        _same = list(_same)
+        _diff = list(_diff)
+        all_samples = []
         for same_sample in _same:
-            label = 1
-            sample[:dimension, :, :] = preprocess.readManyDicom(same_sample[0], IMAGE_SIZE, dimension)
-            sample[dimension:, :, :] = preprocess.readManyDicom(same_sample[1], IMAGE_SIZE, dimension)
-            datum.data = sample.tobytes()
-            datum.label = label
-            str_id = "%8d" % index
-            txn.put(str_id, datum.SerializeToString())
-            index = index + 1
-            print same_sample
-            print "--------"
-        print "***********"
+            same_sample = list(same_sample)
+            same_sample.append(1)
+            all_samples.append(same_sample)
         for diff_sample in _diff:
-            label = 0
-            sample[:dimension, :, :] = preprocess.readManyDicom(diff_sample[0], IMAGE_SIZE, dimension)
-            sample[dimension:, :, :] = preprocess.readManyDicom(diff_sample[1], IMAGE_SIZE, dimension)
+            diff_sample = list(diff_sample)
+            diff_sample.append(0)
+            all_samples.append(diff_sample)
+
+        # all_samples.extend(_same)
+        # all_samples.extend(_diff)
+        random.shuffle(all_samples)
+        random.shuffle(all_samples)
+
+        print all_samples
+        print len(all_samples)
+
+        for index, one_sample in enumerate(all_samples):
+            print one_sample
+            sample[:dimension, :, :] = preprocess.readManyDicom_sorted(one_sample[0], IMAGE_SIZE, dimension)
+            sample[dimension:, :, :] = preprocess.readManyDicom_sorted(one_sample[1], IMAGE_SIZE, dimension)
             datum.data = sample.tobytes()
-            datum.label = label
+            datum.label = one_sample[2]
             str_id = "%8d" % index
             txn.put(str_id, datum.SerializeToString())
-            index = index + 1
-            print diff_sample
-            print "--------"
 
 # generate dataset path
 # combines the samples, return _same and _diff
@@ -81,38 +112,21 @@ def generate_siamese_dataset(source):
             sample = os.path.join(person_dir, dicom_files)
             all_samples.append(sample)
     sample_combinations = list(combinations(all_samples, 2))
-    for one_comination in sample_combinations:
-        if os.path.dirname(one_comination[0]) == os.path.dirname(one_comination[1]):
-            _same.append(one_comination)
+    for one_combination in sample_combinations:
+        if os.path.dirname(one_combination[0]) == os.path.dirname(one_combination[1]):
+            _same.append(one_combination)
         else:
-            _diff.append(one_comination)
+            _diff.append(one_combination)
     random.shuffle(_diff)
     return _same, _diff[:len(_same)]
 
-# not complete
-def generate_hdf5(source, target="/Users/HZzone/Desktop/dete-data/train.h5", dimension=200, IMAGE_SIZE=227):
-    for label, person in enumerate(os.listdir(source)):
-        person_dir = os.path.join(source, person)
-        one_person_samples = os.listdir(person_dir)
-        for dicom_files in one_person_samples:
-            s = os.path.join(person_dir, dicom_files)
-            print s
-            sample = np.zeros((dimension, IMAGE_SIZE, IMAGE_SIZE))
-            datum = caffe.proto.caffe_pb2.Datum()
-            for index, dicom_file in enumerate(os.listdir(s)):
-                path = os.path.join(s, dicom_file)
-                im = preprocess.preprocess(path, IMAGE_SIZE=IMAGE_SIZE)
-                sample[index, :, :] = im
-            datum.data = sample.tostring()
-            datum.label = label
-            str_id = "%s" % dicom_files
-            txn.put(str_id, datum.SerializeToString())
-        print "--------"
 
 
     # return float(correct) / totals
 if __name__ == "__main__":
     # generate_ordinary_lmdb("/Users/HZzone/Desktop/mdzz", dimension=150)
-    generate_siamese_lmdb("/Users/HZzone/Desktop/temp/train", target="/Users/HZzone/Desktop/dete-data/siamese_train_lmdb", dimension=150)
-    generate_siamese_lmdb("/Users/HZzone/Desktop/temp/test", target="/Users/HZzone/Desktop/dete-data/siamese_test_lmdb", dimension=150)
+    statics.delete_DS_Store("/Users/HZzone/Desktop/determination-data/train")
+    statics.delete_DS_Store("/Users/HZzone/Desktop/determination-data/test")
+    generate_siamese_lmdb("/Users/HZzone/Desktop/determination-data/train", target="/Users/HZzone/Desktop/determination-data/siamese_train_lmdb", dimension=250)
+    generate_siamese_lmdb("/Users/HZzone/Desktop/determination-data/test", target="/Users/HZzone/Desktop/determination-data/siamese_test_lmdb", dimension=250)
     # print generate_siamese_dataset("/Users/HZzone/Desktop/mdzz")

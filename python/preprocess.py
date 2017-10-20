@@ -5,6 +5,7 @@ import os
 import numpy as np
 from skimage.transform import resize
 from scipy.misc import bytescale
+import td_process
 
 def show(source):
     ds = dicom.read_file(source)
@@ -34,12 +35,32 @@ def process(source, IMAGE_SIZE=227):
     im = bytescale(im)
     return im
 
+def process_sorted(ds, IMAGE_SIZE=227):
+    pixel_array = ds.pixel_array
+    im = resize(pixel_array, (IMAGE_SIZE, IMAGE_SIZE))
+    im = bytescale(im)
+    return im
+
 # read one sample dicom folder and return the dimension*dimension matrix
 def readManyDicom(source, IMAGE_SIZE=227, dimension=150):
     sample = np.zeros((dimension, IMAGE_SIZE, IMAGE_SIZE))
     for index, dicom_file in enumerate(os.listdir(source)):
         path = os.path.join(source, dicom_file)
         im = process(path, IMAGE_SIZE=IMAGE_SIZE)
+        sample[index, :, :] = im
+    return sample
+
+
+# read one sample dicom folder and return the dimension*dimension matrix
+def readManyDicom_sorted(source, IMAGE_SIZE=227, dimension=150):
+    sample = np.zeros((dimension, IMAGE_SIZE, IMAGE_SIZE))
+    slices = td_process.load_scan(source)
+    # for index, dicom_file in enumerate(os.listdir(source)):
+    #     path = os.path.join(source, dicom_file)
+    #     im = process(path, IMAGE_SIZE=IMAGE_SIZE)
+    #     sample[index, :, :] = im
+    for index, ds in enumerate(slices):
+        im = process_sorted(ds, IMAGE_SIZE=IMAGE_SIZE)
         sample[index, :, :] = im
     return sample
 

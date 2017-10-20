@@ -20,6 +20,6 @@ display: 100
 max_iter: 50000
 # snapshot intermediate results
 snapshot: 5000
-snapshot_prefix: "/home/ubuntu/dete-data/lenet_siamese_train"
+snapshot_prefix: "/Volumes/Hzzone/model/lenet_siamese_train"
 # solver mode: CPU or GPU
-solver_mode: GPU
+solver_mode: CPU

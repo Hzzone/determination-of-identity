@@ -66,6 +66,12 @@ def renameFolder(source):
         os.rename(os.path.join(source, s), os.path.join(source, str(file_name)))
         print file_name
 
+def delete_DS_Store(source):
+    for root, dirs, files in os.walk(source):
+        for file_name in files:
+            if file_name == ".DS_Store":
+                os.remove(os.path.join(root, file_name))
+
 
 if __name__ == "__main__":
     # print(len(statics_same("/Volumes/Hzzone/data")))
