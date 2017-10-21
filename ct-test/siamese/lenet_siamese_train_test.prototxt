@@ -6,10 +6,13 @@ layer {
   top: "sim"
   include {
     phase: TRAIN
+  }  
+  transform_param {
+    scale: 0.00390625
   }
   data_param {
-    source: "/Users/HZzone/Desktop/determination-data/siamese_train_lmdb"
-    batch_size: 20 
+    source: "./siamese_train_lmdb"
+    batch_size: 5 
     backend: LMDB
   }
 }
@@ -21,9 +24,12 @@ layer {
   include {
     phase: TEST
   }
+  transform_param {
+    scale: 0.00390625
+  }
   data_param {
-    source: "/Users/HZzone/Desktop/determination-data/siamese_test_lmdb"
-    batch_size: 10
+    source: "./siamese_test_lmdb"
+    batch_size: 2
     backend: LMDB
   }
 }

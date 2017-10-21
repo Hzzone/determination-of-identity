@@ -4,7 +4,7 @@ layer {
   type: "Input"
   top: "data"
   input_param {
-    shape: { dim: 10 dim: 150 dim: 227 dim: 227 }
+    shape: { dim: 16 dim: 250 dim: 227 dim: 227 }
   }
 }
 layer {
@@ -111,6 +111,6 @@ layer {
     lr_mult: 2
   }
   inner_product_param {
-    num_output: 6
+    num_output: 10
   }
 }
