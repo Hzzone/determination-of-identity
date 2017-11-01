@@ -3,4 +3,3 @@
 *.DS*
 /data/
 *.npy
-notebooks/preparation.ipynb
