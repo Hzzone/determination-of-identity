@@ -10,3 +10,5 @@
 /data/test_same_sequence.txt
 /data/train_diff_sequence.txt
 /data/train_same_sequence.txt
+/data/test_lmdb/
+/data/train_lmdb/

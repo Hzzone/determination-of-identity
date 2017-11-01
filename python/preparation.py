@@ -10,10 +10,10 @@ import math
 caffe_root = '/home/hzzone/caffe'  # this file is expected to be in {caffe_root}/examples/siamese
 import sys
 sys.path.insert(0, os.path.join(caffe_root, 'python'))
+import caffe
 from itertools import combinations
 import random
 import lmdb
-import json
 
 train_source = "/home/hzzone/classifited/train"
 test_source = "/home/hzzone/classifited/test"
@@ -179,55 +179,50 @@ def write_sequence_file():
 def load(same_sequence_file, diff_sequence_file):
     with open(same_sequence_file) as f:
         # print f.readlines()[0]
-        _same = json.loads(str(f.readlines()[0]))
+        # lines = f.readlines().strip("\n")
+        # same.append(line.split(" "))
+        lines = f.readlines()
+        same = [line.strip('\n').split(" ") for line in lines]
     with open(diff_sequence_file) as f:
-        _diff = json.loads(f.readlines()[0])
-    print _same
-    print _diff
+        lines = f.readlines()
+        diff = [line.strip('\n').split(" ") for line in lines]
+    all_samples = []
+    all_samples.extend(same)
+    all_samples.extend(diff[:len(same)])
+    random.shuffle(all_samples)
+    random.shuffle(all_samples)
+    return all_samples
 
 # source: the dataset folder
 '''
 pay attention to shuffle the train list
 '''
-def generate_siamese_lmdb(source, target="/Users/HZzone/Desktop/dete-data/siamese_train_lmdb", dimension=150, IMAGE_SIZE=227):
-    env = lmdb.Environment(target, map_size=int(1e12))
-    dataset = generate_siamese_dataset(source)
-    _same = dataset[0]
-    _diff = dataset[1]
-    with open("data.txt", "w") as f:
-        f.write(str(_same)+'\n'+str(_diff))
+def generate_siamese_lmdb(same_sequence_file, diff_sequence_file, data_np_source, save_target, dimension=64, IMAGE_SIZE=64):
+    env = lmdb.Environment(save_target, map_size=int(1e12))
+    sequence_file = load(same_sequence_file, diff_sequence_file)
+    all_data = np.load(data_np_source)
     with env.begin(write=True) as txn:
         datum = caffe.proto.caffe_pb2.Datum()
         datum.channels = 2*dimension
         datum.height = IMAGE_SIZE
         datum.width = IMAGE_SIZE
         sample = np.zeros((2*dimension, IMAGE_SIZE, IMAGE_SIZE))
-        _same = list(_same)
-        _diff = list(_diff)
-        all_samples = []
-        for same_sample in _same:
-            same_sample = list(same_sample)
-            same_sample.append(1)
-            all_samples.append(same_sample)
-        for diff_sample in _diff:
-            diff_sample = list(diff_sample)
-            diff_sample.append(0)
-            all_samples.append(diff_sample)
-
-        # all_samples.extend(_same)
-        # all_samples.extend(_diff)
-        random.shuffle(all_samples)
-        random.shuffle(all_samples)
-
-        print all_samples
-        print len(all_samples)
-
-        for index, one_sample in enumerate(all_samples):
-            print one_sample
-            sample[:dimension, :, :] = preprocess.readManyDicom_sorted(one_sample[0], IMAGE_SIZE, dimension)
-            sample[dimension:, :, :] = preprocess.readManyDicom_sorted(one_sample[1], IMAGE_SIZE, dimension)
+        for index, sequence_sample in enumerate(sequence_file):
+            print sequence_sample
+            label = int(sequence_sample[2])
+            first_sample = sequence_sample[0]
+            second_sample = sequence_sample[1]
+            first_sample_id = first_sample.split("/")[0]
+            first_sample_study_date = first_sample.split("/")[1]
+            second_sample_id = second_sample.split("/")[0]
+            second_sample_study_date = second_sample.split('/')[1]
+            for x in range(all_data.shape[0]):
+                if all_data[x][1] == first_sample_id and all_data[x][2] == first_sample_study_date:
+                    sample[:dimension, :, :] = all_data[x][0]
+                if all_data[x][1] == second_sample_id and all_data[x][2] == second_sample_study_date:
+                    sample[dimension:, :, :] = all_data[x][0]
             datum.data = sample.tobytes()
-            datum.label = one_sample[2]
+            datum.label = label
             str_id = "%8d" % index
             txn.put(str_id, datum.SerializeToString())
 
@@ -237,5 +232,7 @@ if __name__ == "__main__":
     # plot_ct_scan(process_data(load_scan("/home/hzzone/classifited/train/0000279404/20150528")))
     # slices = process_data(load_scan("/home/hzzone/classifited/train/0000279404/20150528"))
     # save_np_file()
-    write_sequence_file()
+    # write_sequence_file()
     # load("../data/train_same_sequence.txt", "../data/train_diff_sequence.txt")
+    generate_siamese_lmdb("../data/train_same_sequence.txt", "../data/train_diff_sequence.txt", "../data/train_data-64-64-64.npy", save_target="../data/train_lmdb")
+    generate_siamese_lmdb("../data/test_same_sequence.txt", "../data/test_diff_sequence.txt", "../data/test_data-64-64-64.npy", save_target="../data/test_lmdb")
