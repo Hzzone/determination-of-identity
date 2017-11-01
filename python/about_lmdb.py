@@ -46,30 +46,6 @@ def generate_siamese_lmdb(source, target="/Users/HZzone/Desktop/dete-data/siames
         datum.height = IMAGE_SIZE
         datum.width = IMAGE_SIZE
         sample = np.zeros((2*dimension, IMAGE_SIZE, IMAGE_SIZE))
-        # index = 0
-        # for same_sample in _same:
-        #     label = 1
-        #     sample[:dimension, :, :] = preprocess.readManyDicom_sorted(same_sample[0], IMAGE_SIZE, dimension)
-        #     sample[dimension:, :, :] = preprocess.readManyDicom_sorted(same_sample[1], IMAGE_SIZE, dimension)
-        #     datum.data = sample.tobytes()
-        #     datum.label = label
-        #     str_id = "%8d" % index
-        #     txn.put(str_id, datum.SerializeToString())
-        #     index = index + 1
-        #     print same_sample
-        #     print "--------"
-        # print "***********"
-        # for diff_sample in _diff:
-        #     label = 0
-        #     sample[:dimension, :, :] = preprocess.readManyDicom_sorted(diff_sample[0], IMAGE_SIZE, dimension)
-        #     sample[dimension:, :, :] = preprocess.readManyDicom_sorted(diff_sample[1], IMAGE_SIZE, dimension)
-        #     datum.data = sample.tobytes()
-        #     datum.label = label
-        #     str_id = "%8d" % index
-        #     txn.put(str_id, datum.SerializeToString())
-        #     index = index + 1
-        #     print diff_sample
-        #     print "--------"
         _same = list(_same)
         _diff = list(_diff)
         all_samples = []

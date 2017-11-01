@@ -1,5 +1,12 @@
 .idea
 *.pyc
 *.DS*
-/data/
 *.npy
+/tensorflow-test/.ipynb_checkpoints/
+/notebooks/.ipynb_checkpoints/
+/data/test_data-64-64-64.npy
+/data/train_data-64-64-64.npy
+/data/test_diff_sequence.txt
+/data/test_same_sequence.txt
+/data/train_diff_sequence.txt
+/data/train_same_sequence.txt

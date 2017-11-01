@@ -28,7 +28,7 @@ import numpy as np
 # Load the scans in given folder path
 def load_scan(path):
     slices = [dicom.read_file(os.path.join(path, s)) for s in os.listdir(path)]
-    slices.sort(key = lambda x: int(x.ImagePositionPatient[2]))
+    slices.sort(key=lambda x: int(x.ImagePositionPatient[2]))
     try:
         slice_thickness = np.abs(slices[0].ImagePositionPatient[2] - slices[1].ImagePositionPatient[2])
     except:
@@ -85,10 +85,10 @@ def plot_3d(image, threshold=-300):
     plt.show()
 
 
-# first_patient = load_scan("/home/bw/same_data/0000494780/20120320")
-# first_patient_pixels = get_pixels_hu(first_patient)
-# pix_resampled, spacing = resample(first_patient_pixels, first_patient, [1,1,1])
-# plot_3d(pix_resampled, 000)
+first_patient = load_scan("/home/hzzone/classifited/train/0000279404/20150528")
+first_patient_pixels = get_pixels_hu(first_patient)
+pix_resampled, spacing = resample(first_patient_pixels, first_patient, [1,1,1])
+plot_3d(pix_resampled, 000)
 
 # plt.hist(first_patient_pixels.flatten(), bins=80, color='c')
 # plt.xlabel("Hounsfield Units (HU)")
