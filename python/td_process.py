@@ -85,10 +85,10 @@ def plot_3d(image, threshold=-300):
     plt.show()
 
 
-first_patient = load_scan("/home/hzzone/classifited/train/0000279404/20150528")
-first_patient_pixels = get_pixels_hu(first_patient)
-pix_resampled, spacing = resample(first_patient_pixels, first_patient, [1,1,1])
-plot_3d(pix_resampled, 000)
+# first_patient = load_scan("/home/hzzone/classifited/train/0000279404/20150528")
+# first_patient_pixels = get_pixels_hu(first_patient)
+# pix_resampled, spacing = resample(first_patient_pixels, first_patient, [1,1,1])
+# plot_3d(pix_resampled, 000)
 
 # plt.hist(first_patient_pixels.flatten(), bins=80, color='c')
 # plt.xlabel("Hounsfield Units (HU)")

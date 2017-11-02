@@ -12,7 +12,7 @@ import random
 import distance
 import statics
 
-def generate_ordinary_lmdb(source, target="/Users/HZzone/Desktop/dete-data/train_lmdb", dimension=150, IMAGE_SIZE=227):
+def generate_ordinary_lmdb(source, target="/Users/HZzone/Desktop/dete-data/siamese_train_lmdb", dimension=150, IMAGE_SIZE=227):
     env = lmdb.Environment(target, map_size=int(1e12))
     with env.begin(write=True) as txn:
         for label, person in enumerate(os.listdir(source)):

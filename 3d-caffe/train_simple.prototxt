@@ -24,7 +24,7 @@ layer {
   top: "sim"
   include {
     phase: TEST
-    stage: "test-on-val"
+    #stage: "test-on-val"
   }
   video_data_param {
     source: "../data/test_lmdb"

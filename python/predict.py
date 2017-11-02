@@ -12,6 +12,7 @@ import about_lmdb
 import pylab
 import matplotlib.pyplot as plt
 import dicom
+import preparation
 
 def ordinary_predict_two_sample(source1, source2, caffemodel, deploy_file, dimension=150, IMAGE_SIZE=227, gpu_mode=True, LAST_LAYER_NAME="ip1"):
     if gpu_mode:
@@ -30,8 +31,6 @@ def ordinary_predict_two_sample(source1, source2, caffemodel, deploy_file, dimen
     second_sample_feature = output[LAST_LAYER_NAME][1]
     print distance.cosine_distnace(first_sample_feature, second_sample_feature)
 
-def siamese_predict_two_sample(source, dimension=150, IMAGE_SIZE=227):
-    pass
 
 # source: Test dataset
 def ordinary_predict_dataset(source, caffemodel, deploy_file, dimension=150, IMAGE_SIZE=227, gpu_mode=True, LAST_LAYER_NAME="ip1", save_features_file="features.txt"):
@@ -58,7 +57,9 @@ def ordinary_predict_dataset(source, caffemodel, deploy_file, dimension=150, IMA
     data = np.zeros((len(samples), dimension, IMAGE_SIZE, IMAGE_SIZE))
     for index, sample in enumerate(samples):
         print sample, samples[sample]
-        data[index, :, :, :] = preprocess.readManyDicom_sorted(sample, IMAGE_SIZE, dimension) * 0.00390625
+        # data[index, :, :, :] = preprocess.readManyDicom_sorted(sample, IMAGE_SIZE, dimension) * 0.00390625
+        data[index, :, :, :] = preparation.process_data(preparation.load_scan(sample), IMAGESIZE=64, HM_SLICES=64) * 0.00390625
+    print data.shape
     # print data.shape
     # # only for test LeNet
     # # data = data * 0.00390625
@@ -75,12 +76,12 @@ def ordinary_predict_dataset(source, caffemodel, deploy_file, dimension=150, IMA
             f.write(des+"\n")
     # return features, samples, patch
 
-def write_model_dir_features(caffemodel_source_dir, target_save_path, test_data_source, deploy_file, dimension=250, LAST_LAYER_NAME="feat"):
+def write_model_dir_features(caffemodel_source_dir, target_save_path, test_data_source, deploy_file, dimension, LAST_LAYER_NAME="feat"):
     for file_name in os.listdir(caffemodel_source_dir):
         path = os.path.join(caffemodel_source_dir, file_name)
-        ordinary_predict_dataset(test_data_source, caffemodel=path, deploy_file=deploy_file, dimension=dimension, LAST_LAYER_NAME=LAST_LAYER_NAME, save_features_file=os.path.join(target_save_path, file_name+"_features.txt"))
+        ordinary_predict_dataset(test_data_source, caffemodel=path, deploy_file=deploy_file, dimension=dimension, LAST_LAYER_NAME=LAST_LAYER_NAME, save_features_file=os.path.join(target_save_path, file_name+"_features.txt"), IMAGE_SIZE=64)
 
-def read__file_and_output_accuracy(sequence_source, features_file, jpg_file_name):
+def read__file_and_output_accuracy(sequence_source, features_file):
     with open(features_file) as f:
         temp = f.readlines()
     samples = {}
@@ -148,8 +149,8 @@ def x1(source):
         f.write(key)
 
 if __name__ == "__main__":
-    # write_model_dir_features("/home/hzzone/determination-of-identity/ct-test/classfication/model", "/home/hzzone/determination-of-identity/python/classfication_features", test_data_source="/home/hzzone/test", deploy_file="/home/hzzone/determination-of-identity/ct-test/classfication/face_deploy.prototxt", dimension=250, LAST_LAYER_NAME="fc5")
-    for file_name in os.listdir("./classfication_features"):
+    # write_model_dir_features("/home/hzzone/determination-of-identity/ct-test/siamese/model", "/home/hzzone/determination-of-identity/ct-test/siamese/siamese_features", test_data_source="/home/hzzone/classifited/test", deploy_file="/home/hzzone/determination-of-identity/ct-test/siamese/lenet_siamese.prototxt", dimension=64, LAST_LAYER_NAME="feat")
+    for file_name in os.listdir("../ct-test/siamese/siamese_features"):
         read__file_and_output_accuracy("./temp.txt", os.path.join("./classfication_features", file_name), os.path.join("./im", file_name+".jpg"))
     # x1("./temp.txt")
     # read__file_and_output_accuracy("./temp.txt", "/home/hzzone/determination-of-identity/python/features/lenet_siamese_train_iter_1000.caffemodel_features.txt", "1.jpg")

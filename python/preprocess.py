@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import dicom
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 import os
 import numpy as np
 from skimage.transform import resize

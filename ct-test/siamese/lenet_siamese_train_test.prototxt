@@ -6,13 +6,13 @@ layer {
   top: "sim"
   include {
     phase: TRAIN
-  }  
+  }
   transform_param {
     scale: 0.00390625
   }
   data_param {
-    source: "./siamese_train_lmdb"
-    batch_size: 5 
+    source: "../../data/siamese_train_lmdb"
+    batch_size: 100
     backend: LMDB
   }
 }
@@ -28,8 +28,8 @@ layer {
     scale: 0.00390625
   }
   data_param {
-    source: "./siamese_test_lmdb"
-    batch_size: 2
+    source: "../../data/siamese_test_lmdb"
+    batch_size: 30
     backend: LMDB
   }
 }
@@ -41,7 +41,7 @@ layer {
   top: "data_p"
   slice_param {
     slice_dim: 1
-    slice_point: 250
+    slice_point: 64
   }
 }
 layer {
@@ -58,8 +58,8 @@ layer {
     lr_mult: 2
   }
   convolution_param {
-    num_output: 20
-    kernel_size: 5
+    num_output: 64
+    kernel_size: 3
     stride: 1
     weight_filler {
       type: "xavier"
@@ -94,8 +94,8 @@ layer {
     lr_mult: 2
   }
   convolution_param {
-    num_output: 50
-    kernel_size: 5
+    num_output: 128
+    kernel_size: 3
     stride: 1
     weight_filler {
       type: "xavier"
@@ -117,9 +117,34 @@ layer {
   }
 }
 layer {
+  name: "conv3"
+  type: "Convolution"
+  bottom: "pool2"
+  top: "conv3"
+  param {
+    name: "conv3_w"
+    lr_mult: 1
+  }
+  param {
+    name: "conv3_b"
+    lr_mult: 2
+  }
+  convolution_param {
+    num_output: 512
+    kernel_size: 3
+    stride: 1
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+    }
+  }
+}
+layer {
   name: "ip1"
   type: "InnerProduct"
-  bottom: "pool2"
+  bottom: "conv3"
   top: "ip1"
   param {
     name: "ip1_w"
@@ -130,7 +155,7 @@ layer {
     lr_mult: 2
   }
   inner_product_param {
-    num_output: 500
+    num_output: 1024
     weight_filler {
       type: "xavier"
     }
@@ -159,7 +184,7 @@ layer {
     lr_mult: 2
   }
   inner_product_param {
-    num_output: 10
+    num_output: 2048
     weight_filler {
       type: "xavier"
     }
@@ -182,7 +207,7 @@ layer {
     lr_mult: 2
   }
   inner_product_param {
-    num_output: 10
+    num_output: 128
     weight_filler {
       type: "xavier"
     }
@@ -191,6 +216,8 @@ layer {
     }
   }
 }
+
+#######################
 layer {
   name: "conv1_p"
   type: "Convolution"
@@ -205,8 +232,8 @@ layer {
     lr_mult: 2
   }
   convolution_param {
-    num_output: 20
-    kernel_size: 5
+    num_output: 64
+    kernel_size: 3
     stride: 1
     weight_filler {
       type: "xavier"
@@ -241,8 +268,8 @@ layer {
     lr_mult: 2
   }
   convolution_param {
-    num_output: 50
-    kernel_size: 5
+    num_output: 128
+    kernel_size: 3
     stride: 1
     weight_filler {
       type: "xavier"
@@ -264,9 +291,34 @@ layer {
   }
 }
 layer {
+  name: "conv3_p"
+  type: "Convolution"
+  bottom: "pool2_p"
+  top: "conv3_p"
+  param {
+    name: "conv3_w"
+    lr_mult: 1
+  }
+  param {
+    name: "conv3_b"
+    lr_mult: 2
+  }
+  convolution_param {
+    num_output: 512
+    kernel_size: 3
+    stride: 1
+    weight_filler {
+      type: "xavier"
+    }
+    bias_filler {
+      type: "constant"
+    }
+  }
+}
+layer {
   name: "ip1_p"
   type: "InnerProduct"
-  bottom: "pool2_p"
+  bottom: "conv3_p"
   top: "ip1_p"
   param {
     name: "ip1_w"
@@ -277,7 +329,7 @@ layer {
     lr_mult: 2
   }
   inner_product_param {
-    num_output: 500
+    num_output: 1024
     weight_filler {
       type: "xavier"
     }
@@ -306,7 +358,7 @@ layer {
     lr_mult: 2
   }
   inner_product_param {
-    num_output: 10
+    num_output: 2048
     weight_filler {
       type: "xavier"
     }
@@ -329,7 +381,7 @@ layer {
     lr_mult: 2
   }
   inner_product_param {
-    num_output: 10 
+    num_output: 128
     weight_filler {
       type: "xavier"
     }

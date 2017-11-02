@@ -1,4 +1,4 @@
-net: "train_simple.prototxt"
+net: "./train_simple.prototxt"
 #test_iter: 100
 #test_state: { stage: 'test-on-train' }
 #test_iter: 100
@@ -16,5 +16,5 @@ display: 20
 max_iter: 1000
 # snapshot intermediate results
 snapshot: 1000
-snapshot_prefix: "c3d_ucf101"
+snapshot_prefix: "model/EffecticeNet_train_iter_"
 solver_mode: GPU
