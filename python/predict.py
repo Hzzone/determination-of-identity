@@ -13,6 +13,7 @@ import pylab
 import matplotlib.pyplot as plt
 import dicom
 import preparation
+from itertools import combinations
 
 def ordinary_predict_two_sample(source1, source2, caffemodel, deploy_file, dimension=150, IMAGE_SIZE=227, gpu_mode=True, LAST_LAYER_NAME="ip1"):
     if gpu_mode:
@@ -81,7 +82,7 @@ def write_model_dir_features(caffemodel_source_dir, target_save_path, test_data_
         path = os.path.join(caffemodel_source_dir, file_name)
         ordinary_predict_dataset(test_data_source, caffemodel=path, deploy_file=deploy_file, dimension=dimension, LAST_LAYER_NAME=LAST_LAYER_NAME, save_features_file=os.path.join(target_save_path, file_name+"_features.txt"), IMAGE_SIZE=64)
 
-def read__file_and_output_accuracy(sequence_source, features_file):
+def read__file_and_output_accuracy(features_file):
     with open(features_file) as f:
         temp = f.readlines()
     samples = {}
@@ -89,10 +90,7 @@ def read__file_and_output_accuracy(sequence_source, features_file):
         a = t.split(" ")
         one_feature = [float(x) for x in a[1:]]
         samples[a[0]] = one_feature
-    with open(sequence_source) as f:
-        temp = f.readlines()
-    result = []
-    key_ = ""
+    com = list(combinations(temp, 2))
     for t in temp:
         a = t.split(" ")
         real_result = int(a[2])

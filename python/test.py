@@ -1,12 +1,24 @@
+import glob
+import os
+import pandas as pd
 import numpy as np # linear algebra
 import pandas as pd # data processing, CSV file I/O (e.g. pd.read_csv)
-import dicom
-import os
-import scipy.ndimage
+import skimage, os
+from skimage.morphology import ball, disk, dilation, binary_erosion, remove_small_objects, erosion, closing, reconstruction, binary_closing
+from skimage.measure import label,regionprops, perimeter
+from skimage.morphology import binary_dilation, binary_opening
+from skimage.filters import roberts, sobel
+from skimage import measure, feature
+from skimage.segmentation import clear_border
+from skimage import data
+from scipy import ndimage as ndi
+import matplotlib
+#matplotlib.use('Agg')
 import matplotlib.pyplot as plt
-
-from skimage import measure, morphology
 from mpl_toolkits.mplot3d.art3d import Poly3DCollection
+import dicom
+import scipy.misc
+import numpy as np
 import cv2
 
 
@@ -34,33 +46,29 @@ def get_pixels_hu(slices):
     # Set outside-of-scan pixels to 0
     # The intercept is usually -1024, so air is approximately 0
     image[image == -2000] = 0
+    # print(image)
     
-    # 去除挡板
-    layers, width, height = image.shape
-    width, height = pixel_array.shape
-    y, x = np.ogrid[0:width,0:height]
-    centerx, centery = (width/2, height/2)
-    # print(x, y)
-    mask = ((y - centery)**2 + (x - centerx)**2) > (width/2)**2
-#     print(mask.shape)
-    pixel_array[mask] = 0
-    
+
     # Convert to Hounsfield units (HU)
     for slice_number in range(len(slices)):
         
         intercept = slices[slice_number].RescaleIntercept
         slope = slices[slice_number].RescaleSlope
-        
-        if slope != 1:
-            image[slice_number] = slope * image[slice_number].astype(np.float64)
-            image[slice_number] = image[slice_number].astype(np.int16)
+
+        # 去除挡板
+        # image[slice_number][mask] = 0
+
+        # if slope != 1:
+        # image[slice_number] = slope * image[slice_number].astype(np.float64)
+        # image[slice_number] = image[slice_number].astype(np.int16)
             
-        image[slice_number] += np.int16(intercept)
-    
+        # image[slice_number] += np.int16(intercept)
+        image[slice_number] = segment_head_mask(image[slice_number], slope, intercept)
+
     return np.array(image, dtype=np.int16)
 
 
-def resample(image, scan, new_spacing=[1,1,1]):
+def resample(image, scan, new_spacing=[1, 1, 1]):
     # Determine current pixel spacing
     spacing = np.array([scan[0].SliceThickness] + scan[0].PixelSpacing, dtype=np.float32)
 
@@ -79,7 +87,7 @@ def plot_3d(image, threshold=-300):
     
     # Position the scan upright, 
     # so the head of the patient would be at the top facing the camera
-    p = image.transpose(2,1,0)
+    p = image.transpose(2, 1, 0)
     
     verts, faces, x, y = measure.marching_cubes(p, threshold)
 
@@ -117,20 +125,70 @@ def plot_ct_scan(scan):
         plots[int(i / 4), int((i % 4))].imshow(cv2.resize(scan[i], (64, 64)), cmap=plt.cm.bone)
     plt.show()
 
+# 返回不等于background的最大面积的像素值
+def largest_label_volume(im, bg=-1):
+    vals, counts = np.unique(im, return_counts=True)
+    counts = counts[vals != bg]
+    vals = vals[vals != bg]
+    if len(counts) > 0:
+        return vals[np.argmax(counts)]
+    else:
+        return None
 
-import dicom
-import numpy as np
-import matplotlib.pyplot as plt
-pixel_array = dicom.read_file("/home/hzzone/classifited/train/0000279404/20150528/41239121").pixel_array
-print(pixel_array.shape)
-width, height = (512, 512)
-y, x = np.ogrid[0:width,0:height]
-centerx, centery = (width/2, height/2)
-# print(x, y)
-mask = ((y - centery)**2 + (x - centerx)**2) > (width/2)**2
-print(mask.shape)
-pixel_array[mask] = 0
-plt.imshow(pixel_array)
-plt.show()
-plt.hist(pixel_array.flatten(), bins=80, color='c')
-plt.show()
+def segment_head_mask(image, slope, intercept):
+    # not actually binary, but 1 and 2.
+    # 0 is treated as background, which we do not want
+    binary_image = np.array(slope*image.astype(np.float64)+intercept > -400, dtype=np.int8)
+    # Pick the pixel in the very corner to determine which label is air.
+    #   Improvement: Pick multiple background labels from around the patient
+    #   More resistant to "trays" on which the patient lays cutting the air
+    #   around the person in half
+    #   为了找到背景色，就用右上角第一个点
+    #Fill the air around the person
+#     labels[background_label == labels] = -1
+    # Method of filling the lung structures (that is superior to something like
+    # morphological closing)
+    # For every slice we determine the largest solid structure
+    # for i, axial_slice in enumerate(binary_image):
+    labels = measure.label(binary_image)
+    background_label = labels[0, 0]
+#             axial_slice = axial_slice - 1
+#             binary_image -= 1
+#             labeling = measure.label(binary_image)
+    l_max = largest_label_volume(labels, bg=background_label)
+    if l_max is not None: #This slice contains some lung
+        labels[labels != l_max] = 0
+#             labels[labels == -1] = 0
+        labels[labels != 0] = 1
+        # plt.imshow(image[i])
+        # plt.show()
+    return (image*labels)*slope + intercept
+
+def padding(image, expected_shape=(200, 300, 300)):
+    dim, width, height = image.shape
+    # print(image.shape)
+    expected_dim, expected_width, expected_height = expected_shape
+    padding_image = np.ones(expected_shape)*(-1024)
+    # print(padding_image.shape)
+    low_z_offset = int((expected_dim-dim)/2)
+    high_z_offset = int((expected_dim+dim)/2)
+    # print(low_z_offset, high_z_offset)
+    high_x_offset = int((expected_width+width)/2)
+    low_x_offset = int((expected_width-width)/2)
+    # print(low_x_offset, high_x_offset)
+
+    low_y_offset = int((expected_height-height)/2)
+    high_y_offset = int((expected_height+height)/2)
+    # print(low_y_offset, high_y_offset)
+    for index_dimmension in range(low_z_offset, high_z_offset):
+        padding_image[index_dimmension, low_y_offset: high_y_offset, low_x_offset: high_x_offset] = image[index_dimmension-low_z_offset]
+    # print(padding_image.shape)
+    return padding_image
+				
+# 测试
+if __name__ == "__main__":
+	first_patient = load_scan("/Volumes/Hzzone/classifited/train/0000279404/20150528")
+	first_patient_pixels = get_pixels_hu(first_patient)
+	pix_resampled, spacing = resample(first_patient_pixels, first_patient, [1, 1, 1])
+	padding_image = padding(pix_resampled, expected_shape=(200, 300, 300))
+	plot_3d(padding_image)
