@@ -20,7 +20,22 @@ import dicom
 import scipy.misc
 import numpy as np
 import cv2
+from os.path import join as ospj
+import logging
 
+logging.basicConfig(level=logging.DEBUG,
+                format='%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s',
+                datefmt='%a, %d %b %Y %H:%M:%S')
+
+'''
+Preprocess steps:
+1. convert pixel values to HU
+2. resampling 1*1*1 pixel spacing
+3. keep the head and discard the left things
+4. normalize
+5. zero centered
+6. padding to 200*300*300
+'''
 
 # Load the scans in given folder path
 def load_scan(path):
@@ -185,10 +200,54 @@ def padding(image, expected_shape=(200, 300, 300)):
     # print(padding_image.shape)
     return padding_image
 				
+MIN_BOUND = -400.0
+MAX_BOUND = 2000.0
+    
+def normalize(image):
+    image = (image - MIN_BOUND) / (MAX_BOUND - MIN_BOUND)
+    image[image>1] = 1.
+    image[image<0] = 0.
+    return image
+
+PIXEL_MEAN = 0.25
+
+def zero_center(image):
+    image = image - PIXEL_MEAN
+    return image
+
+def calculate_pixel_mean(source):
+	pass
+
+def preprocess(source):
+	patient = load_scan(source)
+	patient_pixels = get_pixels_hu(patient)
+	pix_resampled, spacing = resample(patient_pixels, patient, [1, 1, 1])
+	padding_image = padding(pix_resampled, expected_shape=(200, 300, 300))
+	padding_image.astype("float64")
+	normalized_image = normalize(padding_image)
+	return normalized_image
 # 测试
 if __name__ == "__main__":
-	first_patient = load_scan("/Volumes/Hzzone/classifited/train/0000279404/20150528")
-	first_patient_pixels = get_pixels_hu(first_patient)
-	pix_resampled, spacing = resample(first_patient_pixels, first_patient, [1, 1, 1])
-	padding_image = padding(pix_resampled, expected_shape=(200, 300, 300))
-	plot_3d(padding_image)
+	train_source = "/Volumes/Hzzone/classifited/train"
+	test_source = "/Volumes/Hzzone/classifited/test"
+	train_data = []
+	test_data = []
+	for person in os.listdir(train_source):
+		p1 = ospj(train_source, person)
+		for each_sample in os.listdir(p1):
+			p2 = ospj(p1, each_sample)
+			logging.debug(p2)
+			train_data.append([preprocess(p2), person, each_sample])
+
+	for person in os.listdir(test_source):
+		p1 = ospj(test_source, person)
+		for each_sample in os.listdir(ospj(test_source, person)):
+			p2 = ospj(p1, each_sample)
+			logging.debug(p2)
+			test_data.append([preprocess(p2), person, each_sample])
+
+	# np.save('../data/train_data-{}-{}-{}.npy'.format(IMAGE_SIZE, IMAGE_SIZE, HM_SLICES), train_data)
+	# np.save('../data/test_data-{}-{}-{}.npy'.format(IMAGE_SIZE, IMAGE_SIZE, HM_SLICES), test_data)
+	np.save("../data/train_data.npy", train_data)
+	np.save("../data/test_data.npy", test_data)
+
