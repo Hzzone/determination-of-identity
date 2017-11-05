@@ -222,7 +222,7 @@ def preprocess(source):
 	patient_pixels = get_pixels_hu(patient)
 	pix_resampled, spacing = resample(patient_pixels, patient, 40, [1, 1, 1])
 	padding_image = padding(pix_resampled, expected_shape=(270, 270))
-	padding_image.astype("float32")
+	padding_image.astype(np.float32)
 	normalized_image = normalize(padding_image)
 	return normalized_image
 

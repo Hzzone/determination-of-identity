@@ -10,7 +10,7 @@ import math
 caffe_root = '/home/hzzone/caffe'  # this file is expected to be in {caffe_root}/examples/siamese
 import sys
 sys.path.insert(0, os.path.join(caffe_root, 'python'))
-import caffe
+# import caffe
 from itertools import combinations
 import random
 import lmdb
@@ -224,44 +224,64 @@ def generate_siamese_lmdb(same_sequence_file, diff_sequence_file, data_np_source
             txn.put(str_id, datum.SerializeToString())
             logging.debug("%s %s" % (sequence_sample, label))
 
-def generate_ordinary_lmdb(data_np_source, save_target, dimension=64, IMAGE_SIZE=64):
-    env = lmdb.Environment(save_target, map_size=int(1e12))
-    all_data = list(np.load(data_np_source))
-    random.shuffle(all_data)
-    random.shuffle(all_data)
-    dic = {}
-    with env.begin(write=True) as txn:
-        datum = caffe.proto.caffe_pb2.Datum()
-        datum.channels = 2*dimension
-        datum.height = IMAGE_SIZE
-        datum.width = IMAGE_SIZE
-        sample = np.zeros((dimension, IMAGE_SIZE, IMAGE_SIZE))
-        patient_id = []
-        for index in range(len(all_data)):
-            sample_id = all_data[index][1]
-            patient_id.append(sample_id)
-        for index, id in enumerate(set(patient_id)):
-            dic[id] = index
-        for index, each_sample in enumerate(all_data):
-            sample[:, :, :] = each_sample[0]
-            datum.data = sample.tobytes()
-            datum.label = dic[each_sample[1]]
-            str_id = "%8d" % index
-            print str_id, each_sample[1], dic[each_sample[1]]
-            txn.put(str_id, datum.SerializeToString())
+def generate_ordinary_hdf5(data_np_source, save_target, dimension=64, IMAGE_SIZE=64):
+    samples = []
+    for np_file in os.listdir(data_np_source):
+        samples.append(np_file.split("_")[0])
+    samples = set(samples)
+    k = {}
+    for index, s in enumerate(samples):
+        k[s] = index
+    print(k)
+    print(len(k))
+    # for index, np_file in enumerate(os.listdir(data_np_source)):
+    #     p_id = np_file.split("_")[0]
+    #     with hy.File(os.path.join(save_target, str(index)+".h5"), 'w') as h5_file:
+    #         data = np.zeros((1, dimension, IMAGE_SIZE, IMAGE_SIZE))
+    #         label = k[p_id]
+    #         p = os.path.join(data_np_source, np_file)
+    #         data[0] = np.load(p)[0]
+    #         data.astype(np.float32)
+    #         labels = np.zeros(1, dtype=np.float32)
+    #         labels[0] = label
+    #         h5_file['data'] = data
+    #         h5_file['label'] = labels
+    #         logging.debug(p)
 
-def generate_siamese_hdf5(same_sequence_file, diff_sequence_file, data_np_source, save_target, dimension, IMAGE_SIZE):
-    h5_file = hy.File(save_target, 'w')
-    data = np.zeros((1, 400, 300, 300))
-    data[0][:200] = np.load("/home/hzzone/determination-of-identity/data/train/0000279404_20150528.npy")[0]
-    data[0][200:] = np.load("/home/hzzone/determination-of-identity/data/train/0000279404_20150825.npy")[0]
-    data.astype("float64")
-    labels = np.zeros(1, dtype=np.float64)
-    labels[0] = 1
-    h5_file['pair_data'] = data
-    h5_file['sim'] = labels
 
-    h5_file.close()
+
+
+def generate_siamese_hdf5(same_sequence_file, diff_sequence_file, data_np_source, save_target, dimension, IMAGE_SIZE, is_3d=True):
+    sequence_file = load(same_sequence_file, diff_sequence_file)
+    for index, sequence_sample in enumerate(sequence_file):
+        with hy.File(os.path.join(save_target, str(index)+".h5"), 'w') as h5_file:
+            data = np.zeros((1, 2*dimension, IMAGE_SIZE, IMAGE_SIZE))
+            label = int(sequence_sample[2])
+            first_sample = sequence_sample[0]
+            second_sample = sequence_sample[1]
+            first_sample_id = first_sample.split("/")[0]
+            first_sample_study_date = first_sample.split("/")[1]
+            second_sample_id = second_sample.split("/")[0]
+            second_sample_study_date = second_sample.split('/')[1]
+            p1 = os.path.join(data_np_source, "%s_%s.npy" % (first_sample_id, first_sample_study_date))
+            p2 = os.path.join(data_np_source, "%s_%s.npy" % (second_sample_id, second_sample_study_date))
+            data[0][:40] = np.load(p1)[0]
+            data[0][40:] = np.load(p2)[0]
+            if is_3d:
+                data = data[np.newaxis, :]
+            data.astype(np.float32)
+            labels = np.zeros(1, dtype=np.float32)
+            labels[0] = label
+            h5_file['pair_data'] = data
+            h5_file['sim'] = labels
+            logging.debug(sequence_sample)
+
+def generate_hdf5_txt(hdf5_source, save_path):
+    with open(save_path, "w") as f:
+        for root, dirs, files in os.walk(hdf5_source):
+            for hdf5_file in files:
+                f.write(os.path.join(root, hdf5_file)+"\n")
+
 
 if __name__ == "__main__":
     '''
@@ -293,8 +313,8 @@ if __name__ == "__main__":
     '''
     # write_sequence_file()
     # print load("../data/train_same_sequence.txt", "../data/train_diff_sequence.txt")
-    generate_siamese_lmdb("../data/train_same_sequence.txt", "../data/train_diff_sequence.txt", "/home/hzzone/1tb/id-data/train", save_target="/home/hzzone/1tb/id-data/lmdb/siamese_train_lmdb", IMAGE_SIZE=300, dimension=200)
-    generate_siamese_lmdb("../data/test_same_sequence.txt", "../data/test_diff_sequence.txt", "/home/hzzone/1tb/id-data/test", save_target="/home/hzzone/1tb/id-data/lmdb/siamese_test_lmdb", IMAGE_SIZE=300, dimension=200)
+    # generate_siamese_lmdb("../data/train_same_sequence.txt", "../data/train_diff_sequence.txt", "/home/hzzone/1tb/id-data/train", save_target="/home/hzzone/1tb/id-data/lmdb/siamese_train_lmdb", IMAGE_SIZE=300, dimension=200)
+    # generate_siamese_lmdb("../data/test_same_sequence.txt", "../data/test_diff_sequence.txt", "/home/hzzone/1tb/id-data/test", save_target="/home/hzzone/1tb/id-data/lmdb/siamese_test_lmdb", IMAGE_SIZE=300, dimension=200)
     # generate_ordinary_lmdb("../data/test_data-64-64-64.npy", save_target="../data/ordinary_test_lmdb")
     # generate_ordinary_lmdb("../data/train_data-64-64-64.npy", save_target="../data/ordinary_train_lmdb")
 
@@ -302,5 +322,9 @@ if __name__ == "__main__":
     '''
     generate hdf5
     '''
-    # generate_siamese_hdf5("../data/train_same_sequence.txt", "../data/train_diff_sequence.txt", "../data/train_data-64-64-64.npy", save_target="../data/siamese_train_h5", IMAGE_SIZE=64, dimension=64)
+    generate_siamese_hdf5("../data/train_same_sequence.txt", "../data/train_diff_sequence.txt", "/home/hzzone/1tb/id-data/train", save_target="/home/hzzone/1tb/id-data/hdf5/classification_train", IMAGE_SIZE=270, dimension=40, is_3d=False)
+    generate_siamese_hdf5("../data/test_same_sequence.txt", "../data/test_diff_sequence.txt", "/home/hzzone/1tb/id-data/test", save_target="/home/hzzone/1tb/id-data/hdf5/classification_test", IMAGE_SIZE=270, dimension=40, is_3d=False)
+    # generate_hdf5_txt("/home/hzzone/1tb/id-data/classification_hdf5/train", "train.txt")
+    # generate_hdf5_txt("/home/hzzone/1tb/id-data/hdf5/test", "test.txt")
+    # generate_ordinary_hdf5("/home/hzzone/1tb/id-data/train", save_target="/home/hzzone/1tb/id-data/classification_hdf5/train", IMAGE_SIZE=270, dimension=40)
     pass

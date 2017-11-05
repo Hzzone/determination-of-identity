@@ -12,7 +12,7 @@ layer {
   }
   data_param {
     source: "/home/hzzone/1tb/id-data/lmdb/siamese_train_lmdb"
-    batch_size: 5
+    batch_size: 50
     backend: LMDB
   }
 }

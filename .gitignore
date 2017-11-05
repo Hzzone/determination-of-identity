@@ -14,3 +14,4 @@
 /data/siamese_train_lmdb/
 *.caffemodel
 /data/
+*.solverstate
