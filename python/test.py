@@ -81,21 +81,34 @@ def get_pixels_hu(slices):
     return np.array(image, dtype=np.int16)
 
 
-def resample(image, scan, slice_count, new_spacing=[1, 1, 1]):
-    # Determine current pixel spacing
-    spacing = np.array([scan[0].SliceThickness] + scan[0].PixelSpacing, dtype=np.float32)
+# def resample(image, scan, slice_count, new_spacing=[1, 1, 1]):
+#     # Determine current pixel spacing
+#     spacing = np.array([scan[0].SliceThickness] + scan[0].PixelSpacing, dtype=np.float32)
+#
+#     resize_factor = spacing / new_spacing
+#     new_real_shape = image.shape * resize_factor
+#     new_shape = np.round(new_real_shape)
+#     new_shape[0] = slice_count
+#     real_resize_factor = new_shape / image.shape
+#     new_spacing = spacing / real_resize_factor
+#
+#     image = scipy.ndimage.interpolation.zoom(image, real_resize_factor, mode='nearest')
+#
+#     return image, new_spacing
 
-    resize_factor = spacing / new_spacing
-    new_real_shape = image.shape * resize_factor
-    new_shape = np.round(new_real_shape)
-    new_shape[0] = slice_count
-    real_resize_factor = new_shape / image.shape
-    new_spacing = spacing / real_resize_factor
+'''
+down-resampling to the size
+to solve the problem:
+    have the same number of slices scan and image size: eg: 40*120*120
+    and decrease the pressure of computation
+'''
+def resample(image, expected_shape):
+
+    real_resize_factor = np.array(expected_shape) / image.shape
 
     image = scipy.ndimage.interpolation.zoom(image, real_resize_factor, mode='nearest')
 
-    return image, new_spacing
-
+    return image
 
 def plot_3d(image, threshold=-300):
     
@@ -220,10 +233,11 @@ def calculate_pixel_mean(source):
 def preprocess(source):
 	patient = load_scan(source)
 	patient_pixels = get_pixels_hu(patient)
-	pix_resampled, spacing = resample(patient_pixels, patient, 40, [1, 1, 1])
-	padding_image = padding(pix_resampled, expected_shape=(270, 270))
-	padding_image.astype(np.float32)
-	normalized_image = normalize(padding_image)
+	# pix_resampled, spacing = resample(patient_pixels, patient, 40, [1, 1, 1])
+	pix_resampled = resample(patient_pixels, (40, 120, 120))
+	# padding_image = padding(pix_resampled, expected_shape=(270, 270))
+	# padding_image.astype(np.float32)
+	normalized_image = normalize(pix_resampled)
 	return normalized_image
 
 # 测试
