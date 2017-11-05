@@ -1,8 +1,6 @@
 import glob
 import os
-import pandas as pd
 import numpy as np # linear algebra
-import pandas as pd # data processing, CSV file I/O (e.g. pd.read_csv)
 import skimage, os
 from skimage.morphology import ball, disk, dilation, binary_erosion, remove_small_objects, erosion, closing, reconstruction, binary_closing
 from skimage.measure import label,regionprops, perimeter
@@ -83,18 +81,19 @@ def get_pixels_hu(slices):
     return np.array(image, dtype=np.int16)
 
 
-def resample(image, scan, new_spacing=[1, 1, 1]):
+def resample(image, scan, slice_count, new_spacing=[1, 1, 1]):
     # Determine current pixel spacing
     spacing = np.array([scan[0].SliceThickness] + scan[0].PixelSpacing, dtype=np.float32)
 
     resize_factor = spacing / new_spacing
     new_real_shape = image.shape * resize_factor
     new_shape = np.round(new_real_shape)
+    new_shape[0] = slice_count
     real_resize_factor = new_shape / image.shape
     new_spacing = spacing / real_resize_factor
-    
+
     image = scipy.ndimage.interpolation.zoom(image, real_resize_factor, mode='nearest')
-    
+
     return image, new_spacing
 
 
@@ -179,14 +178,14 @@ def segment_head_mask(image, slope, intercept):
         # plt.show()
     return (image*labels)*slope + intercept
 
-def padding(image, expected_shape=(200, 300, 300)):
+def padding(image, expected_shape=(300, 300)):
     dim, width, height = image.shape
     # print(image.shape)
-    expected_dim, expected_width, expected_height = expected_shape
-    padding_image = np.ones(expected_shape)*(-1024)
+    expected_width, expected_height = expected_shape
+    padding_image = np.ones((dim, expected_height, expected_width))*(-1024)
     # print(padding_image.shape)
-    low_z_offset = int((expected_dim-dim)/2)
-    high_z_offset = int((expected_dim+dim)/2)
+    # low_z_offset = int((expected_dim-dim)/2)
+    # high_z_offset = int((expected_dim+dim)/2)
     # print(low_z_offset, high_z_offset)
     high_x_offset = int((expected_width+width)/2)
     low_x_offset = int((expected_width-width)/2)
@@ -195,18 +194,18 @@ def padding(image, expected_shape=(200, 300, 300)):
     low_y_offset = int((expected_height-height)/2)
     high_y_offset = int((expected_height+height)/2)
     # print(low_y_offset, high_y_offset)
-    for index_dimmension in range(low_z_offset, high_z_offset):
-        padding_image[index_dimmension, low_y_offset: high_y_offset, low_x_offset: high_x_offset] = image[index_dimmension-low_z_offset]
+    for index_dimmension in range(dim):
+        padding_image[index_dimmension, low_y_offset: high_y_offset, low_x_offset: high_x_offset] = image[index_dimmension]
     # print(padding_image.shape)
     return padding_image
 				
-MIN_BOUND = -400.0
+MIN_BOUND = 500.0
 MAX_BOUND = 2000.0
     
 def normalize(image):
     image = (image - MIN_BOUND) / (MAX_BOUND - MIN_BOUND)
-    image[image>1] = 1.
-    image[image<0] = 0.
+    image[image > 1] = 1.
+    image[image < 0] = 0.
     return image
 
 PIXEL_MEAN = 0.25
@@ -221,33 +220,37 @@ def calculate_pixel_mean(source):
 def preprocess(source):
 	patient = load_scan(source)
 	patient_pixels = get_pixels_hu(patient)
-	pix_resampled, spacing = resample(patient_pixels, patient, [1, 1, 1])
-	padding_image = padding(pix_resampled, expected_shape=(200, 300, 300))
-	padding_image.astype("float64")
+	pix_resampled, spacing = resample(patient_pixels, patient, 40, [1, 1, 1])
+	padding_image = padding(pix_resampled, expected_shape=(270, 270))
+	padding_image.astype("float32")
 	normalized_image = normalize(padding_image)
 	return normalized_image
+
 # 测试
 if __name__ == "__main__":
-	train_source = "/Volumes/Hzzone/classifited/train"
-	test_source = "/Volumes/Hzzone/classifited/test"
-	train_data = []
-	test_data = []
-	for person in os.listdir(train_source):
-		p1 = ospj(train_source, person)
-		for each_sample in os.listdir(p1):
-			p2 = ospj(p1, each_sample)
-			logging.debug(p2)
-			train_data.append([preprocess(p2), person, each_sample])
+	train_source = "/home/hzzone/classifited/train"
+	test_source = "/home/hzzone/classifited/test"
 
+	file_list = []
 	for person in os.listdir(test_source):
 		p1 = ospj(test_source, person)
-		for each_sample in os.listdir(ospj(test_source, person)):
+		for each_sample in os.listdir(p1):
 			p2 = ospj(p1, each_sample)
-			logging.debug(p2)
-			test_data.append([preprocess(p2), person, each_sample])
+			file_list.append(p2)
+	for index, each_sample in enumerate(file_list):
+		logging.debug("%s %s" % (index, p2))
+		patient = each_sample.split("/")[-2]
+		study_date = each_sample.split("/")[-1]
+        np.save("/home/hzzone/1tb/id-data/test/%s_%s.npy" % (patient, study_date), [preprocess(p2), person, each_sample])
 
-	# np.save('../data/train_data-{}-{}-{}.npy'.format(IMAGE_SIZE, IMAGE_SIZE, HM_SLICES), train_data)
-	# np.save('../data/test_data-{}-{}-{}.npy'.format(IMAGE_SIZE, IMAGE_SIZE, HM_SLICES), test_data)
-	np.save("../data/train_data.npy", train_data)
-	np.save("../data/test_data.npy", test_data)
-
+    file_list = []
+    for person in os.listdir(test_source):
+        p1 = ospj(test_source, person)
+    for each_sample in os.listdir(p1):
+        p2 = ospj(p1, each_sample)
+    file_list.append(p2)
+    for index, each_sample in enumerate(file_list):
+        logging.debug("%s %s" % (index, p2))
+    patient = each_sample.split("/")[-2]
+    study_date = each_sample.split("/")[-1]
+    np.save("/home/hzzone/1tb/id-data/test/%s_%s.npy" % (patient, study_date), [preprocess(p2), person, each_sample])

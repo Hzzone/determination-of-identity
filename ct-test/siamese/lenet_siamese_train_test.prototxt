@@ -8,11 +8,11 @@ layer {
     phase: TRAIN
   }
   transform_param {
-    scale: 0.00390625
+    crop_size: 270
   }
   data_param {
-    source: "../../data/siamese_train_lmdb"
-    batch_size: 100
+    source: "/home/hzzone/1tb/id-data/lmdb/siamese_train_lmdb"
+    batch_size: 5
     backend: LMDB
   }
 }
@@ -25,11 +25,11 @@ layer {
     phase: TEST
   }
   transform_param {
-    scale: 0.00390625
+    crop_size: 270
   }
   data_param {
-    source: "../../data/siamese_test_lmdb"
-    batch_size: 30
+    source: "/home/hzzone/1tb/id-data/lmdb/siamese_test_lmdb"
+    batch_size: 2
     backend: LMDB
   }
 }
@@ -41,7 +41,7 @@ layer {
   top: "data_p"
   slice_param {
     slice_dim: 1
-    slice_point: 64
+    slice_point: 200
   }
 }
 layer {
@@ -117,34 +117,9 @@ layer {
   }
 }
 layer {
-  name: "conv3"
-  type: "Convolution"
-  bottom: "pool2"
-  top: "conv3"
-  param {
-    name: "conv3_w"
-    lr_mult: 1
-  }
-  param {
-    name: "conv3_b"
-    lr_mult: 2
-  }
-  convolution_param {
-    num_output: 512
-    kernel_size: 3
-    stride: 1
-    weight_filler {
-      type: "xavier"
-    }
-    bias_filler {
-      type: "constant"
-    }
-  }
-}
-layer {
   name: "ip1"
   type: "InnerProduct"
-  bottom: "conv3"
+  bottom: "pool2"
   top: "ip1"
   param {
     name: "ip1_w"
@@ -155,7 +130,7 @@ layer {
     lr_mult: 2
   }
   inner_product_param {
-    num_output: 1024
+    num_output: 512
     weight_filler {
       type: "xavier"
     }
@@ -184,7 +159,7 @@ layer {
     lr_mult: 2
   }
   inner_product_param {
-    num_output: 2048
+    num_output: 1024
     weight_filler {
       type: "xavier"
     }
@@ -291,34 +266,9 @@ layer {
   }
 }
 layer {
-  name: "conv3_p"
-  type: "Convolution"
-  bottom: "pool2_p"
-  top: "conv3_p"
-  param {
-    name: "conv3_w"
-    lr_mult: 1
-  }
-  param {
-    name: "conv3_b"
-    lr_mult: 2
-  }
-  convolution_param {
-    num_output: 512
-    kernel_size: 3
-    stride: 1
-    weight_filler {
-      type: "xavier"
-    }
-    bias_filler {
-      type: "constant"
-    }
-  }
-}
-layer {
   name: "ip1_p"
   type: "InnerProduct"
-  bottom: "conv3_p"
+  bottom: "pool2_p"
   top: "ip1_p"
   param {
     name: "ip1_w"
@@ -329,7 +279,7 @@ layer {
     lr_mult: 2
   }
   inner_product_param {
-    num_output: 1024
+    num_output: 512
     weight_filler {
       type: "xavier"
     }
@@ -358,7 +308,7 @@ layer {
     lr_mult: 2
   }
   inner_product_param {
-    num_output: 2048
+    num_output: 1024
     weight_filler {
       type: "xavier"
     }
@@ -399,5 +349,57 @@ layer {
   top: "loss"
   contrastive_loss_param {
     margin: 1
+  }
+}
+layer {
+  name: "concat_feat"
+  type: "Concat"
+  bottom: "feat"
+  bottom: "feat_p"
+  top: "concat_feat"
+  concat_param {
+    axis: 1
+  }
+}
+layer {
+  name: "classifier"
+  type: "InnerProduct"
+  bottom: "concat_feat"
+  top: "classifier"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  param {
+    lr_mult: 2
+    decay_mult: 0
+  }
+  inner_product_param {
+    num_output: 2
+    weight_filler {
+      type: "gaussian"
+      std: 0.01
+    }
+    bias_filler {
+      type: "constant"
+      value: 0
+    }
+  }
+}
+layer {
+  name: "classifier/loss"
+  type: "SoftmaxWithLoss"
+  bottom: "classifier"
+  bottom: "sim"
+  top: "classifier/loss"
+}
+layer {
+  name: "accuracy"
+  type: "Accuracy"
+  bottom: "classifier"
+  bottom: "sim"
+  top: "accuracy"
+  include {
+    phase: TEST
   }
 }

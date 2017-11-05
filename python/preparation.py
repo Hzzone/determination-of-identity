@@ -15,6 +15,8 @@ from itertools import combinations
 import random
 import lmdb
 import utils
+import h5py as hy
+
 
 import logging
 
@@ -198,7 +200,6 @@ pay attention to shuffle the train list
 def generate_siamese_lmdb(same_sequence_file, diff_sequence_file, data_np_source, save_target, dimension, IMAGE_SIZE):
     env = lmdb.Environment(save_target, map_size=int(1e12))
     sequence_file = load(same_sequence_file, diff_sequence_file)
-    all_data = np.load(data_np_source)
     with env.begin(write=True) as txn:
         datum = caffe.proto.caffe_pb2.Datum()
         datum.channels = 2*dimension
@@ -213,13 +214,10 @@ def generate_siamese_lmdb(same_sequence_file, diff_sequence_file, data_np_source
             first_sample_study_date = first_sample.split("/")[1]
             second_sample_id = second_sample.split("/")[0]
             second_sample_study_date = second_sample.split('/')[1]
-            for x in range(all_data.shape[0]):
-                if all_data[x][1] == first_sample_id and all_data[x][2] == first_sample_study_date:
-                    sample[:dimension, :, :] = all_data[x][0]
-                    logging.debug("first sample hit!")
-                if all_data[x][1] == second_sample_id and all_data[x][2] == second_sample_study_date:
-                    sample[dimension:, :, :] = all_data[x][0]
-                    logging.debug("second sample hit!")
+            p1 = os.path.join(data_np_source, "%s_%s.npy" % (first_sample_id, first_sample_study_date))
+            p2 = os.path.join(data_np_source, "%s_%s.npy" % (second_sample_id, second_sample_study_date))
+            sample[:dimension] = np.load(p1)[0]
+            sample[dimension:] = np.load(p2)[0]
             datum.data = sample.tobytes()
             datum.label = label
             str_id = "%8d" % index
@@ -252,6 +250,19 @@ def generate_ordinary_lmdb(data_np_source, save_target, dimension=64, IMAGE_SIZE
             print str_id, each_sample[1], dic[each_sample[1]]
             txn.put(str_id, datum.SerializeToString())
 
+def generate_siamese_hdf5(same_sequence_file, diff_sequence_file, data_np_source, save_target, dimension, IMAGE_SIZE):
+    h5_file = hy.File(save_target, 'w')
+    data = np.zeros((1, 400, 300, 300))
+    data[0][:200] = np.load("/home/hzzone/determination-of-identity/data/train/0000279404_20150528.npy")[0]
+    data[0][200:] = np.load("/home/hzzone/determination-of-identity/data/train/0000279404_20150825.npy")[0]
+    data.astype("float64")
+    labels = np.zeros(1, dtype=np.float64)
+    labels[0] = 1
+    h5_file['pair_data'] = data
+    h5_file['sim'] = labels
+
+    h5_file.close()
+
 if __name__ == "__main__":
     '''
     data process test
@@ -282,8 +293,14 @@ if __name__ == "__main__":
     '''
     # write_sequence_file()
     # print load("../data/train_same_sequence.txt", "../data/train_diff_sequence.txt")
-    generate_siamese_lmdb("../data/train_same_sequence.txt", "../data/train_diff_sequence.txt", "../data/train_data-64-64-64.npy", save_target="../data/siamese_train_lmdb", IMAGE_SIZE=64, dimension=64)
-    generate_siamese_lmdb("../data/test_same_sequence.txt", "../data/test_diff_sequence.txt", "../data/test_data-64-64-64.npy", save_target="../data/siamese_test_lmdb", IMAGE_SIZE=64, dimension=64)
+    generate_siamese_lmdb("../data/train_same_sequence.txt", "../data/train_diff_sequence.txt", "/home/hzzone/1tb/id-data/train", save_target="/home/hzzone/1tb/id-data/lmdb/siamese_train_lmdb", IMAGE_SIZE=300, dimension=200)
+    generate_siamese_lmdb("../data/test_same_sequence.txt", "../data/test_diff_sequence.txt", "/home/hzzone/1tb/id-data/test", save_target="/home/hzzone/1tb/id-data/lmdb/siamese_test_lmdb", IMAGE_SIZE=300, dimension=200)
     # generate_ordinary_lmdb("../data/test_data-64-64-64.npy", save_target="../data/ordinary_test_lmdb")
     # generate_ordinary_lmdb("../data/train_data-64-64-64.npy", save_target="../data/ordinary_train_lmdb")
+
+
+    '''
+    generate hdf5
+    '''
+    # generate_siamese_hdf5("../data/train_same_sequence.txt", "../data/train_diff_sequence.txt", "../data/train_data-64-64-64.npy", save_target="../data/siamese_train_h5", IMAGE_SIZE=64, dimension=64)
     pass

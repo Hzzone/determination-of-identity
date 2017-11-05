@@ -13,3 +13,4 @@
 /data/siamese_test_lmdb/
 /data/siamese_train_lmdb/
 *.caffemodel
+/data/
