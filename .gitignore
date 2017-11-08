@@ -15,3 +15,5 @@
 *.caffemodel
 /data/
 *.solverstate
+/ct-test/siamese/train/
+*.caffemodel_features.txt

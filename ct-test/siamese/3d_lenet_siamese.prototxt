@@ -1,0 +1,813 @@
+name: "C3D-UCF101Net"
+layer {
+  name: "pair_data"
+  type: "HDF5Data"
+  top: "pair_data"
+  top: "sim"
+  hdf5_data_param {
+    source: "./train.txt"
+    # 6GB GPU: use batch_size of ~30. 12GB: ~50. Adjust for your GPU memory
+    shuffle: true
+    batch_size: 3
+  }
+  include {
+    phase: TRAIN
+  }
+}
+layer {
+  name: "slice_pair"
+  type: "Slice"
+  bottom: "pair_data"
+  top: "data"
+  top: "data_p"
+  slice_param {
+    slice_dim: 2
+    slice_point: 40
+  }
+}
+# ----- 1st group -----
+layer {
+  name: "conv1a"
+  type: "Convolution3D"
+  bottom: "data"
+  top: "conv1a"
+  param {
+    name: "conv1a_w"
+    lr_mult: 1
+    decay_mult: 1
+  }
+  param {
+    name: "conv1a_b"
+    lr_mult: 2
+    decay_mult: 0
+  }
+  convolution3d_param {
+    num_output: 64
+    kernel_size: 3
+    kernel_depth: 3
+    stride: 1
+    temporal_stride: 1
+    pad: 1
+    temporal_pad: 1
+    weight_filler {
+      type: "gaussian"
+      std: 0.01
+    }
+    bias_filler {
+      type: "constant"
+      value: 0
+    }
+  }
+}
+layer {
+  name: "relu1a"
+  type: "ReLU"
+  bottom: "conv1a"
+  top: "conv1a"
+}
+layer {
+  name: "pool1"
+  type: "Pooling3D"
+  bottom: "conv1a"
+  top: "pool1"
+  pooling3d_param {
+    pool: MAX
+    kernel_size: 2
+    kernel_depth: 1
+    stride: 2
+    temporal_stride: 1
+  }
+}
+
+# ----- 2nd group -----
+layer {
+  name: "conv2a"
+  type: "Convolution3D"
+  bottom: "pool1"
+  top: "conv2a"
+  param {
+    name: "conv2a_w"
+    lr_mult: 1
+    decay_mult: 1
+  }
+  param {
+    name: "conv2a_b"
+    lr_mult: 2
+    decay_mult: 0
+  }
+  convolution3d_param {
+    num_output: 128
+    kernel_size:3
+    kernel_depth: 3
+    stride: 1
+    temporal_stride: 1
+    pad: 1
+    temporal_pad: 1
+    weight_filler {
+      type: "gaussian"
+      std: 0.01
+    }
+    bias_filler {
+      type: "constant"
+      value: 1
+    }
+  }
+}
+layer {
+  name: "relu2a"
+  type: "ReLU"
+  bottom: "conv2a"
+  top: "conv2a"
+}
+layer {
+  name: "pool2"
+  type: "Pooling3D"
+  bottom: "conv2a"
+  top: "pool2"
+  pooling3d_param {
+    pool: MAX
+    kernel_size: 2
+    kernel_depth: 2
+    stride: 2
+    temporal_stride: 2
+  }
+}
+
+# ----- 3rd group -----
+layer {
+  name: "conv3a"
+  type: "Convolution3D"
+  bottom: "pool2"
+  top: "conv3a"
+  param {
+    name: "conv3a_w"
+    lr_mult: 1
+    decay_mult: 1
+  }
+  param {
+    name: "conv3a_b"
+    lr_mult: 2
+    decay_mult: 0
+  }
+  convolution3d_param {
+    num_output: 256
+    kernel_size: 3
+    kernel_depth: 3
+    stride: 1
+    temporal_stride: 1
+    pad: 1
+    temporal_pad: 1
+    weight_filler {
+      type: "gaussian"
+      std: 0.01
+    }
+    bias_filler {
+      type: "constant"
+      value: 1
+    }
+  }
+}
+layer {
+  name: "relu3a"
+  type: "ReLU"
+  bottom: "conv3a"
+  top: "conv3a"
+}
+layer {
+  name: "pool3"
+  type: "Pooling3D"
+  bottom: "conv3a"
+  top: "pool3"
+  pooling3d_param {
+    pool: MAX
+    kernel_size: 2
+    kernel_depth: 2
+    stride: 2
+    temporal_stride: 2
+  }
+}
+
+# ----- 4th group -----
+layer {
+  name: "conv4a"
+  type: "Convolution3D"
+  bottom: "pool3"
+  top: "conv4a"
+  param {
+    name: "conv4a_w"
+    lr_mult: 1
+    decay_mult: 1
+  }
+  param {
+    name: "conv4a_b"
+    lr_mult: 2
+    decay_mult: 0
+  }
+  convolution3d_param {
+    num_output: 256
+    kernel_size: 3
+    kernel_depth: 3
+    stride: 1
+    temporal_stride: 1
+    pad: 1
+    temporal_pad: 1
+    weight_filler {
+      type: "gaussian"
+      std: 0.01
+    }
+    bias_filler {
+      type: "constant"
+      value: 1
+    }
+  }
+}
+layer {
+  name: "relu4a"
+  type: "ReLU"
+  bottom: "conv4a"
+  top: "conv4a"
+}
+layer {
+  name: "pool4"
+  type: "Pooling3D"
+  bottom: "conv4a"
+  top: "pool4"
+  pooling3d_param {
+    pool: MAX
+    kernel_size: 2
+    kernel_depth: 2
+    stride: 2
+    temporal_stride: 2
+  }
+}
+
+# ----- 5th group -----
+layer {
+  name: "conv5a"
+  type: "Convolution3D"
+  bottom: "pool4"
+  top: "conv5a"
+  param {
+    name: "conv5a_w"
+    lr_mult: 1
+    decay_mult: 1
+  }
+  param {
+    name: "conv5a_b"
+    lr_mult: 2
+    decay_mult: 0
+  }
+  convolution3d_param {
+    num_output: 256
+    kernel_size: 3
+    kernel_depth: 3
+    stride: 1
+    temporal_stride: 1
+    pad: 1
+    temporal_pad: 1
+    weight_filler {
+      type: "gaussian"
+      std: 0.01
+    }
+    bias_filler {
+      type: "constant"
+      value: 1
+    }
+  }
+}
+layer {
+  name: "relu5a"
+  type: "ReLU"
+  bottom: "conv5a"
+  top: "conv5a"
+}
+layer {
+  name: "pool5"
+  type: "Pooling3D"
+  bottom: "conv5a"
+  top: "pool5"
+  pooling3d_param {
+    pool: MAX
+    kernel_size: 2
+    kernel_depth: 2
+    stride: 2
+    temporal_stride: 2
+  }
+}
+
+# ----- 1st fc group -----
+layer {
+  name: "fc6"
+  type: "InnerProduct"
+  bottom: "pool5"
+  top: "fc6"
+  param {
+    name: "fc6_w"
+    lr_mult: 1
+    decay_mult: 1
+  }
+  param {
+  	name: "fc6_b"
+    lr_mult: 2
+    decay_mult: 0
+  }
+  inner_product_param {
+    num_output: 2048
+    weight_filler {
+      type: "gaussian"
+      std: 0.005
+    }
+    bias_filler {
+      type: "constant"
+      value: 1
+    }
+  }
+}
+layer {
+  name: "relu6"
+  type: "ReLU"
+  bottom: "fc6"
+  top: "fc6"
+}
+layer {
+  name: "drop6"
+  type: "Dropout"
+  bottom: "fc6"
+  top: "fc6"
+  dropout_param {
+    dropout_ratio: 0.5
+  }
+}
+
+# ----- 2nd fc group -----
+layer {
+  name: "fc7"
+  type: "InnerProduct"
+  bottom: "fc6"
+  top: "fc7"
+  param {
+    name: "fc7_w"
+    lr_mult: 1
+    decay_mult: 1
+  }
+  param {
+  	name: "fc7_b"
+    lr_mult: 2
+    decay_mult: 0
+  }
+  inner_product_param {
+    num_output: 2048
+    weight_filler {
+      type: "gaussian"
+      std: 0.005
+    }
+    bias_filler {
+      type: "constant"
+      value: 1
+    }
+  }
+}
+layer {
+  name: "relu7"
+  type: "ReLU"
+  bottom: "fc7"
+  top: "fc7"
+}
+layer {
+  name: "drop7"
+  type: "Dropout"
+  bottom: "fc7"
+  top: "fc7"
+  dropout_param {
+    dropout_ratio: 0.5
+  }
+}
+
+# ----- 3rd fc group -----
+layer {
+  name: "fc8"
+  type: "InnerProduct"
+  bottom: "fc7"
+  top: "fc8"
+  param {
+    name: "fc8_w"
+    lr_mult: 1
+    decay_mult: 1
+  }
+  param {
+  	name: "fc8_b"
+    lr_mult: 2
+    decay_mult: 0
+  }
+  inner_product_param {
+    num_output: 101
+    weight_filler {
+      type: "gaussian"
+      std: 0.01
+    }
+    bias_filler {
+      type: "constant"
+      value: 0
+    }
+  }
+}
+
+##--------------------
+
+# ----- 1st group -----
+layer {
+  name: "conv1a_p"
+  type: "Convolution3D"
+  bottom: "data_p"
+  top: "conv1a_p"
+  param {
+    name: "conv1a_w"
+    lr_mult: 1
+    decay_mult: 1
+  }
+  param {
+    name: "conv1a_b"
+    lr_mult: 2
+    decay_mult: 0
+  }
+  convolution3d_param {
+    num_output: 64
+    kernel_size: 3
+    kernel_depth: 3
+    stride: 1
+    temporal_stride: 1
+    pad: 1
+    temporal_pad: 1
+    weight_filler {
+      type: "gaussian"
+      std: 0.01
+    }
+    bias_filler {
+      type: "constant"
+      value: 0
+    }
+  }
+}
+layer {
+  name: "relu1a_p"
+  type: "ReLU"
+  bottom: "conv1a_p"
+  top: "conv1a_p"
+}
+layer {
+  name: "pool1_p"
+  type: "Pooling3D"
+  bottom: "conv1a_p"
+  top: "pool1_p"
+  pooling3d_param {
+    pool: MAX
+    kernel_size: 2
+    kernel_depth: 1
+    stride: 2
+    temporal_stride: 1
+  }
+}
+
+# ----- 2nd group -----
+layer {
+  name: "conv2a_p"
+  type: "Convolution3D"
+  bottom: "pool1_p"
+  top: "conv2a_p"
+  param {
+    name: "conv2a_w"
+    lr_mult: 1
+    decay_mult: 1
+  }
+  param {
+    name: "conv2a_b"
+    lr_mult: 2
+    decay_mult: 0
+  }
+  convolution3d_param {
+    num_output: 128
+    kernel_size:3
+    kernel_depth: 3
+    stride: 1
+    temporal_stride: 1
+    pad: 1
+    temporal_pad: 1
+    weight_filler {
+      type: "gaussian"
+      std: 0.01
+    }
+    bias_filler {
+      type: "constant"
+      value: 1
+    }
+  }
+}
+layer {
+  name: "relu2a_p"
+  type: "ReLU"
+  bottom: "conv2a_p"
+  top: "conv2a_p"
+}
+layer {
+  name: "pool2_p"
+  type: "Pooling3D"
+  bottom: "conv2a_p"
+  top: "pool2_p"
+  pooling3d_param {
+    pool: MAX
+    kernel_size: 2
+    kernel_depth: 2
+    stride: 2
+    temporal_stride: 2
+  }
+}
+
+# ----- 3rd group -----
+layer {
+  name: "conv3a_p"
+  type: "Convolution3D"
+  bottom: "pool2_p"
+  top: "conv3a_p"
+  param {
+    name: "conv3a_w"
+    lr_mult: 1
+    decay_mult: 1
+  }
+  param {
+    name: "conv3a_b"
+    lr_mult: 2
+    decay_mult: 0
+  }
+  convolution3d_param {
+    num_output: 256
+    kernel_size: 3
+    kernel_depth: 3
+    stride: 1
+    temporal_stride: 1
+    pad: 1
+    temporal_pad: 1
+    weight_filler {
+      type: "gaussian"
+      std: 0.01
+    }
+    bias_filler {
+      type: "constant"
+      value: 1
+    }
+  }
+}
+layer {
+  name: "relu3a_p"
+  type: "ReLU"
+  bottom: "conv3a_p"
+  top: "conv3a_p"
+}
+layer {
+  name: "pool3_p"
+  type: "Pooling3D"
+  bottom: "conv3a_p"
+  top: "pool3_p"
+  pooling3d_param {
+    pool: MAX
+    kernel_size: 2
+    kernel_depth: 2
+    stride: 2
+    temporal_stride: 2
+  }
+}
+
+# ----- 4th group -----
+layer {
+  name: "conv4a_p"
+  type: "Convolution3D"
+  bottom: "pool3_p"
+  top: "conv4a_p"
+  param {
+    name: "conv4a_w"
+    lr_mult: 1
+    decay_mult: 1
+  }
+  param {
+    name: "conv4a_b"
+    lr_mult: 2
+    decay_mult: 0
+  }
+  convolution3d_param {
+    num_output: 256
+    kernel_size: 3
+    kernel_depth: 3
+    stride: 1
+    temporal_stride: 1
+    pad: 1
+    temporal_pad: 1
+    weight_filler {
+      type: "gaussian"
+      std: 0.01
+    }
+    bias_filler {
+      type: "constant"
+      value: 1
+    }
+  }
+}
+layer {
+  name: "relu4a_p"
+  type: "ReLU"
+  bottom: "conv4a_p"
+  top: "conv4a_p"
+}
+layer {
+  name: "pool4_p"
+  type: "Pooling3D"
+  bottom: "conv4a_p"
+  top: "pool4_p"
+  pooling3d_param {
+    pool: MAX
+    kernel_size: 2
+    kernel_depth: 2
+    stride: 2
+    temporal_stride: 2
+  }
+}
+
+# ----- 5th group -----
+layer {
+  name: "conv5a_p"
+  type: "Convolution3D"
+  bottom: "pool4_p"
+  top: "conv5a_p"
+  param {
+    name: "conv5a_w"
+    lr_mult: 1
+    decay_mult: 1
+  }
+  param {
+    name: "conv5a_b"
+    lr_mult: 2
+    decay_mult: 0
+  }
+  convolution3d_param {
+    num_output: 256
+    kernel_size: 3
+    kernel_depth: 3
+    stride: 1
+    temporal_stride: 1
+    pad: 1
+    temporal_pad: 1
+    weight_filler {
+      type: "gaussian"
+      std: 0.01
+    }
+    bias_filler {
+      type: "constant"
+      value: 1
+    }
+  }
+}
+layer {
+  name: "relu5a_p"
+  type: "ReLU"
+  bottom: "conv5a_p"
+  top: "conv5a_p"
+}
+layer {
+  name: "pool5_p"
+  type: "Pooling3D"
+  bottom: "conv5a_p"
+  top: "pool5_p"
+  pooling3d_param {
+    pool: MAX
+    kernel_size: 2
+    kernel_depth: 2
+    stride: 2
+    temporal_stride: 2
+  }
+}
+
+# ----- 1st fc group -----
+layer {
+  name: "fc6_p"
+  type: "InnerProduct"
+  bottom: "pool5_p"
+  top: "fc6_p"
+  param {
+    name: "fc6_w"
+    lr_mult: 1
+    decay_mult: 1
+  }
+  param {
+  	name: "fc6_b"
+    lr_mult: 2
+    decay_mult: 0
+  }
+  inner_product_param {
+    num_output: 2048
+    weight_filler {
+      type: "gaussian"
+      std: 0.005
+    }
+    bias_filler {
+      type: "constant"
+      value: 1
+    }
+  }
+}
+layer {
+  name: "relu6_p"
+  type: "ReLU"
+  bottom: "fc6_p"
+  top: "fc6_p"
+}
+layer {
+  name: "drop6_p"
+  type: "Dropout"
+  bottom: "fc6_p"
+  top: "fc6_p"
+  dropout_param {
+    dropout_ratio: 0.5
+  }
+}
+
+# ----- 2nd fc group -----
+layer {
+  name: "fc7_p"
+  type: "InnerProduct"
+  bottom: "fc6_p"
+  top: "fc7_p"
+  param {
+    name: "fc7_w"
+    lr_mult: 1
+    decay_mult: 1
+  }
+  param {
+  	name: "fc7_b"
+    lr_mult: 2
+    decay_mult: 0
+  }
+  inner_product_param {
+    num_output: 2048
+    weight_filler {
+      type: "gaussian"
+      std: 0.005
+    }
+    bias_filler {
+      type: "constant"
+      value: 1
+    }
+  }
+}
+layer {
+  name: "relu7_p"
+  type: "ReLU"
+  bottom: "fc7_p"
+  top: "fc7_p"
+}
+layer {
+  name: "drop7_p"
+  type: "Dropout"
+  bottom: "fc7_p"
+  top: "fc7_p"
+  dropout_param {
+    dropout_ratio: 0.5
+  }
+}
+
+# ----- 3rd fc group -----
+layer {
+  name: "fc8_p"
+  type: "InnerProduct"
+  bottom: "fc7_p"
+  top: "fc8_p"
+  param {
+    name: "fc8_w"
+    lr_mult: 1
+    decay_mult: 1
+  }
+  param {
+  	name: "fc8_b"
+    lr_mult: 2
+    decay_mult: 0
+  }
+  inner_product_param {
+    num_output: 101
+    weight_filler {
+      type: "gaussian"
+      std: 0.01
+    }
+    bias_filler {
+      type: "constant"
+      value: 0
+    }
+  }
+}
+layer {
+  name: "loss"
+  type: "ContrastiveLoss"
+  bottom: "fc8"
+  bottom: "fc8_p"
+  bottom: "sim"
+  top: "loss"
+  contrastive_loss_param {
+    margin: 1
+  }
+}

@@ -280,7 +280,7 @@ def generate_hdf5_txt(hdf5_source, save_path):
     with open(save_path, "w") as f:
         for root, dirs, files in os.walk(hdf5_source):
             for hdf5_file in files:
-                f.write(os.path.join(root, hdf5_file)+"\n")
+                f.write(os.path.abspath(os.path.join(root, hdf5_file)+"\n"))
 
 
 if __name__ == "__main__":
@@ -322,9 +322,9 @@ if __name__ == "__main__":
     '''
     generate hdf5
     '''
-    generate_siamese_hdf5("../data/train_same_sequence.txt", "../data/train_diff_sequence.txt", "/home/hzzone/1tb/id-data/train", save_target="/home/hzzone/1tb/id-data/hdf5/classification_train", IMAGE_SIZE=270, dimension=40, is_3d=False)
-    generate_siamese_hdf5("../data/test_same_sequence.txt", "../data/test_diff_sequence.txt", "/home/hzzone/1tb/id-data/test", save_target="/home/hzzone/1tb/id-data/hdf5/classification_test", IMAGE_SIZE=270, dimension=40, is_3d=False)
-    # generate_hdf5_txt("/home/hzzone/1tb/id-data/classification_hdf5/train", "train.txt")
+    # generate_siamese_hdf5("../data/train_same_sequence.txt", "../data/train_diff_sequence.txt", "/home/hzzone/1tb/id-data/train", save_target="../ct-test/siamese/train", IMAGE_SIZE=120, dimension=40)
+    # generate_siamese_hdf5("../data/test_same_sequence.txt", "../data/test_diff_sequence.txt", "/home/hzzone/1tb/id-data/test", save_target="/home/hzzone/1tb/id-data/hdf5/classification_test", IMAGE_SIZE=270, dimension=40, is_3d=False)
+    generate_hdf5_txt("../ct-test/siamese/train", "../ct-test/siamese/train.txt")
     # generate_hdf5_txt("/home/hzzone/1tb/id-data/hdf5/test", "test.txt")
     # generate_ordinary_hdf5("/home/hzzone/1tb/id-data/train", save_target="/home/hzzone/1tb/id-data/classification_hdf5/train", IMAGE_SIZE=270, dimension=40)
     pass
