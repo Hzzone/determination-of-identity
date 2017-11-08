@@ -284,4 +284,4 @@ if __name__ == "__main__":
 		logging.debug("%s %s" % (index, p2))
 		patient = each_sample.split("/")[-2]
 		study_date = each_sample.split("/")[-1]
-		np.save("/home/hzzone/1tb/id-data/test/%s_%s.npy" % (patient, study_date), [preprocess(p2), person, each_sample])
+		np.save("/home/hzzone/1tb/id-data/test/%s_%s.npy" % (patient, study_date), [preprocess(p2), patient, study_date])

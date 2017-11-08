@@ -26,12 +26,12 @@ def ordinary_predict_dataset(source, caffemodel, deploy_file, LAST_LAYER_NAME, s
         patient_id = im[1]
         study_date = im[2]
         im = im[0]
-        im = im[np.newaxis, :]
+        # im = im[np.newaxis, :]
         net.blobs['data'].data[...] = im
         output = net.forward()
         features = output[LAST_LAYER_NAME]
         with open(save_features_file, "a") as f:
-            f.write("%s %s %s\n" % (patient_id, study_date, " ".join(features[0].tolist())))
+            f.write("%s %s %s\n" % (patient_id, study_date, " ".join(map(str, features[0].tolist()))))
 
 def write_model_dir_features(caffemodel_source_dir, target_save_path, test_data_source, deploy_file, LAST_LAYER_NAME):
     for file_name in os.listdir(caffemodel_source_dir):
@@ -92,7 +92,7 @@ def read_file_and_output_accuracy(features_file):
     # plt.show()
 
 if __name__ == "__main__":
-    write_model_dir_features("/home/hzzone/determination-of-identity/ct-test/siamese/model", "/home/hzzone/determination-of-identity/ct-test/siamese/siamese_features", test_data_source="/home/hzzone/classifited/test", deploy_file="/home/hzzone/determination-of-identity/ct-test/siamese/3d_siamese_deploy.prototxt", LAST_LAYER_NAME="fc8")
+    write_model_dir_features("/home/hzzone/determination-of-identity/ct-test/siamese/model", "/home/hzzone/determination-of-identity/ct-test/siamese/siamese_features", test_data_source="/home/hzzone/1tb/id-data/test", deploy_file="/home/hzzone/determination-of-identity/ct-test/siamese/3d_siamese_deploy.prototxt", LAST_LAYER_NAME="fc8")
     # for file_name in os.listdir("../ct-test/siamese/siamese_features"):
     #     read__file_and_output_accuracy("./temp.txt", os.path.join("./classfication_features", file_name), os.path.join("./im", file_name+".jpg"))
     # x1("./temp.txt")
