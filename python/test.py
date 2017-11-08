@@ -212,7 +212,7 @@ def padding(image, expected_shape=(300, 300)):
     # print(padding_image.shape)
     return padding_image
 				
-MIN_BOUND = 500.0
+MIN_BOUND = -400.0
 MAX_BOUND = 2000.0
     
 def normalize(image):
@@ -227,8 +227,21 @@ def zero_center(image):
     image = image - PIXEL_MEAN
     return image
 
-def calculate_pixel_mean(source):
-	pass
+def calculate_pixel_mean():
+	s = 0.
+	source = ["/home/hzzone/classifited/train", "/home/hzzone/classifited/test"]
+	file_list = []
+	for file_source in source:
+		for person in os.listdir(file_source):
+			p1 = ospj(file_source, person)
+			for each_sample in os.listdir(p1):
+				p2 = ospj(p1, each_sample)
+				file_list.append(p2)
+	for each_sample in file_list:
+		s += np.sum(preprocess(each_sample))
+		logging.debug(each_sample)
+	print(s)
+	print(s/(len(file_list)*40*120*120))
 
 def preprocess(source):
 	patient = load_scan(source)
