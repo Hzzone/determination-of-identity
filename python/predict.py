@@ -22,6 +22,7 @@ def ordinary_predict_dataset(source, caffemodel, deploy_file, LAST_LAYER_NAME, s
     net = caffe.Net(deploy_file, caffemodel, caffe.TEST)
     for each_sample in os.listdir(source):
         p1 = os.path.join(source, each_sample)
+        print p1
         im = np.load(p1)
         patient_id = im[1]
         study_date = im[2]
@@ -29,7 +30,9 @@ def ordinary_predict_dataset(source, caffemodel, deploy_file, LAST_LAYER_NAME, s
         # im = im[np.newaxis, :]
         net.blobs['data'].data[...] = im
         output = net.forward()
+        print output
         features = output[LAST_LAYER_NAME]
+        print features
         with open(save_features_file, "a") as f:
             f.write("%s %s %s\n" % (patient_id, study_date, " ".join(map(str, features[0].tolist()))))
 
@@ -51,8 +54,8 @@ def read_file_and_output_accuracy(features_file):
     with open("../data/test_same_sequence.txt") as f:
             _same = f.readlines()
     _same = [x.split(" ") for x in _same]
-    _diff = [x.split(" ") for x in _diff][len(_same)]
-    x_values = pylab.arange(-1.0, 1.01, 0.001)
+    _diff = [x.split(" ") for x in _diff][:len(_same)]
+    x_values = pylab.arange(-1.0, 1.0, 0.0001)
     max_accuracy = 0
     max_accuracy_threshold = 0
     for threshold in x_values:
@@ -90,11 +93,45 @@ def read_file_and_output_accuracy(features_file):
     #          label="(%s, %s)" % (x_values[max_index], y_values[max_index]))
     # plt.legend()
     # plt.show()
+    
+def write_reslut(features, threshold, diff_sequence_file, _same_sequence_file):
+	with open(features) as f:
+		temp = f.readlines()
+	samples = {}
+	for t in temp:
+		a = t.split(" ")
+		one_feature = [float(x) for x in a[2:]]
+		samples["/".join(a[:2])] = one_feature
+	with open("../data/test_diff_sequence.txt") as f:
+		_diff = f.readlines()
+	with open("../data/test_same_sequence.txt") as f:
+		_same = f.readlines()
+	_same = [x.split(" ") for x in _same]
+	_diff = [x.split(" ") for x in _diff]
+	result = []
+	for r in _same:
+		d = distance.cosine_distnace(samples[r[0]], samples[r[1]])
+		if d >= threshold:
+			r.append(1)
+		else:
+			r.append(0)
+		result.append(r)
+	for r in _diff:
+		d = distance.cosine_distnace(samples[r[0]], samples[r[1]])
+		if d >= threshold:
+			r.append(1)
+		else:
+			r.append(0)
+		result.append(r)
+	with open("test.txt") as f:
+		for s in result:
+			f.write("%s\n" % " ".join(s))
+		
 
 if __name__ == "__main__":
-    write_model_dir_features("/home/hzzone/determination-of-identity/ct-test/siamese/model", "/home/hzzone/determination-of-identity/ct-test/siamese/siamese_features", test_data_source="/home/hzzone/1tb/id-data/test", deploy_file="/home/hzzone/determination-of-identity/ct-test/siamese/3d_siamese_deploy.prototxt", LAST_LAYER_NAME="fc8")
-    # for file_name in os.listdir("../ct-test/siamese/siamese_features"):
-    #     read__file_and_output_accuracy("./temp.txt", os.path.join("./classfication_features", file_name), os.path.join("./im", file_name+".jpg"))
+    # write_model_dir_features("/home/hzzone/determination-of-identity/ct-test/siamese/model", "/home/hzzone/determination-of-identity/ct-test/siamese/siamese_features", test_data_source="/home/hzzone/1tb/id-data/test", deploy_file="/home/hzzone/determination-of-identity/ct-test/siamese/3d_siamese_deploy.prototxt", LAST_LAYER_NAME="fc8")
+    for file_name in os.listdir("../ct-test/siamese/siamese_features"):
+	    read_file_and_output_accuracy(os.path.join("../ct-test/siamese/siamese_features", file_name))
     # x1("./temp.txt")
     # read__file_and_output_accuracy("./temp.txt", "/home/hzzone/determination-of-identity/python/features/lenet_siamese_train_iter_1000.caffemodel_features.txt", "1.jpg")
 

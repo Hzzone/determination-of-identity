@@ -257,23 +257,9 @@ def preprocess(source):
 
 # 测试
 if __name__ == "__main__":
-	# train_source = "/home/hzzone/classifited/train"
-	#
-	# file_list = []
-	# for person in os.listdir(train_source):
-	# 	p1 = ospj(train_source, person)
-	# 	for each_sample in os.listdir(p1):
-	# 		p2 = ospj(p1, each_sample)
-	# 		file_list.append(p2)
-	# for index, each_sample in enumerate(file_list):
-	# 	logging.debug("%s %s" % (index, p2))
-	# 	patient = each_sample.split("/")[-2]
-	# 	study_date = each_sample.split("/")[-1]
-	# 	np.save("/home/hzzone/1tb/id-data/train/%s_%s.npy" % (patient, study_date), [preprocess(p2), person, each_sample])
-	
 	
 	test_source = "/home/hzzone/classifited/test"
-	
+
 	file_list = []
 	for person in os.listdir(test_source):
 		p1 = ospj(test_source, person)
@@ -281,7 +267,22 @@ if __name__ == "__main__":
 			p2 = ospj(p1, each_sample)
 			file_list.append(p2)
 	for index, each_sample in enumerate(file_list):
-		logging.debug("%s %s" % (index, p2))
 		patient = each_sample.split("/")[-2]
 		study_date = each_sample.split("/")[-1]
-		np.save("/home/hzzone/1tb/id-data/test/%s_%s.npy" % (patient, study_date), [preprocess(p2), patient, study_date])
+		np.save("/home/hzzone/1tb/id-data/test/%s_%s.npy" % (patient, study_date), [preprocess(each_sample), patient, study_date])
+		logging.debug("%s %s" % (index, each_sample))
+
+
+	train_source = "/home/hzzone/classifited/train"
+
+	file_list = []
+	for person in os.listdir(train_source):
+		p1 = ospj(train_source, person)
+		for each_sample in os.listdir(p1):
+			p2 = ospj(p1, each_sample)
+			file_list.append(p2)
+	for index, each_sample in enumerate(file_list):
+		patient = each_sample.split("/")[-2]
+		study_date = each_sample.split("/")[-1]
+		np.save("/home/hzzone/1tb/id-data/train/%s_%s.npy" % (patient, study_date), [preprocess(each_sample), patient, study_date])
+		logging.debug("%s %s" % (index, each_sample))
