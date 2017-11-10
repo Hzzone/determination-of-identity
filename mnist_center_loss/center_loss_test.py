@@ -11,7 +11,7 @@ import random
 import matplotlib.pyplot as plt
 import pylab
 import itertools
-import distance
+import python.distance
 
 
 
@@ -58,9 +58,9 @@ _diff = random.sample(_diff, totals/2)
 _same_distance = []
 _diff_distance = []
 for x in _same:
-    _same_distance.append(distance.cosine_distnace(x[0], x[1]))
+    _same_distance.append(python.distance.cosine_distnace(x[0], x[1]))
 for x in _diff:
-    _diff_distance.append(distance.cosine_distnace(x[0], x[1]))
+    _diff_distance.append(python.distance.cosine_distnace(x[0], x[1]))
 
 x_values = pylab.arange(-1.0, 1.01, 0.001)
 y_values = []
