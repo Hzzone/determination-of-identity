@@ -105,12 +105,41 @@ def write_reslut(features, threshold, diff_sequence_file, _same_sequence_file):
 	with open("test.txt") as f:
 		for s in result:
 			f.write("%s\n" % " ".join(s))
-		
+
+def write(features):
+	with open(features) as f:
+		temp = f.readlines()
+	samples = {}
+	for t in temp:
+		a = t.split(" ")
+		one_feature = [float(x) for x in a[2:]]
+		samples["/".join(a[:2])] = one_feature
+	with open("../data/test_diff_sequence.txt") as f:
+		_diff = f.readlines()
+	with open("../data/test_same_sequence.txt") as f:
+		_same = f.readlines()
+	_same = [x.strip("\n").split(" ") for x in _same]
+	_diff = [x.strip("\n").split(" ") for x in _diff]
+	result = []
+	for r in _same:
+		d = distance.cosine_distnace(samples[r[0]], samples[r[1]])
+		r.append(str(d))
+		result.append(r)
+	for r in _diff:
+		d = distance.cosine_distnace(samples[r[0]], samples[r[1]])
+		r.append(str(d))
+		result.append(r)
+	with open("test.txt", "w") as f:
+		for s in result:
+			# print(s)
+			# print(s[0], s[1], s[3])
+			f.write("%s %s %s %s\n" % (s[0], s[1], s[2], s[3]))
 
 if __name__ == "__main__":
+	write("../ct-test/siamese/siamese_features/c3d_lenet_iter_2400.caffemodel_features.txt")
     # write_model_dir_features("/home/hzzone/determination-of-identity/ct-test/siamese/model", "/home/hzzone/determination-of-identity/ct-test/siamese/siamese_features", test_data_source="/home/hzzone/1tb/id-data/test", deploy_file="/home/hzzone/determination-of-identity/ct-test/siamese/3d_siamese_deploy.prototxt", LAST_LAYER_NAME="fc8")
-    for file_name in os.listdir("../ct-test/siamese/siamese_features"):
-        read_file_and_output_accuracy(os.path.join("../ct-test/siamese/siamese_features", file_name))
+    # for file_name in os.listdir("../ct-test/siamese/siamese_features"):
+    #     read_file_and_output_accuracy(os.path.join("../ct-test/siamese/siamese_features", file_name))
     # x1("./temp.txt")
     # read__file_and_output_accuracy("./temp.txt", "/home/hzzone/determination-of-identity/python/features/lenet_siamese_train_iter_1000.caffemodel_features.txt", "1.jpg")
 
