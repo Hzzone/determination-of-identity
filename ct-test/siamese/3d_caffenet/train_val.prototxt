@@ -40,23 +40,23 @@ layer {
       value: 0
     }
   }
-    convolution3d_param {
-    num_output: 96
-    kernel_size: 3
-    kernel_depth: 3
-    stride: 1
-    temporal_stride: 1
-    pad: 1
-    temporal_pad: 1
-    weight_filler {
-      type: "gaussian"
-      std: 0.01
-    }
-    bias_filler {
-      type: "constant"
-      value: 0
-    }
+  convolution3d_param {
+  num_output: 96
+  kernel_size: 3
+  kernel_depth: 3
+  stride: 1
+  temporal_stride: 1
+  pad: 1
+  temporal_pad: 1
+  weight_filler {
+    type: "gaussian"
+    std: 0.01
   }
+  bias_filler {
+    type: "constant"
+    value: 0
+  }
+}
 }
 layer {
   name: "relu1"
