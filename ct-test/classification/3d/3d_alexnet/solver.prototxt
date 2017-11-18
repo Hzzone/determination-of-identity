@@ -1,0 +1,12 @@
+net: "./train_val.prototxt"
+base_lr: 0.001
+lr_policy: "step"
+gamma: 0.1
+stepsize: 3000
+display: 20
+max_iter: 10000
+momentum: 0.9
+weight_decay: 0.0005
+snapshot: 100
+snapshot_prefix: "/home/hzzone/1tb/id-model/classification/3d/3d_alexnet/3d_classification_alexnet_train"
+solver_mode: GPU

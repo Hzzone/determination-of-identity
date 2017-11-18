@@ -197,56 +197,32 @@ def load(same_sequence_file, diff_sequence_file):
 '''
 pay attention to shuffle the train list
 '''
-def generate_siamese_lmdb(same_sequence_file, diff_sequence_file, data_np_source, save_target, dimension, IMAGE_SIZE):
-    env = lmdb.Environment(save_target, map_size=int(1e12))
-    sequence_file = load(same_sequence_file, diff_sequence_file)
-    with env.begin(write=True) as txn:
-        datum = caffe.proto.caffe_pb2.Datum()
-        datum.channels = 2*dimension
-        datum.height = IMAGE_SIZE
-        datum.width = IMAGE_SIZE
-        sample = np.zeros((2*dimension, IMAGE_SIZE, IMAGE_SIZE))
-        for index, sequence_sample in enumerate(sequence_file):
-            label = int(sequence_sample[2])
-            first_sample = sequence_sample[0]
-            second_sample = sequence_sample[1]
-            first_sample_id = first_sample.split("/")[0]
-            first_sample_study_date = first_sample.split("/")[1]
-            second_sample_id = second_sample.split("/")[0]
-            second_sample_study_date = second_sample.split('/')[1]
-            p1 = os.path.join(data_np_source, "%s_%s.npy" % (first_sample_id, first_sample_study_date))
-            p2 = os.path.join(data_np_source, "%s_%s.npy" % (second_sample_id, second_sample_study_date))
-            sample[:dimension] = np.load(p1)[0]
-            sample[dimension:] = np.load(p2)[0]
-            datum.data = sample.tobytes()
-            datum.label = label
-            str_id = "%8d" % index
-            txn.put(str_id, datum.SerializeToString())
-            logging.debug("%s %s" % (sequence_sample, label))
-
-def generate_ordinary_hdf5(data_np_source, save_target, dimension=64, IMAGE_SIZE=64):
+def generate_ordinary_hdf5(data_np_source, save_target, dimension, IMAGE_SIZE, is_3d=True):
+    patient_id = []
     samples = []
     for np_file in os.listdir(data_np_source):
-        samples.append(np_file.split("_")[0])
-    samples = set(samples)
+        patient_id.append(np_file.split("_")[0])
+        samples.append(os.path.join(data_np_source, np_file))
+    patient_id = set(patient_id)
     k = {}
-    for index, s in enumerate(samples):
+    for index, s in enumerate(patient_id):
         k[s] = index
     print(k)
-    print(len(k))
-    # for index, np_file in enumerate(os.listdir(data_np_source)):
-    #     p_id = np_file.split("_")[0]
-    #     with hy.File(os.path.join(save_target, str(index)+".h5"), 'w') as h5_file:
-    #         data = np.zeros((1, dimension, IMAGE_SIZE, IMAGE_SIZE))
-    #         label = k[p_id]
-    #         p = os.path.join(data_np_source, np_file)
-    #         data[0] = np.load(p)[0]
-    #         data.astype(np.float32)
-    #         labels = np.zeros(1, dtype=np.float32)
-    #         labels[0] = label
-    #         h5_file['data'] = data
-    #         h5_file['label'] = labels
-    #         logging.debug(p)
+    random.shuffle(samples)
+    random.shuffle(samples)
+    for index, np_file in enumerate(samples):
+        p_id = np_file.split("/")[-1].split("_")[0]
+        with hy.File(os.path.join(save_target, str(index)+".h5"), 'w') as h5_file:
+            data = np.zeros((1, dimension, IMAGE_SIZE, IMAGE_SIZE))
+            data[0] = np.load(np_file)[0]
+            data.astype(np.float32)
+            labels = np.zeros(1, dtype=np.float32)
+            labels[0] = k[p_id]
+            if is_3d:
+                data = data[np.newaxis, :]
+            h5_file['data'] = data
+            h5_file['label'] = labels
+            logging.debug(np_file)
 
 
 
@@ -322,9 +298,14 @@ if __name__ == "__main__":
     '''
     generate hdf5
     '''
-    generate_siamese_hdf5("../data/train_same_sequence.txt", "../data/train_diff_sequence.txt", "/home/hzzone/1tb/id-data/train", save_target="../ct-test/siamese/train", IMAGE_SIZE=120, dimension=40)
-    # generate_siamese_hdf5("../data/test_same_sequence.txt", "../data/test_diff_sequence.txt", "/home/hzzone/1tb/id-data/test", save_target="/home/hzzone/1tb/id-data/hdf5/classification_test", IMAGE_SIZE=270, dimension=40, is_3d=False)
-    generate_hdf5_txt("../ct-test/siamese/train", "../ct-test/siamese/train.txt")
-    # generate_hdf5_txt("/home/hzzone/1tb/id-data/hdf5/test", "test.txt")
-    # generate_ordinary_hdf5("/home/hzzone/1tb/id-data/train", save_target="/home/hzzone/1tb/id-data/classification_hdf5/train", IMAGE_SIZE=270, dimension=40)
+    # siamese train data
+    # generate_siamese_hdf5("../data/train_same_sequence.txt", "../data/train_diff_sequence.txt", "/home/hzzone/1tb/id-data/train", save_target="/home/hzzone/1tb/id-data/siamese_3d_hdf5/train", IMAGE_SIZE=120, dimension=40, is_3d=True)
+    # generate_siamese_hdf5("../data/train_same_sequence.txt", "../data/train_diff_sequence.txt", "/home/hzzone/1tb/id-data/train", save_target="/home/hzzone/1tb/id-data/siamese_2d_hdf5/train", IMAGE_SIZE=120, dimension=40, is_3d=False)
+    generate_hdf5_txt("/home/hzzone/1tb/id-data/siamese_3d_hdf5/train", "../ct-test/siamese/3d/train.txt")
+    generate_hdf5_txt("/home/hzzone/1tb/id-data/siamese_2d_hdf5/train", "../ct-test/siamese/2d/train.txt")
+    
+    # generate_ordinary_hdf5("/home/hzzone/1tb/id-data/train", save_target="/home/hzzone/1tb/id-data/classification_2d_hdf5/train", IMAGE_SIZE=120, dimension=40, is_3d=False)
+    # generate_ordinary_hdf5("/home/hzzone/1tb/id-data/train", save_target="/home/hzzone/1tb/id-data/classification_3d_hdf5/train", IMAGE_SIZE=120, dimension=40, is_3d=True)
+    generate_hdf5_txt("/home/hzzone/1tb/id-data/classification_3d_hdf5/train", "../ct-test/classification/3d/train.txt")
+    generate_hdf5_txt("/home/hzzone/1tb/id-data/classification_2d_hdf5/train", "../ct-test/classification/2d/train.txt")
     pass
