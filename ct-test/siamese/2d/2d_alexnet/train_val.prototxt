@@ -9,7 +9,7 @@ layer {
   }
   hdf5_data_param {
     source: "../train.txt"
-    batch_size: 50
+    batch_size: 10
     shuffle: true
   }
 }
@@ -21,7 +21,7 @@ layer {
   top: "data_p"
   slice_param {
     slice_dim: 1
-    slice_point: 1
+    slice_point: 40
   }
 }
 layer {
