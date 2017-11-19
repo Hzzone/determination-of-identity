@@ -1,4 +1,4 @@
-name: "CaffeNet"
+name: "AlexNet"
 layer {
   name: "data"
   type: "Input"
@@ -22,7 +22,7 @@ layer {
   }
   convolution3d_param {
     num_output: 96
-    kernel_size: 11
+    kernel_size: 3
     kernel_depth: 3
     stride: 1
     temporal_stride: 1
@@ -51,8 +51,8 @@ layer {
   top: "pool1"
   pooling3d_param {
     pool: MAX
-    kernel_size: 3
-    kernel_depth: 3
+    kernel_size: 2
+    kernel_depth: 2
     stride: 2
     temporal_stride: 2
   }
@@ -84,7 +84,7 @@ layer {
     }
     bias_filler {
       type: "constant"
-      value: 1
+      value: 0
     }
   }
 }
@@ -101,8 +101,8 @@ layer {
   top: "pool2"
   pooling3d_param {
     pool: MAX
-    kernel_size: 3
-    kernel_depth: 3
+    kernel_size: 2
+    kernel_depth: 2
     stride: 2
     temporal_stride: 2
   }
@@ -121,13 +121,13 @@ layer {
     decay_mult: 0
   }
   convolution3d_param {
-    num_output: 256
+    num_output: 384
     kernel_size: 3
     kernel_depth: 3
     stride: 1
     temporal_stride: 1
     pad: 1
-    temporal_pad: 1    
+    temporal_pad: 1
     weight_filler {
       type: "gaussian"
       std: 0.01
@@ -164,7 +164,7 @@ layer {
     stride: 1
     temporal_stride: 1
     pad: 1
-    temporal_pad: 1    
+    temporal_pad: 1
     weight_filler {
       type: "gaussian"
       std: 0.01
@@ -195,13 +195,13 @@ layer {
     decay_mult: 0
   }
   convolution3d_param {
-    num_output: 256
+    num_output: 384
     kernel_size: 3
     kernel_depth: 3
     stride: 1
     temporal_stride: 1
     pad: 1
-    temporal_pad: 1    
+    temporal_pad: 1
     weight_filler {
       type: "gaussian"
       std: 0.01
@@ -225,8 +225,8 @@ layer {
   top: "pool5"
   pooling3d_param {
     pool: MAX
-    kernel_size: 3
-    kernel_depth: 3
+    kernel_size: 2
+    kernel_depth: 2
     stride: 2
     temporal_stride: 2
   }
@@ -245,14 +245,14 @@ layer {
     decay_mult: 0
   }
   inner_product_param {
-    num_output: 128
+    num_output: 256
     weight_filler {
       type: "gaussian"
       std: 0.005
     }
     bias_filler {
       type: "constant"
-      value: 1
+      value: 0.1
     }
   }
 }
@@ -285,14 +285,14 @@ layer {
     decay_mult: 0
   }
   inner_product_param {
-    num_output: 128
+    num_output: 256
     weight_filler {
       type: "gaussian"
       std: 0.005
     }
     bias_filler {
       type: "constant"
-      value: 1
+      value: 0.1
     }
   }
 }
@@ -325,7 +325,7 @@ layer {
     decay_mult: 0
   }
   inner_product_param {
-    num_output: 70
+    num_output: 100
     weight_filler {
       type: "gaussian"
       std: 0.01

@@ -3,17 +3,35 @@ layer {
   name: "data"
   type: "Input"
   top: "data"
-  input_param { shape: { dim: 10 dim: 3 dim: 227 dim: 227 } }
+  input_param {
+    shape: { dim: 1 dim: 40 dim: 120 dim: 120 }
+  }
 }
 layer {
   name: "conv1"
   type: "Convolution"
   bottom: "data"
   top: "conv1"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  param {
+    lr_mult: 2
+    decay_mult: 0
+  }
   convolution_param {
     num_output: 96
     kernel_size: 11
     stride: 4
+    weight_filler {
+      type: "gaussian"
+      std: 0.01
+    }
+    bias_filler {
+      type: "constant"
+      value: 0
+    }
   }
 }
 layer {
@@ -49,11 +67,27 @@ layer {
   type: "Convolution"
   bottom: "norm1"
   top: "conv2"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  param {
+    lr_mult: 2
+    decay_mult: 0
+  }
   convolution_param {
     num_output: 256
     pad: 2
     kernel_size: 5
     group: 2
+    weight_filler {
+      type: "gaussian"
+      std: 0.01
+    }
+    bias_filler {
+      type: "constant"
+      value: 1
+    }
   }
 }
 layer {
@@ -89,10 +123,26 @@ layer {
   type: "Convolution"
   bottom: "norm2"
   top: "conv3"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  param {
+    lr_mult: 2
+    decay_mult: 0
+  }
   convolution_param {
     num_output: 384
     pad: 1
     kernel_size: 3
+    weight_filler {
+      type: "gaussian"
+      std: 0.01
+    }
+    bias_filler {
+      type: "constant"
+      value: 0
+    }
   }
 }
 layer {
@@ -106,11 +156,27 @@ layer {
   type: "Convolution"
   bottom: "conv3"
   top: "conv4"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  param {
+    lr_mult: 2
+    decay_mult: 0
+  }
   convolution_param {
     num_output: 384
     pad: 1
     kernel_size: 3
     group: 2
+    weight_filler {
+      type: "gaussian"
+      std: 0.01
+    }
+    bias_filler {
+      type: "constant"
+      value: 1
+    }
   }
 }
 layer {
@@ -124,11 +190,27 @@ layer {
   type: "Convolution"
   bottom: "conv4"
   top: "conv5"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  param {
+    lr_mult: 2
+    decay_mult: 0
+  }
   convolution_param {
     num_output: 256
     pad: 1
     kernel_size: 3
     group: 2
+    weight_filler {
+      type: "gaussian"
+      std: 0.01
+    }
+    bias_filler {
+      type: "constant"
+      value: 1
+    }
   }
 }
 layer {
@@ -153,8 +235,24 @@ layer {
   type: "InnerProduct"
   bottom: "pool5"
   top: "fc6"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  param {
+    lr_mult: 2
+    decay_mult: 0
+  }
   inner_product_param {
     num_output: 4096
+    weight_filler {
+      type: "gaussian"
+      std: 0.005
+    }
+    bias_filler {
+      type: "constant"
+      value: 1
+    }
   }
 }
 layer {
@@ -177,8 +275,24 @@ layer {
   type: "InnerProduct"
   bottom: "fc6"
   top: "fc7"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  param {
+    lr_mult: 2
+    decay_mult: 0
+  }
   inner_product_param {
     num_output: 4096
+    weight_filler {
+      type: "gaussian"
+      std: 0.005
+    }
+    bias_filler {
+      type: "constant"
+      value: 1
+    }
   }
 }
 layer {
@@ -201,13 +315,23 @@ layer {
   type: "InnerProduct"
   bottom: "fc7"
   top: "fc8"
-  inner_product_param {
-    num_output: 1000
+  param {
+    lr_mult: 1
+    decay_mult: 1
   }
-}
-layer {
-  name: "prob"
-  type: "Softmax"
-  bottom: "fc8"
-  top: "prob"
+  param {
+    lr_mult: 2
+    decay_mult: 0
+  }
+  inner_product_param {
+    num_output: 100
+    weight_filler {
+      type: "gaussian"
+      std: 0.01
+    }
+    bias_filler {
+      type: "constant"
+      value: 0
+    }
+  }
 }

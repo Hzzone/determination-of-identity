@@ -1421,3 +1421,1442 @@ I1119 11:14:09.234875  9434 sgd_solver.cpp:105] Iteration 1520, lr = 0.001
 I1119 11:14:12.027113  9434 solver.cpp:218] Iteration 1540 (7.16279 iter/s, 2.79221s/20 iters), loss = 0.130617
 I1119 11:14:12.027179  9434 solver.cpp:237]     Train net output #0: loss = 0.130617 (* 1 = 0.130617 loss)
 I1119 11:14:12.027189  9434 sgd_solver.cpp:105] Iteration 1540, lr = 0.001
+I1119 11:14:14.812793  9434 solver.cpp:218] Iteration 1560 (7.17985 iter/s, 2.78557s/20 iters), loss = 0.130593
+I1119 11:14:14.812853  9434 solver.cpp:237]     Train net output #0: loss = 0.130593 (* 1 = 0.130593 loss)
+I1119 11:14:14.812865  9434 sgd_solver.cpp:105] Iteration 1560, lr = 0.001
+I1119 11:14:17.596822  9434 solver.cpp:218] Iteration 1580 (7.18409 iter/s, 2.78393s/20 iters), loss = 0.123289
+I1119 11:14:17.596884  9434 solver.cpp:237]     Train net output #0: loss = 0.123289 (* 1 = 0.123289 loss)
+I1119 11:14:17.596894  9434 sgd_solver.cpp:105] Iteration 1580, lr = 0.001
+I1119 11:14:20.217207  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_1600.caffemodel
+I1119 11:14:21.155642  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_1600.solverstate
+I1119 11:14:21.538545  9434 solver.cpp:218] Iteration 1600 (5.07407 iter/s, 3.94161s/20 iters), loss = 0.12555
+I1119 11:14:21.538614  9434 solver.cpp:237]     Train net output #0: loss = 0.12555 (* 1 = 0.12555 loss)
+I1119 11:14:21.538627  9434 sgd_solver.cpp:105] Iteration 1600, lr = 0.001
+I1119 11:14:24.340967  9434 solver.cpp:218] Iteration 1620 (7.13696 iter/s, 2.80231s/20 iters), loss = 0.118159
+I1119 11:14:24.341150  9434 solver.cpp:237]     Train net output #0: loss = 0.118159 (* 1 = 0.118159 loss)
+I1119 11:14:24.341161  9434 sgd_solver.cpp:105] Iteration 1620, lr = 0.001
+I1119 11:14:27.095572  9434 solver.cpp:218] Iteration 1640 (7.26115 iter/s, 2.75438s/20 iters), loss = 0.124506
+I1119 11:14:27.095633  9434 solver.cpp:237]     Train net output #0: loss = 0.124506 (* 1 = 0.124506 loss)
+I1119 11:14:27.095643  9434 sgd_solver.cpp:105] Iteration 1640, lr = 0.001
+I1119 11:14:29.884214  9434 solver.cpp:218] Iteration 1660 (7.17221 iter/s, 2.78854s/20 iters), loss = 0.125747
+I1119 11:14:29.884274  9434 solver.cpp:237]     Train net output #0: loss = 0.125747 (* 1 = 0.125747 loss)
+I1119 11:14:29.884286  9434 sgd_solver.cpp:105] Iteration 1660, lr = 0.001
+I1119 11:14:32.653887  9434 solver.cpp:218] Iteration 1680 (7.22134 iter/s, 2.76957s/20 iters), loss = 0.118809
+I1119 11:14:32.653951  9434 solver.cpp:237]     Train net output #0: loss = 0.118809 (* 1 = 0.118809 loss)
+I1119 11:14:32.653962  9434 sgd_solver.cpp:105] Iteration 1680, lr = 0.001
+I1119 11:14:35.290349  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_1700.caffemodel
+I1119 11:14:36.239271  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_1700.solverstate
+I1119 11:14:36.611783  9434 solver.cpp:218] Iteration 1700 (5.05334 iter/s, 3.95778s/20 iters), loss = 0.1313
+I1119 11:14:36.611845  9434 solver.cpp:237]     Train net output #0: loss = 0.1313 (* 1 = 0.1313 loss)
+I1119 11:14:36.611855  9434 sgd_solver.cpp:105] Iteration 1700, lr = 0.001
+I1119 11:14:39.407136  9434 solver.cpp:218] Iteration 1720 (7.15499 iter/s, 2.79525s/20 iters), loss = 0.126868
+I1119 11:14:39.407199  9434 solver.cpp:237]     Train net output #0: loss = 0.126868 (* 1 = 0.126868 loss)
+I1119 11:14:39.407210  9434 sgd_solver.cpp:105] Iteration 1720, lr = 0.001
+I1119 11:14:42.218389  9434 solver.cpp:218] Iteration 1740 (7.11457 iter/s, 2.81113s/20 iters), loss = 0.121556
+I1119 11:14:42.218463  9434 solver.cpp:237]     Train net output #0: loss = 0.121556 (* 1 = 0.121556 loss)
+I1119 11:14:42.218477  9434 sgd_solver.cpp:105] Iteration 1740, lr = 0.001
+I1119 11:14:45.015240  9434 solver.cpp:218] Iteration 1760 (7.15118 iter/s, 2.79674s/20 iters), loss = 0.117744
+I1119 11:14:45.015303  9434 solver.cpp:237]     Train net output #0: loss = 0.117744 (* 1 = 0.117744 loss)
+I1119 11:14:45.015314  9434 sgd_solver.cpp:105] Iteration 1760, lr = 0.001
+I1119 11:14:47.801563  9434 solver.cpp:218] Iteration 1780 (7.17819 iter/s, 2.78622s/20 iters), loss = 0.120102
+I1119 11:14:47.801626  9434 solver.cpp:237]     Train net output #0: loss = 0.120102 (* 1 = 0.120102 loss)
+I1119 11:14:47.801636  9434 sgd_solver.cpp:105] Iteration 1780, lr = 0.001
+I1119 11:14:50.419908  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_1800.caffemodel
+I1119 11:14:51.408654  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_1800.solverstate
+I1119 11:14:51.785307  9434 solver.cpp:218] Iteration 1800 (5.02055 iter/s, 3.98363s/20 iters), loss = 0.130306
+I1119 11:14:51.785369  9434 solver.cpp:237]     Train net output #0: loss = 0.130306 (* 1 = 0.130306 loss)
+I1119 11:14:51.785379  9434 sgd_solver.cpp:105] Iteration 1800, lr = 0.001
+I1119 11:14:54.495512  9434 solver.cpp:218] Iteration 1820 (7.37979 iter/s, 2.7101s/20 iters), loss = 0.122049
+I1119 11:14:54.495741  9434 solver.cpp:237]     Train net output #0: loss = 0.122049 (* 1 = 0.122049 loss)
+I1119 11:14:54.495754  9434 sgd_solver.cpp:105] Iteration 1820, lr = 0.001
+I1119 11:14:57.216879  9434 solver.cpp:218] Iteration 1840 (7.34997 iter/s, 2.7211s/20 iters), loss = 0.130272
+I1119 11:14:57.216941  9434 solver.cpp:237]     Train net output #0: loss = 0.130272 (* 1 = 0.130272 loss)
+I1119 11:14:57.216953  9434 sgd_solver.cpp:105] Iteration 1840, lr = 0.001
+I1119 11:14:59.977668  9434 solver.cpp:218] Iteration 1860 (7.24457 iter/s, 2.76069s/20 iters), loss = 0.125332
+I1119 11:14:59.977730  9434 solver.cpp:237]     Train net output #0: loss = 0.125332 (* 1 = 0.125332 loss)
+I1119 11:14:59.977743  9434 sgd_solver.cpp:105] Iteration 1860, lr = 0.001
+I1119 11:15:02.739204  9434 solver.cpp:218] Iteration 1880 (7.24261 iter/s, 2.76143s/20 iters), loss = 0.121634
+I1119 11:15:02.739270  9434 solver.cpp:237]     Train net output #0: loss = 0.121634 (* 1 = 0.121634 loss)
+I1119 11:15:02.739281  9434 sgd_solver.cpp:105] Iteration 1880, lr = 0.001
+I1119 11:15:05.356868  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_1900.caffemodel
+I1119 11:15:06.316280  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_1900.solverstate
+I1119 11:15:06.689481  9434 solver.cpp:218] Iteration 1900 (5.06309 iter/s, 3.95016s/20 iters), loss = 0.118055
+I1119 11:15:06.689545  9434 solver.cpp:237]     Train net output #0: loss = 0.118055 (* 1 = 0.118055 loss)
+I1119 11:15:06.689556  9434 sgd_solver.cpp:105] Iteration 1900, lr = 0.001
+I1119 11:15:09.481719  9434 solver.cpp:218] Iteration 1920 (7.16298 iter/s, 2.79213s/20 iters), loss = 0.134204
+I1119 11:15:09.481782  9434 solver.cpp:237]     Train net output #0: loss = 0.134204 (* 1 = 0.134204 loss)
+I1119 11:15:09.481793  9434 sgd_solver.cpp:105] Iteration 1920, lr = 0.001
+I1119 11:15:12.246840  9434 solver.cpp:218] Iteration 1940 (7.23323 iter/s, 2.76502s/20 iters), loss = 0.134027
+I1119 11:15:12.246901  9434 solver.cpp:237]     Train net output #0: loss = 0.134027 (* 1 = 0.134027 loss)
+I1119 11:15:12.246912  9434 sgd_solver.cpp:105] Iteration 1940, lr = 0.001
+I1119 11:15:14.995893  9434 solver.cpp:218] Iteration 1960 (7.27551 iter/s, 2.74895s/20 iters), loss = 0.125031
+I1119 11:15:14.995951  9434 solver.cpp:237]     Train net output #0: loss = 0.125031 (* 1 = 0.125031 loss)
+I1119 11:15:14.995961  9434 sgd_solver.cpp:105] Iteration 1960, lr = 0.001
+I1119 11:15:17.738457  9434 solver.cpp:218] Iteration 1980 (7.29271 iter/s, 2.74247s/20 iters), loss = 0.120959
+I1119 11:15:17.738520  9434 solver.cpp:237]     Train net output #0: loss = 0.120959 (* 1 = 0.120959 loss)
+I1119 11:15:17.738530  9434 sgd_solver.cpp:105] Iteration 1980, lr = 0.001
+I1119 11:15:20.359158  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_2000.caffemodel
+I1119 11:15:21.306849  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_2000.solverstate
+I1119 11:15:21.681767  9434 solver.cpp:218] Iteration 2000 (5.07203 iter/s, 3.94319s/20 iters), loss = 0.121038
+I1119 11:15:21.681829  9434 solver.cpp:237]     Train net output #0: loss = 0.121038 (* 1 = 0.121038 loss)
+I1119 11:15:21.681839  9434 sgd_solver.cpp:105] Iteration 2000, lr = 0.001
+I1119 11:15:24.478229  9434 solver.cpp:218] Iteration 2020 (7.15216 iter/s, 2.79636s/20 iters), loss = 0.123073
+I1119 11:15:24.478292  9434 solver.cpp:237]     Train net output #0: loss = 0.123073 (* 1 = 0.123073 loss)
+I1119 11:15:24.478303  9434 sgd_solver.cpp:105] Iteration 2020, lr = 0.001
+I1119 11:15:27.236616  9434 solver.cpp:218] Iteration 2040 (7.25089 iter/s, 2.75828s/20 iters), loss = 0.12801
+I1119 11:15:27.236814  9434 solver.cpp:237]     Train net output #0: loss = 0.12801 (* 1 = 0.12801 loss)
+I1119 11:15:27.236829  9434 sgd_solver.cpp:105] Iteration 2040, lr = 0.001
+I1119 11:15:29.943634  9434 solver.cpp:218] Iteration 2060 (7.38883 iter/s, 2.70679s/20 iters), loss = 0.119335
+I1119 11:15:29.943696  9434 solver.cpp:237]     Train net output #0: loss = 0.119335 (* 1 = 0.119335 loss)
+I1119 11:15:29.943707  9434 sgd_solver.cpp:105] Iteration 2060, lr = 0.001
+I1119 11:15:32.708721  9434 solver.cpp:218] Iteration 2080 (7.23331 iter/s, 2.76498s/20 iters), loss = 0.130339
+I1119 11:15:32.708782  9434 solver.cpp:237]     Train net output #0: loss = 0.130339 (* 1 = 0.130339 loss)
+I1119 11:15:32.708793  9434 sgd_solver.cpp:105] Iteration 2080, lr = 0.001
+I1119 11:15:35.297461  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_2100.caffemodel
+I1119 11:15:36.250330  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_2100.solverstate
+I1119 11:15:36.623699  9434 solver.cpp:218] Iteration 2100 (5.10874 iter/s, 3.91486s/20 iters), loss = 0.130297
+I1119 11:15:36.623762  9434 solver.cpp:237]     Train net output #0: loss = 0.130297 (* 1 = 0.130297 loss)
+I1119 11:15:36.623773  9434 sgd_solver.cpp:105] Iteration 2100, lr = 0.001
+I1119 11:15:39.326902  9434 solver.cpp:218] Iteration 2120 (7.39892 iter/s, 2.7031s/20 iters), loss = 0.127846
+I1119 11:15:39.326967  9434 solver.cpp:237]     Train net output #0: loss = 0.127846 (* 1 = 0.127846 loss)
+I1119 11:15:39.326977  9434 sgd_solver.cpp:105] Iteration 2120, lr = 0.001
+I1119 11:15:42.041009  9434 solver.cpp:218] Iteration 2140 (7.36919 iter/s, 2.714s/20 iters), loss = 0.123223
+I1119 11:15:42.041070  9434 solver.cpp:237]     Train net output #0: loss = 0.123223 (* 1 = 0.123223 loss)
+I1119 11:15:42.041082  9434 sgd_solver.cpp:105] Iteration 2140, lr = 0.001
+I1119 11:15:44.745131  9434 solver.cpp:218] Iteration 2160 (7.3964 iter/s, 2.70402s/20 iters), loss = 0.138462
+I1119 11:15:44.745190  9434 solver.cpp:237]     Train net output #0: loss = 0.138462 (* 1 = 0.138462 loss)
+I1119 11:15:44.745201  9434 sgd_solver.cpp:105] Iteration 2160, lr = 0.001
+I1119 11:15:47.455274  9434 solver.cpp:218] Iteration 2180 (7.37996 iter/s, 2.71004s/20 iters), loss = 0.122751
+I1119 11:15:47.455338  9434 solver.cpp:237]     Train net output #0: loss = 0.122751 (* 1 = 0.122751 loss)
+I1119 11:15:47.455348  9434 sgd_solver.cpp:105] Iteration 2180, lr = 0.001
+I1119 11:15:50.023670  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_2200.caffemodel
+I1119 11:15:50.978324  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_2200.solverstate
+I1119 11:15:51.354372  9434 solver.cpp:218] Iteration 2200 (5.12955 iter/s, 3.89898s/20 iters), loss = 0.126051
+I1119 11:15:51.354434  9434 solver.cpp:237]     Train net output #0: loss = 0.126051 (* 1 = 0.126051 loss)
+I1119 11:15:51.354444  9434 sgd_solver.cpp:105] Iteration 2200, lr = 0.001
+I1119 11:15:54.075624  9434 solver.cpp:218] Iteration 2220 (7.34983 iter/s, 2.72115s/20 iters), loss = 0.132346
+I1119 11:15:54.075688  9434 solver.cpp:237]     Train net output #0: loss = 0.132346 (* 1 = 0.132346 loss)
+I1119 11:15:54.075700  9434 sgd_solver.cpp:105] Iteration 2220, lr = 0.001
+I1119 11:15:56.782896  9434 solver.cpp:218] Iteration 2240 (7.3878 iter/s, 2.70717s/20 iters), loss = 0.131687
+I1119 11:15:56.782958  9434 solver.cpp:237]     Train net output #0: loss = 0.131687 (* 1 = 0.131687 loss)
+I1119 11:15:56.782968  9434 sgd_solver.cpp:105] Iteration 2240, lr = 0.001
+I1119 11:15:59.489640  9434 solver.cpp:218] Iteration 2260 (7.38923 iter/s, 2.70664s/20 iters), loss = 0.131727
+I1119 11:15:59.489897  9434 solver.cpp:237]     Train net output #0: loss = 0.131727 (* 1 = 0.131727 loss)
+I1119 11:15:59.489908  9434 sgd_solver.cpp:105] Iteration 2260, lr = 0.001
+I1119 11:16:02.194689  9434 solver.cpp:218] Iteration 2280 (7.3944 iter/s, 2.70475s/20 iters), loss = 0.126214
+I1119 11:16:02.194751  9434 solver.cpp:237]     Train net output #0: loss = 0.126214 (* 1 = 0.126214 loss)
+I1119 11:16:02.194761  9434 sgd_solver.cpp:105] Iteration 2280, lr = 0.001
+I1119 11:16:04.841850  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_2300.caffemodel
+I1119 11:16:05.814260  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_2300.solverstate
+I1119 11:16:06.188513  9434 solver.cpp:218] Iteration 2300 (5.00915 iter/s, 3.99269s/20 iters), loss = 0.121512
+I1119 11:16:06.188580  9434 solver.cpp:237]     Train net output #0: loss = 0.121512 (* 1 = 0.121512 loss)
+I1119 11:16:06.188591  9434 sgd_solver.cpp:105] Iteration 2300, lr = 0.001
+I1119 11:16:08.897733  9434 solver.cpp:218] Iteration 2320 (7.38249 iter/s, 2.70911s/20 iters), loss = 0.120556
+I1119 11:16:08.897795  9434 solver.cpp:237]     Train net output #0: loss = 0.120556 (* 1 = 0.120556 loss)
+I1119 11:16:08.897806  9434 sgd_solver.cpp:105] Iteration 2320, lr = 0.001
+I1119 11:16:11.646471  9434 solver.cpp:218] Iteration 2340 (7.27633 iter/s, 2.74864s/20 iters), loss = 0.130846
+I1119 11:16:11.646533  9434 solver.cpp:237]     Train net output #0: loss = 0.130846 (* 1 = 0.130846 loss)
+I1119 11:16:11.646546  9434 sgd_solver.cpp:105] Iteration 2340, lr = 0.001
+I1119 11:16:14.439780  9434 solver.cpp:218] Iteration 2360 (7.16023 iter/s, 2.79321s/20 iters), loss = 0.119873
+I1119 11:16:14.439851  9434 solver.cpp:237]     Train net output #0: loss = 0.119873 (* 1 = 0.119873 loss)
+I1119 11:16:14.439862  9434 sgd_solver.cpp:105] Iteration 2360, lr = 0.001
+I1119 11:16:17.216976  9434 solver.cpp:218] Iteration 2380 (7.20179 iter/s, 2.77709s/20 iters), loss = 0.11951
+I1119 11:16:17.217038  9434 solver.cpp:237]     Train net output #0: loss = 0.11951 (* 1 = 0.11951 loss)
+I1119 11:16:17.217051  9434 sgd_solver.cpp:105] Iteration 2380, lr = 0.001
+I1119 11:16:19.817081  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_2400.caffemodel
+I1119 11:16:20.757489  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_2400.solverstate
+I1119 11:16:21.129088  9434 solver.cpp:218] Iteration 2400 (5.11248 iter/s, 3.912s/20 iters), loss = 0.121354
+I1119 11:16:21.129153  9434 solver.cpp:237]     Train net output #0: loss = 0.121354 (* 1 = 0.121354 loss)
+I1119 11:16:21.129166  9434 sgd_solver.cpp:105] Iteration 2400, lr = 0.001
+I1119 11:16:23.880823  9434 solver.cpp:218] Iteration 2420 (7.26842 iter/s, 2.75163s/20 iters), loss = 0.120156
+I1119 11:16:23.880889  9434 solver.cpp:237]     Train net output #0: loss = 0.120156 (* 1 = 0.120156 loss)
+I1119 11:16:23.880900  9434 sgd_solver.cpp:105] Iteration 2420, lr = 0.001
+I1119 11:16:26.673107  9434 solver.cpp:218] Iteration 2440 (7.16288 iter/s, 2.79217s/20 iters), loss = 0.132885
+I1119 11:16:26.673172  9434 solver.cpp:237]     Train net output #0: loss = 0.132885 (* 1 = 0.132885 loss)
+I1119 11:16:26.673183  9434 sgd_solver.cpp:105] Iteration 2440, lr = 0.001
+I1119 11:16:29.444263  9434 solver.cpp:218] Iteration 2460 (7.21748 iter/s, 2.77105s/20 iters), loss = 0.12881
+I1119 11:16:29.444327  9434 solver.cpp:237]     Train net output #0: loss = 0.12881 (* 1 = 0.12881 loss)
+I1119 11:16:29.444339  9434 sgd_solver.cpp:105] Iteration 2460, lr = 0.001
+I1119 11:16:32.197250  9434 solver.cpp:218] Iteration 2480 (7.26511 iter/s, 2.75288s/20 iters), loss = 0.129752
+I1119 11:16:32.197459  9434 solver.cpp:237]     Train net output #0: loss = 0.129752 (* 1 = 0.129752 loss)
+I1119 11:16:32.197474  9434 sgd_solver.cpp:105] Iteration 2480, lr = 0.001
+I1119 11:16:34.838347  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_2500.caffemodel
+I1119 11:16:35.784823  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_2500.solverstate
+I1119 11:16:36.156394  9434 solver.cpp:218] Iteration 2500 (5.05193 iter/s, 3.95889s/20 iters), loss = 0.126555
+I1119 11:16:36.156458  9434 solver.cpp:237]     Train net output #0: loss = 0.126555 (* 1 = 0.126555 loss)
+I1119 11:16:36.156469  9434 sgd_solver.cpp:105] Iteration 2500, lr = 0.001
+I1119 11:16:38.887784  9434 solver.cpp:218] Iteration 2520 (7.32256 iter/s, 2.73128s/20 iters), loss = 0.117533
+I1119 11:16:38.887841  9434 solver.cpp:237]     Train net output #0: loss = 0.117533 (* 1 = 0.117533 loss)
+I1119 11:16:38.887852  9434 sgd_solver.cpp:105] Iteration 2520, lr = 0.001
+I1119 11:16:41.651371  9434 solver.cpp:218] Iteration 2540 (7.23723 iter/s, 2.76349s/20 iters), loss = 0.126939
+I1119 11:16:41.651434  9434 solver.cpp:237]     Train net output #0: loss = 0.126939 (* 1 = 0.126939 loss)
+I1119 11:16:41.651445  9434 sgd_solver.cpp:105] Iteration 2540, lr = 0.001
+I1119 11:16:44.456670  9434 solver.cpp:218] Iteration 2560 (7.12963 iter/s, 2.80519s/20 iters), loss = 0.115284
+I1119 11:16:44.456732  9434 solver.cpp:237]     Train net output #0: loss = 0.115284 (* 1 = 0.115284 loss)
+I1119 11:16:44.456743  9434 sgd_solver.cpp:105] Iteration 2560, lr = 0.001
+I1119 11:16:47.241125  9434 solver.cpp:218] Iteration 2580 (7.183 iter/s, 2.78435s/20 iters), loss = 0.126864
+I1119 11:16:47.241190  9434 solver.cpp:237]     Train net output #0: loss = 0.126864 (* 1 = 0.126864 loss)
+I1119 11:16:47.241201  9434 sgd_solver.cpp:105] Iteration 2580, lr = 0.001
+I1119 11:16:49.897415  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_2600.caffemodel
+I1119 11:16:50.840559  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_2600.solverstate
+I1119 11:16:51.213342  9434 solver.cpp:218] Iteration 2600 (5.03512 iter/s, 3.9721s/20 iters), loss = 0.126188
+I1119 11:16:51.213407  9434 solver.cpp:237]     Train net output #0: loss = 0.126188 (* 1 = 0.126188 loss)
+I1119 11:16:51.213418  9434 sgd_solver.cpp:105] Iteration 2600, lr = 0.001
+I1119 11:16:54.004441  9434 solver.cpp:218] Iteration 2620 (7.16591 iter/s, 2.79099s/20 iters), loss = 0.128276
+I1119 11:16:54.004513  9434 solver.cpp:237]     Train net output #0: loss = 0.128276 (* 1 = 0.128276 loss)
+I1119 11:16:54.004524  9434 sgd_solver.cpp:105] Iteration 2620, lr = 0.001
+I1119 11:16:56.793756  9434 solver.cpp:218] Iteration 2640 (7.17051 iter/s, 2.7892s/20 iters), loss = 0.122225
+I1119 11:16:56.793820  9434 solver.cpp:237]     Train net output #0: loss = 0.122225 (* 1 = 0.122225 loss)
+I1119 11:16:56.793831  9434 sgd_solver.cpp:105] Iteration 2640, lr = 0.001
+I1119 11:16:59.534710  9434 solver.cpp:218] Iteration 2660 (7.29701 iter/s, 2.74085s/20 iters), loss = 0.132563
+I1119 11:16:59.534768  9434 solver.cpp:237]     Train net output #0: loss = 0.132563 (* 1 = 0.132563 loss)
+I1119 11:16:59.534780  9434 sgd_solver.cpp:105] Iteration 2660, lr = 0.001
+I1119 11:17:02.326648  9434 solver.cpp:218] Iteration 2680 (7.16374 iter/s, 2.79184s/20 iters), loss = 0.123565
+I1119 11:17:02.326828  9434 solver.cpp:237]     Train net output #0: loss = 0.123565 (* 1 = 0.123565 loss)
+I1119 11:17:02.326839  9434 sgd_solver.cpp:105] Iteration 2680, lr = 0.001
+I1119 11:17:04.936286  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_2700.caffemodel
+I1119 11:17:05.882388  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_2700.solverstate
+I1119 11:17:06.253504  9434 solver.cpp:218] Iteration 2700 (5.09344 iter/s, 3.92662s/20 iters), loss = 0.127462
+I1119 11:17:06.253571  9434 solver.cpp:237]     Train net output #0: loss = 0.127462 (* 1 = 0.127462 loss)
+I1119 11:17:06.253582  9434 sgd_solver.cpp:105] Iteration 2700, lr = 0.001
+I1119 11:17:09.041370  9434 solver.cpp:218] Iteration 2720 (7.17422 iter/s, 2.78776s/20 iters), loss = 0.126029
+I1119 11:17:09.041435  9434 solver.cpp:237]     Train net output #0: loss = 0.126029 (* 1 = 0.126029 loss)
+I1119 11:17:09.041446  9434 sgd_solver.cpp:105] Iteration 2720, lr = 0.001
+I1119 11:17:11.826352  9434 solver.cpp:218] Iteration 2740 (7.18164 iter/s, 2.78488s/20 iters), loss = 0.125209
+I1119 11:17:11.826414  9434 solver.cpp:237]     Train net output #0: loss = 0.125209 (* 1 = 0.125209 loss)
+I1119 11:17:11.826424  9434 sgd_solver.cpp:105] Iteration 2740, lr = 0.001
+I1119 11:17:14.572288  9434 solver.cpp:218] Iteration 2760 (7.28376 iter/s, 2.74583s/20 iters), loss = 0.128605
+I1119 11:17:14.572346  9434 solver.cpp:237]     Train net output #0: loss = 0.128605 (* 1 = 0.128605 loss)
+I1119 11:17:14.572360  9434 sgd_solver.cpp:105] Iteration 2760, lr = 0.001
+I1119 11:17:17.280728  9434 solver.cpp:218] Iteration 2780 (7.38459 iter/s, 2.70834s/20 iters), loss = 0.133178
+I1119 11:17:17.280791  9434 solver.cpp:237]     Train net output #0: loss = 0.133178 (* 1 = 0.133178 loss)
+I1119 11:17:17.280802  9434 sgd_solver.cpp:105] Iteration 2780, lr = 0.001
+I1119 11:17:19.853062  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_2800.caffemodel
+I1119 11:17:20.806819  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_2800.solverstate
+I1119 11:17:21.181234  9434 solver.cpp:218] Iteration 2800 (5.12769 iter/s, 3.90039s/20 iters), loss = 0.127881
+I1119 11:17:21.181291  9434 solver.cpp:237]     Train net output #0: loss = 0.127881 (* 1 = 0.127881 loss)
+I1119 11:17:21.181303  9434 sgd_solver.cpp:105] Iteration 2800, lr = 0.001
+I1119 11:17:23.972551  9434 solver.cpp:218] Iteration 2820 (7.16533 iter/s, 2.79122s/20 iters), loss = 0.124767
+I1119 11:17:23.972615  9434 solver.cpp:237]     Train net output #0: loss = 0.124767 (* 1 = 0.124767 loss)
+I1119 11:17:23.972625  9434 sgd_solver.cpp:105] Iteration 2820, lr = 0.001
+I1119 11:17:26.738626  9434 solver.cpp:218] Iteration 2840 (7.23074 iter/s, 2.76597s/20 iters), loss = 0.12185
+I1119 11:17:26.738692  9434 solver.cpp:237]     Train net output #0: loss = 0.12185 (* 1 = 0.12185 loss)
+I1119 11:17:26.738703  9434 sgd_solver.cpp:105] Iteration 2840, lr = 0.001
+I1119 11:17:29.506103  9434 solver.cpp:218] Iteration 2860 (7.22708 iter/s, 2.76737s/20 iters), loss = 0.135431
+I1119 11:17:29.506163  9434 solver.cpp:237]     Train net output #0: loss = 0.135431 (* 1 = 0.135431 loss)
+I1119 11:17:29.506173  9434 sgd_solver.cpp:105] Iteration 2860, lr = 0.001
+I1119 11:17:32.286025  9434 solver.cpp:218] Iteration 2880 (7.19471 iter/s, 2.77982s/20 iters), loss = 0.125189
+I1119 11:17:32.286088  9434 solver.cpp:237]     Train net output #0: loss = 0.125189 (* 1 = 0.125189 loss)
+I1119 11:17:32.286098  9434 sgd_solver.cpp:105] Iteration 2880, lr = 0.001
+I1119 11:17:34.880630  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_2900.caffemodel
+I1119 11:17:35.836623  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_2900.solverstate
+I1119 11:17:36.210367  9434 solver.cpp:218] Iteration 2900 (5.09655 iter/s, 3.92423s/20 iters), loss = 0.128865
+I1119 11:17:36.210430  9434 solver.cpp:237]     Train net output #0: loss = 0.128865 (* 1 = 0.128865 loss)
+I1119 11:17:36.210441  9434 sgd_solver.cpp:105] Iteration 2900, lr = 0.001
+I1119 11:17:39.000671  9434 solver.cpp:218] Iteration 2920 (7.16795 iter/s, 2.7902s/20 iters), loss = 0.116094
+I1119 11:17:39.000735  9434 solver.cpp:237]     Train net output #0: loss = 0.116094 (* 1 = 0.116094 loss)
+I1119 11:17:39.000746  9434 sgd_solver.cpp:105] Iteration 2920, lr = 0.001
+I1119 11:17:41.792114  9434 solver.cpp:218] Iteration 2940 (7.16502 iter/s, 2.79134s/20 iters), loss = 0.117864
+I1119 11:17:41.792179  9434 solver.cpp:237]     Train net output #0: loss = 0.117864 (* 1 = 0.117864 loss)
+I1119 11:17:41.792191  9434 sgd_solver.cpp:105] Iteration 2940, lr = 0.001
+I1119 11:17:44.579679  9434 solver.cpp:218] Iteration 2960 (7.17499 iter/s, 2.78746s/20 iters), loss = 0.132336
+I1119 11:17:44.579743  9434 solver.cpp:237]     Train net output #0: loss = 0.132336 (* 1 = 0.132336 loss)
+I1119 11:17:44.579754  9434 sgd_solver.cpp:105] Iteration 2960, lr = 0.001
+I1119 11:17:47.330440  9434 solver.cpp:218] Iteration 2980 (7.27099 iter/s, 2.75066s/20 iters), loss = 0.127349
+I1119 11:17:47.330500  9434 solver.cpp:237]     Train net output #0: loss = 0.127349 (* 1 = 0.127349 loss)
+I1119 11:17:47.330512  9434 sgd_solver.cpp:105] Iteration 2980, lr = 0.001
+I1119 11:17:49.973467  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_3000.caffemodel
+I1119 11:17:50.941166  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_3000.solverstate
+I1119 11:17:51.314244  9434 solver.cpp:218] Iteration 3000 (5.02047 iter/s, 3.98369s/20 iters), loss = 0.128381
+I1119 11:17:51.314304  9434 solver.cpp:237]     Train net output #0: loss = 0.128381 (* 1 = 0.128381 loss)
+I1119 11:17:51.314316  9434 sgd_solver.cpp:105] Iteration 3000, lr = 0.0001
+I1119 11:17:54.089440  9434 solver.cpp:218] Iteration 3020 (7.20696 iter/s, 2.7751s/20 iters), loss = 0.11843
+I1119 11:17:54.089504  9434 solver.cpp:237]     Train net output #0: loss = 0.11843 (* 1 = 0.11843 loss)
+I1119 11:17:54.089514  9434 sgd_solver.cpp:105] Iteration 3020, lr = 0.0001
+I1119 11:17:56.875829  9434 solver.cpp:218] Iteration 3040 (7.17802 iter/s, 2.78628s/20 iters), loss = 0.118821
+I1119 11:17:56.875895  9434 solver.cpp:237]     Train net output #0: loss = 0.118821 (* 1 = 0.118821 loss)
+I1119 11:17:56.875905  9434 sgd_solver.cpp:105] Iteration 3040, lr = 0.0001
+I1119 11:17:59.641533  9434 solver.cpp:218] Iteration 3060 (7.23171 iter/s, 2.7656s/20 iters), loss = 0.118409
+I1119 11:17:59.641594  9434 solver.cpp:237]     Train net output #0: loss = 0.118409 (* 1 = 0.118409 loss)
+I1119 11:17:59.641604  9434 sgd_solver.cpp:105] Iteration 3060, lr = 0.0001
+I1119 11:18:02.422610  9434 solver.cpp:218] Iteration 3080 (7.19172 iter/s, 2.78098s/20 iters), loss = 0.129181
+I1119 11:18:02.422674  9434 solver.cpp:237]     Train net output #0: loss = 0.129181 (* 1 = 0.129181 loss)
+I1119 11:18:02.422685  9434 sgd_solver.cpp:105] Iteration 3080, lr = 0.0001
+I1119 11:18:05.056350  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_3100.caffemodel
+I1119 11:18:06.012238  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_3100.solverstate
+I1119 11:18:06.385378  9434 solver.cpp:218] Iteration 3100 (5.04713 iter/s, 3.96265s/20 iters), loss = 0.135635
+I1119 11:18:06.385442  9434 solver.cpp:237]     Train net output #0: loss = 0.135635 (* 1 = 0.135635 loss)
+I1119 11:18:06.385452  9434 sgd_solver.cpp:105] Iteration 3100, lr = 0.0001
+I1119 11:18:09.183081  9434 solver.cpp:218] Iteration 3120 (7.14899 iter/s, 2.7976s/20 iters), loss = 0.122237
+I1119 11:18:09.183143  9434 solver.cpp:237]     Train net output #0: loss = 0.122237 (* 1 = 0.122237 loss)
+I1119 11:18:09.183154  9434 sgd_solver.cpp:105] Iteration 3120, lr = 0.0001
+I1119 11:18:11.938705  9434 solver.cpp:218] Iteration 3140 (7.25815 iter/s, 2.75552s/20 iters), loss = 0.120798
+I1119 11:18:11.938771  9434 solver.cpp:237]     Train net output #0: loss = 0.120798 (* 1 = 0.120798 loss)
+I1119 11:18:11.938781  9434 sgd_solver.cpp:105] Iteration 3140, lr = 0.0001
+I1119 11:18:14.724660  9434 solver.cpp:218] Iteration 3160 (7.17914 iter/s, 2.78585s/20 iters), loss = 0.124854
+I1119 11:18:14.724725  9434 solver.cpp:237]     Train net output #0: loss = 0.124854 (* 1 = 0.124854 loss)
+I1119 11:18:14.724735  9434 sgd_solver.cpp:105] Iteration 3160, lr = 0.0001
+I1119 11:18:17.529587  9434 solver.cpp:218] Iteration 3180 (7.13058 iter/s, 2.80482s/20 iters), loss = 0.136987
+I1119 11:18:17.529651  9434 solver.cpp:237]     Train net output #0: loss = 0.136987 (* 1 = 0.136987 loss)
+I1119 11:18:17.529662  9434 sgd_solver.cpp:105] Iteration 3180, lr = 0.0001
+I1119 11:18:20.176626  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_3200.caffemodel
+I1119 11:18:21.132367  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_3200.solverstate
+I1119 11:18:21.508219  9434 solver.cpp:218] Iteration 3200 (5.027 iter/s, 3.97851s/20 iters), loss = 0.130964
+I1119 11:18:21.508283  9434 solver.cpp:237]     Train net output #0: loss = 0.130964 (* 1 = 0.130964 loss)
+I1119 11:18:21.508293  9434 sgd_solver.cpp:105] Iteration 3200, lr = 0.0001
+I1119 11:18:24.281812  9434 solver.cpp:218] Iteration 3220 (7.21113 iter/s, 2.77349s/20 iters), loss = 0.126013
+I1119 11:18:24.281877  9434 solver.cpp:237]     Train net output #0: loss = 0.126013 (* 1 = 0.126013 loss)
+I1119 11:18:24.281888  9434 sgd_solver.cpp:105] Iteration 3220, lr = 0.0001
+I1119 11:18:27.087452  9434 solver.cpp:218] Iteration 3240 (7.12877 iter/s, 2.80553s/20 iters), loss = 0.132174
+I1119 11:18:27.087517  9434 solver.cpp:237]     Train net output #0: loss = 0.132174 (* 1 = 0.132174 loss)
+I1119 11:18:27.087527  9434 sgd_solver.cpp:105] Iteration 3240, lr = 0.0001
+I1119 11:18:29.862272  9434 solver.cpp:218] Iteration 3260 (7.20794 iter/s, 2.77472s/20 iters), loss = 0.120422
+I1119 11:18:29.862331  9434 solver.cpp:237]     Train net output #0: loss = 0.120422 (* 1 = 0.120422 loss)
+I1119 11:18:29.862341  9434 sgd_solver.cpp:105] Iteration 3260, lr = 0.0001
+I1119 11:18:32.621635  9434 solver.cpp:218] Iteration 3280 (7.24831 iter/s, 2.75926s/20 iters), loss = 0.123857
+I1119 11:18:32.621695  9434 solver.cpp:237]     Train net output #0: loss = 0.123857 (* 1 = 0.123857 loss)
+I1119 11:18:32.621706  9434 sgd_solver.cpp:105] Iteration 3280, lr = 0.0001
+I1119 11:18:35.234809  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_3300.caffemodel
+I1119 11:18:36.190282  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_3300.solverstate
+I1119 11:18:36.563158  9434 solver.cpp:218] Iteration 3300 (5.07433 iter/s, 3.94141s/20 iters), loss = 0.126651
+I1119 11:18:36.563220  9434 solver.cpp:237]     Train net output #0: loss = 0.126651 (* 1 = 0.126651 loss)
+I1119 11:18:36.563231  9434 sgd_solver.cpp:105] Iteration 3300, lr = 0.0001
+I1119 11:18:39.332427  9434 solver.cpp:218] Iteration 3320 (7.22239 iter/s, 2.76917s/20 iters), loss = 0.117298
+I1119 11:18:39.332526  9434 solver.cpp:237]     Train net output #0: loss = 0.117298 (* 1 = 0.117298 loss)
+I1119 11:18:39.332536  9434 sgd_solver.cpp:105] Iteration 3320, lr = 0.0001
+I1119 11:18:42.135843  9434 solver.cpp:218] Iteration 3340 (7.13451 iter/s, 2.80328s/20 iters), loss = 0.117294
+I1119 11:18:42.135907  9434 solver.cpp:237]     Train net output #0: loss = 0.117294 (* 1 = 0.117294 loss)
+I1119 11:18:42.135918  9434 sgd_solver.cpp:105] Iteration 3340, lr = 0.0001
+I1119 11:18:44.879534  9434 solver.cpp:218] Iteration 3360 (7.28972 iter/s, 2.74359s/20 iters), loss = 0.121313
+I1119 11:18:44.879597  9434 solver.cpp:237]     Train net output #0: loss = 0.121313 (* 1 = 0.121313 loss)
+I1119 11:18:44.879608  9434 sgd_solver.cpp:105] Iteration 3360, lr = 0.0001
+I1119 11:18:47.644322  9434 solver.cpp:218] Iteration 3380 (7.2341 iter/s, 2.76468s/20 iters), loss = 0.145817
+I1119 11:18:47.644387  9434 solver.cpp:237]     Train net output #0: loss = 0.145817 (* 1 = 0.145817 loss)
+I1119 11:18:47.644397  9434 sgd_solver.cpp:105] Iteration 3380, lr = 0.0001
+I1119 11:18:50.288488  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_3400.caffemodel
+I1119 11:18:51.226593  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_3400.solverstate
+I1119 11:18:51.597481  9434 solver.cpp:218] Iteration 3400 (5.0594 iter/s, 3.95304s/20 iters), loss = 0.124387
+I1119 11:18:51.597543  9434 solver.cpp:237]     Train net output #0: loss = 0.124387 (* 1 = 0.124387 loss)
+I1119 11:18:51.597553  9434 sgd_solver.cpp:105] Iteration 3400, lr = 0.0001
+I1119 11:18:54.397688  9434 solver.cpp:218] Iteration 3420 (7.14259 iter/s, 2.8001s/20 iters), loss = 0.118735
+I1119 11:18:54.397753  9434 solver.cpp:237]     Train net output #0: loss = 0.118735 (* 1 = 0.118735 loss)
+I1119 11:18:54.397763  9434 sgd_solver.cpp:105] Iteration 3420, lr = 0.0001
+I1119 11:18:57.160794  9434 solver.cpp:218] Iteration 3440 (7.23851 iter/s, 2.763s/20 iters), loss = 0.128185
+I1119 11:18:57.160851  9434 solver.cpp:237]     Train net output #0: loss = 0.128185 (* 1 = 0.128185 loss)
+I1119 11:18:57.160864  9434 sgd_solver.cpp:105] Iteration 3440, lr = 0.0001
+I1119 11:18:59.913977  9434 solver.cpp:218] Iteration 3460 (7.26458 iter/s, 2.75309s/20 iters), loss = 0.124439
+I1119 11:18:59.914042  9434 solver.cpp:237]     Train net output #0: loss = 0.124439 (* 1 = 0.124439 loss)
+I1119 11:18:59.914052  9434 sgd_solver.cpp:105] Iteration 3460, lr = 0.0001
+I1119 11:19:02.698465  9434 solver.cpp:218] Iteration 3480 (7.18293 iter/s, 2.78438s/20 iters), loss = 0.121293
+I1119 11:19:02.698527  9434 solver.cpp:237]     Train net output #0: loss = 0.121293 (* 1 = 0.121293 loss)
+I1119 11:19:02.698539  9434 sgd_solver.cpp:105] Iteration 3480, lr = 0.0001
+I1119 11:19:05.355420  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_3500.caffemodel
+I1119 11:19:06.301591  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_3500.solverstate
+I1119 11:19:06.671639  9434 solver.cpp:218] Iteration 3500 (5.03391 iter/s, 3.97306s/20 iters), loss = 0.129631
+I1119 11:19:06.671706  9434 solver.cpp:237]     Train net output #0: loss = 0.129631 (* 1 = 0.129631 loss)
+I1119 11:19:06.671717  9434 sgd_solver.cpp:105] Iteration 3500, lr = 0.0001
+I1119 11:19:09.447654  9434 solver.cpp:218] Iteration 3520 (7.20485 iter/s, 2.77591s/20 iters), loss = 0.122
+I1119 11:19:09.447718  9434 solver.cpp:237]     Train net output #0: loss = 0.122 (* 1 = 0.122 loss)
+I1119 11:19:09.447729  9434 sgd_solver.cpp:105] Iteration 3520, lr = 0.0001
+I1119 11:19:12.235605  9434 solver.cpp:218] Iteration 3540 (7.174 iter/s, 2.78785s/20 iters), loss = 0.120132
+I1119 11:19:12.235671  9434 solver.cpp:237]     Train net output #0: loss = 0.120132 (* 1 = 0.120132 loss)
+I1119 11:19:12.235680  9434 sgd_solver.cpp:105] Iteration 3540, lr = 0.0001
+I1119 11:19:15.009729  9434 solver.cpp:218] Iteration 3560 (7.20975 iter/s, 2.77402s/20 iters), loss = 0.126051
+I1119 11:19:15.009793  9434 solver.cpp:237]     Train net output #0: loss = 0.126051 (* 1 = 0.126051 loss)
+I1119 11:19:15.009804  9434 sgd_solver.cpp:105] Iteration 3560, lr = 0.0001
+I1119 11:19:17.766927  9434 solver.cpp:218] Iteration 3580 (7.25403 iter/s, 2.75709s/20 iters), loss = 0.131191
+I1119 11:19:17.766985  9434 solver.cpp:237]     Train net output #0: loss = 0.131191 (* 1 = 0.131191 loss)
+I1119 11:19:17.766995  9434 sgd_solver.cpp:105] Iteration 3580, lr = 0.0001
+I1119 11:19:20.403097  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_3600.caffemodel
+I1119 11:19:21.352115  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_3600.solverstate
+I1119 11:19:21.725620  9434 solver.cpp:218] Iteration 3600 (5.05232 iter/s, 3.95858s/20 iters), loss = 0.138338
+I1119 11:19:21.725693  9434 solver.cpp:237]     Train net output #0: loss = 0.138338 (* 1 = 0.138338 loss)
+I1119 11:19:21.725705  9434 sgd_solver.cpp:105] Iteration 3600, lr = 0.0001
+I1119 11:19:24.537916  9434 solver.cpp:218] Iteration 3620 (7.11191 iter/s, 2.81218s/20 iters), loss = 0.131728
+I1119 11:19:24.537981  9434 solver.cpp:237]     Train net output #0: loss = 0.131728 (* 1 = 0.131728 loss)
+I1119 11:19:24.537992  9434 sgd_solver.cpp:105] Iteration 3620, lr = 0.0001
+I1119 11:19:27.313299  9434 solver.cpp:218] Iteration 3640 (7.20649 iter/s, 2.77528s/20 iters), loss = 0.137991
+I1119 11:19:27.313357  9434 solver.cpp:237]     Train net output #0: loss = 0.137991 (* 1 = 0.137991 loss)
+I1119 11:19:27.313369  9434 sgd_solver.cpp:105] Iteration 3640, lr = 0.0001
+I1119 11:19:30.098399  9434 solver.cpp:218] Iteration 3660 (7.18132 iter/s, 2.785s/20 iters), loss = 0.125386
+I1119 11:19:30.098465  9434 solver.cpp:237]     Train net output #0: loss = 0.125386 (* 1 = 0.125386 loss)
+I1119 11:19:30.098475  9434 sgd_solver.cpp:105] Iteration 3660, lr = 0.0001
+I1119 11:19:32.863101  9434 solver.cpp:218] Iteration 3680 (7.23433 iter/s, 2.7646s/20 iters), loss = 0.124923
+I1119 11:19:32.863163  9434 solver.cpp:237]     Train net output #0: loss = 0.124923 (* 1 = 0.124923 loss)
+I1119 11:19:32.863174  9434 sgd_solver.cpp:105] Iteration 3680, lr = 0.0001
+I1119 11:19:35.499617  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_3700.caffemodel
+I1119 11:19:36.451309  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_3700.solverstate
+I1119 11:19:36.822582  9434 solver.cpp:218] Iteration 3700 (5.05132 iter/s, 3.95936s/20 iters), loss = 0.128785
+I1119 11:19:36.822651  9434 solver.cpp:237]     Train net output #0: loss = 0.128785 (* 1 = 0.128785 loss)
+I1119 11:19:36.822662  9434 sgd_solver.cpp:105] Iteration 3700, lr = 0.0001
+I1119 11:19:39.617101  9434 solver.cpp:218] Iteration 3720 (7.15715 iter/s, 2.79441s/20 iters), loss = 0.125364
+I1119 11:19:39.617163  9434 solver.cpp:237]     Train net output #0: loss = 0.125364 (* 1 = 0.125364 loss)
+I1119 11:19:39.617175  9434 sgd_solver.cpp:105] Iteration 3720, lr = 0.0001
+I1119 11:19:42.434758  9434 solver.cpp:218] Iteration 3740 (7.09835 iter/s, 2.81756s/20 iters), loss = 0.124341
+I1119 11:19:42.434823  9434 solver.cpp:237]     Train net output #0: loss = 0.124341 (* 1 = 0.124341 loss)
+I1119 11:19:42.434834  9434 sgd_solver.cpp:105] Iteration 3740, lr = 0.0001
+I1119 11:19:45.183409  9434 solver.cpp:218] Iteration 3760 (7.27658 iter/s, 2.74854s/20 iters), loss = 0.126179
+I1119 11:19:45.183473  9434 solver.cpp:237]     Train net output #0: loss = 0.126179 (* 1 = 0.126179 loss)
+I1119 11:19:45.183483  9434 sgd_solver.cpp:105] Iteration 3760, lr = 0.0001
+I1119 11:19:47.955669  9434 solver.cpp:218] Iteration 3780 (7.2146 iter/s, 2.77216s/20 iters), loss = 0.126162
+I1119 11:19:47.955732  9434 solver.cpp:237]     Train net output #0: loss = 0.126162 (* 1 = 0.126162 loss)
+I1119 11:19:47.955744  9434 sgd_solver.cpp:105] Iteration 3780, lr = 0.0001
+I1119 11:19:50.565330  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_3800.caffemodel
+I1119 11:19:51.509824  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_3800.solverstate
+I1119 11:19:51.882148  9434 solver.cpp:218] Iteration 3800 (5.09377 iter/s, 3.92636s/20 iters), loss = 0.123396
+I1119 11:19:51.882207  9434 solver.cpp:237]     Train net output #0: loss = 0.123396 (* 1 = 0.123396 loss)
+I1119 11:19:51.882220  9434 sgd_solver.cpp:105] Iteration 3800, lr = 0.0001
+I1119 11:19:54.674620  9434 solver.cpp:218] Iteration 3820 (7.16237 iter/s, 2.79237s/20 iters), loss = 0.127659
+I1119 11:19:54.674679  9434 solver.cpp:237]     Train net output #0: loss = 0.127659 (* 1 = 0.127659 loss)
+I1119 11:19:54.674690  9434 sgd_solver.cpp:105] Iteration 3820, lr = 0.0001
+I1119 11:19:57.479595  9434 solver.cpp:218] Iteration 3840 (7.13045 iter/s, 2.80487s/20 iters), loss = 0.120414
+I1119 11:19:57.479657  9434 solver.cpp:237]     Train net output #0: loss = 0.120414 (* 1 = 0.120414 loss)
+I1119 11:19:57.479670  9434 sgd_solver.cpp:105] Iteration 3840, lr = 0.0001
+I1119 11:20:00.231887  9434 solver.cpp:218] Iteration 3860 (7.26694 iter/s, 2.75219s/20 iters), loss = 0.128278
+I1119 11:20:00.231951  9434 solver.cpp:237]     Train net output #0: loss = 0.128278 (* 1 = 0.128278 loss)
+I1119 11:20:00.231963  9434 sgd_solver.cpp:105] Iteration 3860, lr = 0.0001
+I1119 11:20:02.988273  9434 solver.cpp:218] Iteration 3880 (7.25615 iter/s, 2.75628s/20 iters), loss = 0.126181
+I1119 11:20:02.988335  9434 solver.cpp:237]     Train net output #0: loss = 0.126181 (* 1 = 0.126181 loss)
+I1119 11:20:02.988348  9434 sgd_solver.cpp:105] Iteration 3880, lr = 0.0001
+I1119 11:20:05.609115  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_3900.caffemodel
+I1119 11:20:06.551791  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_3900.solverstate
+I1119 11:20:06.921702  9434 solver.cpp:218] Iteration 3900 (5.08477 iter/s, 3.93332s/20 iters), loss = 0.121588
+I1119 11:20:06.921766  9434 solver.cpp:237]     Train net output #0: loss = 0.121588 (* 1 = 0.121588 loss)
+I1119 11:20:06.921777  9434 sgd_solver.cpp:105] Iteration 3900, lr = 0.0001
+I1119 11:20:09.724366  9434 solver.cpp:218] Iteration 3920 (7.13633 iter/s, 2.80256s/20 iters), loss = 0.118479
+I1119 11:20:09.724429  9434 solver.cpp:237]     Train net output #0: loss = 0.118479 (* 1 = 0.118479 loss)
+I1119 11:20:09.724442  9434 sgd_solver.cpp:105] Iteration 3920, lr = 0.0001
+I1119 11:20:12.508914  9434 solver.cpp:218] Iteration 3940 (7.18276 iter/s, 2.78445s/20 iters), loss = 0.121814
+I1119 11:20:12.508976  9434 solver.cpp:237]     Train net output #0: loss = 0.121814 (* 1 = 0.121814 loss)
+I1119 11:20:12.508991  9434 sgd_solver.cpp:105] Iteration 3940, lr = 0.0001
+I1119 11:20:15.281074  9434 solver.cpp:218] Iteration 3960 (7.21486 iter/s, 2.77205s/20 iters), loss = 0.124438
+I1119 11:20:15.281136  9434 solver.cpp:237]     Train net output #0: loss = 0.124438 (* 1 = 0.124438 loss)
+I1119 11:20:15.281147  9434 sgd_solver.cpp:105] Iteration 3960, lr = 0.0001
+I1119 11:20:17.990854  9434 solver.cpp:218] Iteration 3980 (7.38095 iter/s, 2.70968s/20 iters), loss = 0.12124
+I1119 11:20:17.990912  9434 solver.cpp:237]     Train net output #0: loss = 0.12124 (* 1 = 0.12124 loss)
+I1119 11:20:17.990923  9434 sgd_solver.cpp:105] Iteration 3980, lr = 0.0001
+I1119 11:20:20.558265  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_4000.caffemodel
+I1119 11:20:21.507601  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_4000.solverstate
+I1119 11:20:21.880991  9434 solver.cpp:218] Iteration 4000 (5.14135 iter/s, 3.89003s/20 iters), loss = 0.131967
+I1119 11:20:21.881055  9434 solver.cpp:237]     Train net output #0: loss = 0.131967 (* 1 = 0.131967 loss)
+I1119 11:20:21.881065  9434 sgd_solver.cpp:105] Iteration 4000, lr = 0.0001
+I1119 11:20:24.589010  9434 solver.cpp:218] Iteration 4020 (7.38576 iter/s, 2.70791s/20 iters), loss = 0.126894
+I1119 11:20:24.589071  9434 solver.cpp:237]     Train net output #0: loss = 0.126894 (* 1 = 0.126894 loss)
+I1119 11:20:24.589082  9434 sgd_solver.cpp:105] Iteration 4020, lr = 0.0001
+I1119 11:20:27.323595  9434 solver.cpp:218] Iteration 4040 (7.31399 iter/s, 2.73448s/20 iters), loss = 0.13747
+I1119 11:20:27.323655  9434 solver.cpp:237]     Train net output #0: loss = 0.13747 (* 1 = 0.13747 loss)
+I1119 11:20:27.323667  9434 sgd_solver.cpp:105] Iteration 4040, lr = 0.0001
+I1119 11:20:30.096741  9434 solver.cpp:218] Iteration 4060 (7.21228 iter/s, 2.77305s/20 iters), loss = 0.12127
+I1119 11:20:30.096803  9434 solver.cpp:237]     Train net output #0: loss = 0.12127 (* 1 = 0.12127 loss)
+I1119 11:20:30.096815  9434 sgd_solver.cpp:105] Iteration 4060, lr = 0.0001
+I1119 11:20:32.901273  9434 solver.cpp:218] Iteration 4080 (7.13158 iter/s, 2.80443s/20 iters), loss = 0.124368
+I1119 11:20:32.901336  9434 solver.cpp:237]     Train net output #0: loss = 0.124368 (* 1 = 0.124368 loss)
+I1119 11:20:32.901346  9434 sgd_solver.cpp:105] Iteration 4080, lr = 0.0001
+I1119 11:20:35.559067  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_4100.caffemodel
+I1119 11:20:36.517769  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_4100.solverstate
+I1119 11:20:36.891506  9434 solver.cpp:218] Iteration 4100 (5.01239 iter/s, 3.99012s/20 iters), loss = 0.13052
+I1119 11:20:36.891566  9434 solver.cpp:237]     Train net output #0: loss = 0.13052 (* 1 = 0.13052 loss)
+I1119 11:20:36.891575  9434 sgd_solver.cpp:105] Iteration 4100, lr = 0.0001
+I1119 11:20:39.695734  9434 solver.cpp:218] Iteration 4120 (7.13235 iter/s, 2.80413s/20 iters), loss = 0.128356
+I1119 11:20:39.695796  9434 solver.cpp:237]     Train net output #0: loss = 0.128356 (* 1 = 0.128356 loss)
+I1119 11:20:39.695806  9434 sgd_solver.cpp:105] Iteration 4120, lr = 0.0001
+I1119 11:20:42.480777  9434 solver.cpp:218] Iteration 4140 (7.18148 iter/s, 2.78494s/20 iters), loss = 0.123598
+I1119 11:20:42.480836  9434 solver.cpp:237]     Train net output #0: loss = 0.123598 (* 1 = 0.123598 loss)
+I1119 11:20:42.480847  9434 sgd_solver.cpp:105] Iteration 4140, lr = 0.0001
+I1119 11:20:45.252116  9434 solver.cpp:218] Iteration 4160 (7.21699 iter/s, 2.77124s/20 iters), loss = 0.126922
+I1119 11:20:45.252177  9434 solver.cpp:237]     Train net output #0: loss = 0.126922 (* 1 = 0.126922 loss)
+I1119 11:20:45.252187  9434 sgd_solver.cpp:105] Iteration 4160, lr = 0.0001
+I1119 11:20:47.978444  9434 solver.cpp:218] Iteration 4180 (7.33614 iter/s, 2.72623s/20 iters), loss = 0.130528
+I1119 11:20:47.978504  9434 solver.cpp:237]     Train net output #0: loss = 0.130528 (* 1 = 0.130528 loss)
+I1119 11:20:47.978514  9434 sgd_solver.cpp:105] Iteration 4180, lr = 0.0001
+I1119 11:20:50.590360  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_4200.caffemodel
+I1119 11:20:51.564889  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_4200.solverstate
+I1119 11:20:51.939942  9434 solver.cpp:218] Iteration 4200 (5.04874 iter/s, 3.96139s/20 iters), loss = 0.122966
+I1119 11:20:51.940008  9434 solver.cpp:237]     Train net output #0: loss = 0.122966 (* 1 = 0.122966 loss)
+I1119 11:20:51.940018  9434 sgd_solver.cpp:105] Iteration 4200, lr = 0.0001
+I1119 11:20:54.671532  9434 solver.cpp:218] Iteration 4220 (7.32203 iter/s, 2.73148s/20 iters), loss = 0.129731
+I1119 11:20:54.671591  9434 solver.cpp:237]     Train net output #0: loss = 0.129731 (* 1 = 0.129731 loss)
+I1119 11:20:54.671602  9434 sgd_solver.cpp:105] Iteration 4220, lr = 0.0001
+I1119 11:20:57.403023  9434 solver.cpp:218] Iteration 4240 (7.32228 iter/s, 2.73139s/20 iters), loss = 0.128831
+I1119 11:20:57.403084  9434 solver.cpp:237]     Train net output #0: loss = 0.128831 (* 1 = 0.128831 loss)
+I1119 11:20:57.403095  9434 sgd_solver.cpp:105] Iteration 4240, lr = 0.0001
+I1119 11:21:00.156599  9434 solver.cpp:218] Iteration 4260 (7.26355 iter/s, 2.75347s/20 iters), loss = 0.123532
+I1119 11:21:00.156663  9434 solver.cpp:237]     Train net output #0: loss = 0.123532 (* 1 = 0.123532 loss)
+I1119 11:21:00.156673  9434 sgd_solver.cpp:105] Iteration 4260, lr = 0.0001
+I1119 11:21:02.941642  9434 solver.cpp:218] Iteration 4280 (7.18149 iter/s, 2.78494s/20 iters), loss = 0.13359
+I1119 11:21:02.941705  9434 solver.cpp:237]     Train net output #0: loss = 0.13359 (* 1 = 0.13359 loss)
+I1119 11:21:02.941716  9434 sgd_solver.cpp:105] Iteration 4280, lr = 0.0001
+I1119 11:21:05.556964  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_4300.caffemodel
+I1119 11:21:06.523612  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_4300.solverstate
+I1119 11:21:06.907013  9434 solver.cpp:218] Iteration 4300 (5.04381 iter/s, 3.96525s/20 iters), loss = 0.120456
+I1119 11:21:06.907074  9434 solver.cpp:237]     Train net output #0: loss = 0.120456 (* 1 = 0.120456 loss)
+I1119 11:21:06.907085  9434 sgd_solver.cpp:105] Iteration 4300, lr = 0.0001
+I1119 11:21:09.674716  9434 solver.cpp:218] Iteration 4320 (7.22647 iter/s, 2.7676s/20 iters), loss = 0.12818
+I1119 11:21:09.674780  9434 solver.cpp:237]     Train net output #0: loss = 0.12818 (* 1 = 0.12818 loss)
+I1119 11:21:09.674793  9434 sgd_solver.cpp:105] Iteration 4320, lr = 0.0001
+I1119 11:21:12.450704  9434 solver.cpp:218] Iteration 4340 (7.20491 iter/s, 2.77588s/20 iters), loss = 0.126921
+I1119 11:21:12.450769  9434 solver.cpp:237]     Train net output #0: loss = 0.126921 (* 1 = 0.126921 loss)
+I1119 11:21:12.450779  9434 sgd_solver.cpp:105] Iteration 4340, lr = 0.0001
+I1119 11:21:15.220819  9434 solver.cpp:218] Iteration 4360 (7.22019 iter/s, 2.77001s/20 iters), loss = 0.141006
+I1119 11:21:15.220883  9434 solver.cpp:237]     Train net output #0: loss = 0.141006 (* 1 = 0.141006 loss)
+I1119 11:21:15.220893  9434 sgd_solver.cpp:105] Iteration 4360, lr = 0.0001
+I1119 11:21:18.006114  9434 solver.cpp:218] Iteration 4380 (7.18083 iter/s, 2.78519s/20 iters), loss = 0.12036
+I1119 11:21:18.006180  9434 solver.cpp:237]     Train net output #0: loss = 0.12036 (* 1 = 0.12036 loss)
+I1119 11:21:18.006191  9434 sgd_solver.cpp:105] Iteration 4380, lr = 0.0001
+I1119 11:21:20.642161  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_4400.caffemodel
+I1119 11:21:21.599484  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_4400.solverstate
+I1119 11:21:21.975649  9434 solver.cpp:218] Iteration 4400 (5.03852 iter/s, 3.96942s/20 iters), loss = 0.117758
+I1119 11:21:21.975716  9434 solver.cpp:237]     Train net output #0: loss = 0.117758 (* 1 = 0.117758 loss)
+I1119 11:21:21.975728  9434 sgd_solver.cpp:105] Iteration 4400, lr = 0.0001
+I1119 11:21:24.778970  9434 solver.cpp:218] Iteration 4420 (7.13467 iter/s, 2.80321s/20 iters), loss = 0.12616
+I1119 11:21:24.779032  9434 solver.cpp:237]     Train net output #0: loss = 0.12616 (* 1 = 0.12616 loss)
+I1119 11:21:24.779043  9434 sgd_solver.cpp:105] Iteration 4420, lr = 0.0001
+I1119 11:21:27.552701  9434 solver.cpp:218] Iteration 4440 (7.21077 iter/s, 2.77363s/20 iters), loss = 0.125824
+I1119 11:21:27.552767  9434 solver.cpp:237]     Train net output #0: loss = 0.125824 (* 1 = 0.125824 loss)
+I1119 11:21:27.552778  9434 sgd_solver.cpp:105] Iteration 4440, lr = 0.0001
+I1119 11:21:30.320883  9434 solver.cpp:218] Iteration 4460 (7.22524 iter/s, 2.76807s/20 iters), loss = 0.125598
+I1119 11:21:30.320947  9434 solver.cpp:237]     Train net output #0: loss = 0.125598 (* 1 = 0.125598 loss)
+I1119 11:21:30.320957  9434 sgd_solver.cpp:105] Iteration 4460, lr = 0.0001
+I1119 11:21:33.094370  9434 solver.cpp:218] Iteration 4480 (7.21141 iter/s, 2.77338s/20 iters), loss = 0.123157
+I1119 11:21:33.094441  9434 solver.cpp:237]     Train net output #0: loss = 0.123157 (* 1 = 0.123157 loss)
+I1119 11:21:33.094454  9434 sgd_solver.cpp:105] Iteration 4480, lr = 0.0001
+I1119 11:21:35.731407  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_4500.caffemodel
+I1119 11:21:36.688030  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_4500.solverstate
+I1119 11:21:37.062788  9434 solver.cpp:218] Iteration 4500 (5.03995 iter/s, 3.96829s/20 iters), loss = 0.119137
+I1119 11:21:37.062853  9434 solver.cpp:237]     Train net output #0: loss = 0.119137 (* 1 = 0.119137 loss)
+I1119 11:21:37.062865  9434 sgd_solver.cpp:105] Iteration 4500, lr = 0.0001
+I1119 11:21:39.869921  9434 solver.cpp:218] Iteration 4520 (7.12537 iter/s, 2.80687s/20 iters), loss = 0.132332
+I1119 11:21:39.869979  9434 solver.cpp:237]     Train net output #0: loss = 0.132332 (* 1 = 0.132332 loss)
+I1119 11:21:39.869993  9434 sgd_solver.cpp:105] Iteration 4520, lr = 0.0001
+I1119 11:21:42.661738  9434 solver.cpp:218] Iteration 4540 (7.16404 iter/s, 2.79172s/20 iters), loss = 0.119979
+I1119 11:21:42.661803  9434 solver.cpp:237]     Train net output #0: loss = 0.119979 (* 1 = 0.119979 loss)
+I1119 11:21:42.661815  9434 sgd_solver.cpp:105] Iteration 4540, lr = 0.0001
+I1119 11:21:45.437045  9434 solver.cpp:218] Iteration 4560 (7.20668 iter/s, 2.7752s/20 iters), loss = 0.134677
+I1119 11:21:45.437109  9434 solver.cpp:237]     Train net output #0: loss = 0.134677 (* 1 = 0.134677 loss)
+I1119 11:21:45.437120  9434 sgd_solver.cpp:105] Iteration 4560, lr = 0.0001
+I1119 11:21:48.220166  9434 solver.cpp:218] Iteration 4580 (7.18645 iter/s, 2.78302s/20 iters), loss = 0.124415
+I1119 11:21:48.220229  9434 solver.cpp:237]     Train net output #0: loss = 0.124415 (* 1 = 0.124415 loss)
+I1119 11:21:48.220240  9434 sgd_solver.cpp:105] Iteration 4580, lr = 0.0001
+I1119 11:21:50.880022  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_4600.caffemodel
+I1119 11:21:51.840786  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_4600.solverstate
+I1119 11:21:52.216756  9434 solver.cpp:218] Iteration 4600 (5.00441 iter/s, 3.99647s/20 iters), loss = 0.123418
+I1119 11:21:52.216820  9434 solver.cpp:237]     Train net output #0: loss = 0.123418 (* 1 = 0.123418 loss)
+I1119 11:21:52.216830  9434 sgd_solver.cpp:105] Iteration 4600, lr = 0.0001
+I1119 11:21:55.009562  9434 solver.cpp:218] Iteration 4620 (7.16152 iter/s, 2.7927s/20 iters), loss = 0.122603
+I1119 11:21:55.009626  9434 solver.cpp:237]     Train net output #0: loss = 0.122603 (* 1 = 0.122603 loss)
+I1119 11:21:55.009639  9434 sgd_solver.cpp:105] Iteration 4620, lr = 0.0001
+I1119 11:21:57.741349  9434 solver.cpp:218] Iteration 4640 (7.3215 iter/s, 2.73168s/20 iters), loss = 0.122432
+I1119 11:21:57.741415  9434 solver.cpp:237]     Train net output #0: loss = 0.122432 (* 1 = 0.122432 loss)
+I1119 11:21:57.741425  9434 sgd_solver.cpp:105] Iteration 4640, lr = 0.0001
+I1119 11:22:00.501147  9434 solver.cpp:218] Iteration 4660 (7.24718 iter/s, 2.75969s/20 iters), loss = 0.12124
+I1119 11:22:00.501205  9434 solver.cpp:237]     Train net output #0: loss = 0.12124 (* 1 = 0.12124 loss)
+I1119 11:22:00.501219  9434 sgd_solver.cpp:105] Iteration 4660, lr = 0.0001
+I1119 11:22:03.279116  9434 solver.cpp:218] Iteration 4680 (7.19976 iter/s, 2.77787s/20 iters), loss = 0.121401
+I1119 11:22:03.279182  9434 solver.cpp:237]     Train net output #0: loss = 0.121401 (* 1 = 0.121401 loss)
+I1119 11:22:03.279193  9434 sgd_solver.cpp:105] Iteration 4680, lr = 0.0001
+I1119 11:22:05.909018  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_4700.caffemodel
+I1119 11:22:06.865684  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_4700.solverstate
+I1119 11:22:07.238684  9434 solver.cpp:218] Iteration 4700 (5.05121 iter/s, 3.95945s/20 iters), loss = 0.133024
+I1119 11:22:07.238746  9434 solver.cpp:237]     Train net output #0: loss = 0.133024 (* 1 = 0.133024 loss)
+I1119 11:22:07.238757  9434 sgd_solver.cpp:105] Iteration 4700, lr = 0.0001
+I1119 11:22:10.045063  9434 solver.cpp:218] Iteration 4720 (7.12689 iter/s, 2.80627s/20 iters), loss = 0.122851
+I1119 11:22:10.045125  9434 solver.cpp:237]     Train net output #0: loss = 0.122851 (* 1 = 0.122851 loss)
+I1119 11:22:10.045135  9434 sgd_solver.cpp:105] Iteration 4720, lr = 0.0001
+I1119 11:22:12.841979  9434 solver.cpp:218] Iteration 4740 (7.151 iter/s, 2.79681s/20 iters), loss = 0.128013
+I1119 11:22:12.842039  9434 solver.cpp:237]     Train net output #0: loss = 0.128013 (* 1 = 0.128013 loss)
+I1119 11:22:12.842051  9434 sgd_solver.cpp:105] Iteration 4740, lr = 0.0001
+I1119 11:22:15.635010  9434 solver.cpp:218] Iteration 4760 (7.16094 iter/s, 2.79293s/20 iters), loss = 0.118828
+I1119 11:22:15.635068  9434 solver.cpp:237]     Train net output #0: loss = 0.118828 (* 1 = 0.118828 loss)
+I1119 11:22:15.635079  9434 sgd_solver.cpp:105] Iteration 4760, lr = 0.0001
+I1119 11:22:18.399824  9434 solver.cpp:218] Iteration 4780 (7.23401 iter/s, 2.76472s/20 iters), loss = 0.11753
+I1119 11:22:18.399888  9434 solver.cpp:237]     Train net output #0: loss = 0.11753 (* 1 = 0.11753 loss)
+I1119 11:22:18.399899  9434 sgd_solver.cpp:105] Iteration 4780, lr = 0.0001
+I1119 11:22:21.033249  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_4800.caffemodel
+I1119 11:22:21.990537  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_4800.solverstate
+I1119 11:22:22.365916  9434 solver.cpp:218] Iteration 4800 (5.0429 iter/s, 3.96597s/20 iters), loss = 0.121217
+I1119 11:22:22.365978  9434 solver.cpp:237]     Train net output #0: loss = 0.121217 (* 1 = 0.121217 loss)
+I1119 11:22:22.365989  9434 sgd_solver.cpp:105] Iteration 4800, lr = 0.0001
+I1119 11:22:25.104372  9434 solver.cpp:218] Iteration 4820 (7.30366 iter/s, 2.73835s/20 iters), loss = 0.124206
+I1119 11:22:25.104430  9434 solver.cpp:237]     Train net output #0: loss = 0.124206 (* 1 = 0.124206 loss)
+I1119 11:22:25.104441  9434 sgd_solver.cpp:105] Iteration 4820, lr = 0.0001
+I1119 11:22:27.859716  9434 solver.cpp:218] Iteration 4840 (7.25975 iter/s, 2.75491s/20 iters), loss = 0.131057
+I1119 11:22:27.859778  9434 solver.cpp:237]     Train net output #0: loss = 0.131057 (* 1 = 0.131057 loss)
+I1119 11:22:27.859791  9434 sgd_solver.cpp:105] Iteration 4840, lr = 0.0001
+I1119 11:22:30.632421  9434 solver.cpp:218] Iteration 4860 (7.21344 iter/s, 2.7726s/20 iters), loss = 0.127511
+I1119 11:22:30.632499  9434 solver.cpp:237]     Train net output #0: loss = 0.127511 (* 1 = 0.127511 loss)
+I1119 11:22:30.632510  9434 sgd_solver.cpp:105] Iteration 4860, lr = 0.0001
+I1119 11:22:33.358177  9434 solver.cpp:218] Iteration 4880 (7.33773 iter/s, 2.72564s/20 iters), loss = 0.116002
+I1119 11:22:33.358242  9434 solver.cpp:237]     Train net output #0: loss = 0.116002 (* 1 = 0.116002 loss)
+I1119 11:22:33.358253  9434 sgd_solver.cpp:105] Iteration 4880, lr = 0.0001
+I1119 11:22:35.938222  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_4900.caffemodel
+I1119 11:22:36.901345  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_4900.solverstate
+I1119 11:22:37.276623  9434 solver.cpp:218] Iteration 4900 (5.10422 iter/s, 3.91833s/20 iters), loss = 0.125706
+I1119 11:22:37.276685  9434 solver.cpp:237]     Train net output #0: loss = 0.125706 (* 1 = 0.125706 loss)
+I1119 11:22:37.276696  9434 sgd_solver.cpp:105] Iteration 4900, lr = 0.0001
+I1119 11:22:40.002090  9434 solver.cpp:218] Iteration 4920 (7.33847 iter/s, 2.72536s/20 iters), loss = 0.121456
+I1119 11:22:40.002148  9434 solver.cpp:237]     Train net output #0: loss = 0.121456 (* 1 = 0.121456 loss)
+I1119 11:22:40.002158  9434 sgd_solver.cpp:105] Iteration 4920, lr = 0.0001
+I1119 11:22:42.716935  9434 solver.cpp:218] Iteration 4940 (7.36717 iter/s, 2.71475s/20 iters), loss = 0.129312
+I1119 11:22:42.717000  9434 solver.cpp:237]     Train net output #0: loss = 0.129312 (* 1 = 0.129312 loss)
+I1119 11:22:42.717010  9434 sgd_solver.cpp:105] Iteration 4940, lr = 0.0001
+I1119 11:22:45.485921  9434 solver.cpp:218] Iteration 4960 (7.22313 iter/s, 2.76888s/20 iters), loss = 0.125627
+I1119 11:22:45.485985  9434 solver.cpp:237]     Train net output #0: loss = 0.125627 (* 1 = 0.125627 loss)
+I1119 11:22:45.485997  9434 sgd_solver.cpp:105] Iteration 4960, lr = 0.0001
+I1119 11:22:48.270298  9434 solver.cpp:218] Iteration 4980 (7.1832 iter/s, 2.78427s/20 iters), loss = 0.133363
+I1119 11:22:48.270362  9434 solver.cpp:237]     Train net output #0: loss = 0.133363 (* 1 = 0.133363 loss)
+I1119 11:22:48.270372  9434 sgd_solver.cpp:105] Iteration 4980, lr = 0.0001
+I1119 11:22:50.921937  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_5000.caffemodel
+I1119 11:22:51.878566  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_5000.solverstate
+I1119 11:22:52.254847  9434 solver.cpp:218] Iteration 5000 (5.01954 iter/s, 3.98443s/20 iters), loss = 0.129528
+I1119 11:22:52.254909  9434 solver.cpp:237]     Train net output #0: loss = 0.129528 (* 1 = 0.129528 loss)
+I1119 11:22:52.254920  9434 sgd_solver.cpp:105] Iteration 5000, lr = 0.0001
+I1119 11:22:55.047272  9434 solver.cpp:218] Iteration 5020 (7.1625 iter/s, 2.79232s/20 iters), loss = 0.127463
+I1119 11:22:55.047333  9434 solver.cpp:237]     Train net output #0: loss = 0.127463 (* 1 = 0.127463 loss)
+I1119 11:22:55.047344  9434 sgd_solver.cpp:105] Iteration 5020, lr = 0.0001
+I1119 11:22:57.848765  9434 solver.cpp:218] Iteration 5040 (7.13931 iter/s, 2.80139s/20 iters), loss = 0.124357
+I1119 11:22:57.848834  9434 solver.cpp:237]     Train net output #0: loss = 0.124357 (* 1 = 0.124357 loss)
+I1119 11:22:57.848846  9434 sgd_solver.cpp:105] Iteration 5040, lr = 0.0001
+I1119 11:23:00.615473  9434 solver.cpp:218] Iteration 5060 (7.22909 iter/s, 2.7666s/20 iters), loss = 0.124558
+I1119 11:23:00.615531  9434 solver.cpp:237]     Train net output #0: loss = 0.124558 (* 1 = 0.124558 loss)
+I1119 11:23:00.615542  9434 sgd_solver.cpp:105] Iteration 5060, lr = 0.0001
+I1119 11:23:03.390539  9434 solver.cpp:218] Iteration 5080 (7.20729 iter/s, 2.77497s/20 iters), loss = 0.125027
+I1119 11:23:03.390602  9434 solver.cpp:237]     Train net output #0: loss = 0.125027 (* 1 = 0.125027 loss)
+I1119 11:23:03.390614  9434 sgd_solver.cpp:105] Iteration 5080, lr = 0.0001
+I1119 11:23:06.020536  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_5100.caffemodel
+I1119 11:23:06.981922  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_5100.solverstate
+I1119 11:23:07.355273  9434 solver.cpp:218] Iteration 5100 (5.04463 iter/s, 3.96461s/20 iters), loss = 0.128354
+I1119 11:23:07.355337  9434 solver.cpp:237]     Train net output #0: loss = 0.128354 (* 1 = 0.128354 loss)
+I1119 11:23:07.355347  9434 sgd_solver.cpp:105] Iteration 5100, lr = 0.0001
+I1119 11:23:10.176324  9434 solver.cpp:218] Iteration 5120 (7.08982 iter/s, 2.82095s/20 iters), loss = 0.12922
+I1119 11:23:10.176384  9434 solver.cpp:237]     Train net output #0: loss = 0.12922 (* 1 = 0.12922 loss)
+I1119 11:23:10.176394  9434 sgd_solver.cpp:105] Iteration 5120, lr = 0.0001
+I1119 11:23:12.923532  9434 solver.cpp:218] Iteration 5140 (7.28039 iter/s, 2.74711s/20 iters), loss = 0.127932
+I1119 11:23:12.923595  9434 solver.cpp:237]     Train net output #0: loss = 0.127932 (* 1 = 0.127932 loss)
+I1119 11:23:12.923606  9434 sgd_solver.cpp:105] Iteration 5140, lr = 0.0001
+I1119 11:23:15.724891  9434 solver.cpp:218] Iteration 5160 (7.13966 iter/s, 2.80126s/20 iters), loss = 0.118149
+I1119 11:23:15.724956  9434 solver.cpp:237]     Train net output #0: loss = 0.118149 (* 1 = 0.118149 loss)
+I1119 11:23:15.724967  9434 sgd_solver.cpp:105] Iteration 5160, lr = 0.0001
+I1119 11:23:18.509150  9434 solver.cpp:218] Iteration 5180 (7.18351 iter/s, 2.78415s/20 iters), loss = 0.126047
+I1119 11:23:18.509208  9434 solver.cpp:237]     Train net output #0: loss = 0.126047 (* 1 = 0.126047 loss)
+I1119 11:23:18.509219  9434 sgd_solver.cpp:105] Iteration 5180, lr = 0.0001
+I1119 11:23:21.164914  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_5200.caffemodel
+I1119 11:23:22.135124  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_5200.solverstate
+I1119 11:23:22.515251  9434 solver.cpp:218] Iteration 5200 (4.99253 iter/s, 4.00599s/20 iters), loss = 0.124728
+I1119 11:23:22.515313  9434 solver.cpp:237]     Train net output #0: loss = 0.124728 (* 1 = 0.124728 loss)
+I1119 11:23:22.515324  9434 sgd_solver.cpp:105] Iteration 5200, lr = 0.0001
+I1119 11:23:25.323949  9434 solver.cpp:218] Iteration 5220 (7.121 iter/s, 2.80859s/20 iters), loss = 0.127057
+I1119 11:23:25.324017  9434 solver.cpp:237]     Train net output #0: loss = 0.127057 (* 1 = 0.127057 loss)
+I1119 11:23:25.324028  9434 sgd_solver.cpp:105] Iteration 5220, lr = 0.0001
+I1119 11:23:28.126063  9434 solver.cpp:218] Iteration 5240 (7.13774 iter/s, 2.80201s/20 iters), loss = 0.129207
+I1119 11:23:28.126128  9434 solver.cpp:237]     Train net output #0: loss = 0.129207 (* 1 = 0.129207 loss)
+I1119 11:23:28.126139  9434 sgd_solver.cpp:105] Iteration 5240, lr = 0.0001
+I1119 11:23:30.929343  9434 solver.cpp:218] Iteration 5260 (7.13477 iter/s, 2.80317s/20 iters), loss = 0.13208
+I1119 11:23:30.929405  9434 solver.cpp:237]     Train net output #0: loss = 0.13208 (* 1 = 0.13208 loss)
+I1119 11:23:30.929417  9434 sgd_solver.cpp:105] Iteration 5260, lr = 0.0001
+I1119 11:23:33.734422  9434 solver.cpp:218] Iteration 5280 (7.13018 iter/s, 2.80498s/20 iters), loss = 0.131084
+I1119 11:23:33.734488  9434 solver.cpp:237]     Train net output #0: loss = 0.131084 (* 1 = 0.131084 loss)
+I1119 11:23:33.734498  9434 sgd_solver.cpp:105] Iteration 5280, lr = 0.0001
+I1119 11:23:36.373224  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_5300.caffemodel
+I1119 11:23:37.327194  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_5300.solverstate
+I1119 11:23:37.700826  9434 solver.cpp:218] Iteration 5300 (5.0425 iter/s, 3.96628s/20 iters), loss = 0.122555
+I1119 11:23:37.700889  9434 solver.cpp:237]     Train net output #0: loss = 0.122555 (* 1 = 0.122555 loss)
+I1119 11:23:37.700901  9434 sgd_solver.cpp:105] Iteration 5300, lr = 0.0001
+I1119 11:23:40.507303  9434 solver.cpp:218] Iteration 5320 (7.12664 iter/s, 2.80637s/20 iters), loss = 0.121301
+I1119 11:23:40.507369  9434 solver.cpp:237]     Train net output #0: loss = 0.121301 (* 1 = 0.121301 loss)
+I1119 11:23:40.507382  9434 sgd_solver.cpp:105] Iteration 5320, lr = 0.0001
+I1119 11:23:43.298177  9434 solver.cpp:218] Iteration 5340 (7.16649 iter/s, 2.79077s/20 iters), loss = 0.125656
+I1119 11:23:43.298246  9434 solver.cpp:237]     Train net output #0: loss = 0.125656 (* 1 = 0.125656 loss)
+I1119 11:23:43.298259  9434 sgd_solver.cpp:105] Iteration 5340, lr = 0.0001
+I1119 11:23:46.078655  9434 solver.cpp:218] Iteration 5360 (7.19329 iter/s, 2.78037s/20 iters), loss = 0.125848
+I1119 11:23:46.078718  9434 solver.cpp:237]     Train net output #0: loss = 0.125848 (* 1 = 0.125848 loss)
+I1119 11:23:46.078729  9434 sgd_solver.cpp:105] Iteration 5360, lr = 0.0001
+I1119 11:23:48.869693  9434 solver.cpp:218] Iteration 5380 (7.16606 iter/s, 2.79093s/20 iters), loss = 0.122765
+I1119 11:23:48.869758  9434 solver.cpp:237]     Train net output #0: loss = 0.122765 (* 1 = 0.122765 loss)
+I1119 11:23:48.869768  9434 sgd_solver.cpp:105] Iteration 5380, lr = 0.0001
+I1119 11:23:51.520377  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_5400.caffemodel
+I1119 11:23:52.530809  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_5400.solverstate
+I1119 11:23:52.906791  9434 solver.cpp:218] Iteration 5400 (4.9542 iter/s, 4.03698s/20 iters), loss = 0.119875
+I1119 11:23:52.906857  9434 solver.cpp:237]     Train net output #0: loss = 0.119875 (* 1 = 0.119875 loss)
+I1119 11:23:52.906868  9434 sgd_solver.cpp:105] Iteration 5400, lr = 0.0001
+I1119 11:23:55.695345  9434 solver.cpp:218] Iteration 5420 (7.17245 iter/s, 2.78845s/20 iters), loss = 0.130517
+I1119 11:23:55.695410  9434 solver.cpp:237]     Train net output #0: loss = 0.130517 (* 1 = 0.130517 loss)
+I1119 11:23:55.695420  9434 sgd_solver.cpp:105] Iteration 5420, lr = 0.0001
+I1119 11:23:58.492020  9434 solver.cpp:218] Iteration 5440 (7.15162 iter/s, 2.79657s/20 iters), loss = 0.115002
+I1119 11:23:58.492084  9434 solver.cpp:237]     Train net output #0: loss = 0.115002 (* 1 = 0.115002 loss)
+I1119 11:23:58.492095  9434 sgd_solver.cpp:105] Iteration 5440, lr = 0.0001
+I1119 11:24:01.284862  9434 solver.cpp:218] Iteration 5460 (7.16143 iter/s, 2.79274s/20 iters), loss = 0.123374
+I1119 11:24:01.284925  9434 solver.cpp:237]     Train net output #0: loss = 0.123374 (* 1 = 0.123374 loss)
+I1119 11:24:01.284935  9434 sgd_solver.cpp:105] Iteration 5460, lr = 0.0001
+I1119 11:24:04.060698  9434 solver.cpp:218] Iteration 5480 (7.20531 iter/s, 2.77573s/20 iters), loss = 0.127061
+I1119 11:24:04.060760  9434 solver.cpp:237]     Train net output #0: loss = 0.127061 (* 1 = 0.127061 loss)
+I1119 11:24:04.060770  9434 sgd_solver.cpp:105] Iteration 5480, lr = 0.0001
+I1119 11:24:06.668289  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_5500.caffemodel
+I1119 11:24:07.623797  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_5500.solverstate
+I1119 11:24:07.999101  9434 solver.cpp:218] Iteration 5500 (5.07835 iter/s, 3.93829s/20 iters), loss = 0.113484
+I1119 11:24:07.999167  9434 solver.cpp:237]     Train net output #0: loss = 0.113484 (* 1 = 0.113484 loss)
+I1119 11:24:07.999178  9434 sgd_solver.cpp:105] Iteration 5500, lr = 0.0001
+I1119 11:24:10.772581  9434 solver.cpp:218] Iteration 5520 (7.21144 iter/s, 2.77337s/20 iters), loss = 0.136935
+I1119 11:24:10.772639  9434 solver.cpp:237]     Train net output #0: loss = 0.136935 (* 1 = 0.136935 loss)
+I1119 11:24:10.772650  9434 sgd_solver.cpp:105] Iteration 5520, lr = 0.0001
+I1119 11:24:13.571513  9434 solver.cpp:218] Iteration 5540 (7.14584 iter/s, 2.79883s/20 iters), loss = 0.126636
+I1119 11:24:13.571575  9434 solver.cpp:237]     Train net output #0: loss = 0.126636 (* 1 = 0.126636 loss)
+I1119 11:24:13.571586  9434 sgd_solver.cpp:105] Iteration 5540, lr = 0.0001
+I1119 11:24:16.350515  9434 solver.cpp:218] Iteration 5560 (7.19709 iter/s, 2.7789s/20 iters), loss = 0.12055
+I1119 11:24:16.350579  9434 solver.cpp:237]     Train net output #0: loss = 0.12055 (* 1 = 0.12055 loss)
+I1119 11:24:16.350592  9434 sgd_solver.cpp:105] Iteration 5560, lr = 0.0001
+I1119 11:24:19.120599  9434 solver.cpp:218] Iteration 5580 (7.22027 iter/s, 2.76998s/20 iters), loss = 0.122462
+I1119 11:24:19.120663  9434 solver.cpp:237]     Train net output #0: loss = 0.122462 (* 1 = 0.122462 loss)
+I1119 11:24:19.120676  9434 sgd_solver.cpp:105] Iteration 5580, lr = 0.0001
+I1119 11:24:21.758479  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_5600.caffemodel
+I1119 11:24:22.720237  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_5600.solverstate
+I1119 11:24:23.099592  9434 solver.cpp:218] Iteration 5600 (5.02655 iter/s, 3.97887s/20 iters), loss = 0.122342
+I1119 11:24:23.099658  9434 solver.cpp:237]     Train net output #0: loss = 0.122342 (* 1 = 0.122342 loss)
+I1119 11:24:23.099669  9434 sgd_solver.cpp:105] Iteration 5600, lr = 0.0001
+I1119 11:24:25.905351  9434 solver.cpp:218] Iteration 5620 (7.12846 iter/s, 2.80566s/20 iters), loss = 0.130825
+I1119 11:24:25.905412  9434 solver.cpp:237]     Train net output #0: loss = 0.130825 (* 1 = 0.130825 loss)
+I1119 11:24:25.905423  9434 sgd_solver.cpp:105] Iteration 5620, lr = 0.0001
+I1119 11:24:28.699800  9434 solver.cpp:218] Iteration 5640 (7.15731 iter/s, 2.79435s/20 iters), loss = 0.114486
+I1119 11:24:28.699862  9434 solver.cpp:237]     Train net output #0: loss = 0.114486 (* 1 = 0.114486 loss)
+I1119 11:24:28.699875  9434 sgd_solver.cpp:105] Iteration 5640, lr = 0.0001
+I1119 11:24:31.484222  9434 solver.cpp:218] Iteration 5660 (7.18309 iter/s, 2.78432s/20 iters), loss = 0.122708
+I1119 11:24:31.484284  9434 solver.cpp:237]     Train net output #0: loss = 0.122708 (* 1 = 0.122708 loss)
+I1119 11:24:31.484297  9434 sgd_solver.cpp:105] Iteration 5660, lr = 0.0001
+I1119 11:24:34.289958  9434 solver.cpp:218] Iteration 5680 (7.12852 iter/s, 2.80563s/20 iters), loss = 0.136719
+I1119 11:24:34.290017  9434 solver.cpp:237]     Train net output #0: loss = 0.136719 (* 1 = 0.136719 loss)
+I1119 11:24:34.290029  9434 sgd_solver.cpp:105] Iteration 5680, lr = 0.0001
+I1119 11:24:36.946538  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_5700.caffemodel
+I1119 11:24:37.898015  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_5700.solverstate
+I1119 11:24:38.270507  9434 solver.cpp:218] Iteration 5700 (5.02458 iter/s, 3.98044s/20 iters), loss = 0.114987
+I1119 11:24:38.270572  9434 solver.cpp:237]     Train net output #0: loss = 0.114987 (* 1 = 0.114987 loss)
+I1119 11:24:38.270583  9434 sgd_solver.cpp:105] Iteration 5700, lr = 0.0001
+I1119 11:24:41.093086  9434 solver.cpp:218] Iteration 5720 (7.08603 iter/s, 2.82245s/20 iters), loss = 0.126181
+I1119 11:24:41.093304  9434 solver.cpp:237]     Train net output #0: loss = 0.126181 (* 1 = 0.126181 loss)
+I1119 11:24:41.093336  9434 sgd_solver.cpp:105] Iteration 5720, lr = 0.0001
+I1119 11:24:43.886660  9434 solver.cpp:218] Iteration 5740 (7.15993 iter/s, 2.79332s/20 iters), loss = 0.125822
+I1119 11:24:43.886725  9434 solver.cpp:237]     Train net output #0: loss = 0.125822 (* 1 = 0.125822 loss)
+I1119 11:24:43.886736  9434 sgd_solver.cpp:105] Iteration 5740, lr = 0.0001
+I1119 11:24:46.682523  9434 solver.cpp:218] Iteration 5760 (7.1537 iter/s, 2.79576s/20 iters), loss = 0.119093
+I1119 11:24:46.682585  9434 solver.cpp:237]     Train net output #0: loss = 0.119093 (* 1 = 0.119093 loss)
+I1119 11:24:46.682596  9434 sgd_solver.cpp:105] Iteration 5760, lr = 0.0001
+I1119 11:24:49.455837  9434 solver.cpp:218] Iteration 5780 (7.21185 iter/s, 2.77321s/20 iters), loss = 0.120395
+I1119 11:24:49.455901  9434 solver.cpp:237]     Train net output #0: loss = 0.120395 (* 1 = 0.120395 loss)
+I1119 11:24:49.455914  9434 sgd_solver.cpp:105] Iteration 5780, lr = 0.0001
+I1119 11:24:52.103229  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_5800.caffemodel
+I1119 11:24:53.050520  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_5800.solverstate
+I1119 11:24:53.425101  9434 solver.cpp:218] Iteration 5800 (5.03887 iter/s, 3.96915s/20 iters), loss = 0.13422
+I1119 11:24:53.425165  9434 solver.cpp:237]     Train net output #0: loss = 0.13422 (* 1 = 0.13422 loss)
+I1119 11:24:53.425175  9434 sgd_solver.cpp:105] Iteration 5800, lr = 0.0001
+I1119 11:24:56.205711  9434 solver.cpp:218] Iteration 5820 (7.19296 iter/s, 2.7805s/20 iters), loss = 0.123102
+I1119 11:24:56.205790  9434 solver.cpp:237]     Train net output #0: loss = 0.123102 (* 1 = 0.123102 loss)
+I1119 11:24:56.205802  9434 sgd_solver.cpp:105] Iteration 5820, lr = 0.0001
+I1119 11:24:59.011323  9434 solver.cpp:218] Iteration 5840 (7.12886 iter/s, 2.8055s/20 iters), loss = 0.132258
+I1119 11:24:59.011389  9434 solver.cpp:237]     Train net output #0: loss = 0.132258 (* 1 = 0.132258 loss)
+I1119 11:24:59.011399  9434 sgd_solver.cpp:105] Iteration 5840, lr = 0.0001
+I1119 11:25:01.772864  9434 solver.cpp:218] Iteration 5860 (7.24261 iter/s, 2.76144s/20 iters), loss = 0.129819
+I1119 11:25:01.772927  9434 solver.cpp:237]     Train net output #0: loss = 0.129819 (* 1 = 0.129819 loss)
+I1119 11:25:01.772939  9434 sgd_solver.cpp:105] Iteration 5860, lr = 0.0001
+I1119 11:25:04.561087  9434 solver.cpp:218] Iteration 5880 (7.17329 iter/s, 2.78812s/20 iters), loss = 0.119449
+I1119 11:25:04.561148  9434 solver.cpp:237]     Train net output #0: loss = 0.119449 (* 1 = 0.119449 loss)
+I1119 11:25:04.561159  9434 sgd_solver.cpp:105] Iteration 5880, lr = 0.0001
+I1119 11:25:07.218477  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_5900.caffemodel
+I1119 11:25:08.178376  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_5900.solverstate
+I1119 11:25:08.552131  9434 solver.cpp:218] Iteration 5900 (5.01137 iter/s, 3.99093s/20 iters), loss = 0.136882
+I1119 11:25:08.552197  9434 solver.cpp:237]     Train net output #0: loss = 0.136882 (* 1 = 0.136882 loss)
+I1119 11:25:08.552208  9434 sgd_solver.cpp:105] Iteration 5900, lr = 0.0001
+I1119 11:25:11.354645  9434 solver.cpp:218] Iteration 5920 (7.13672 iter/s, 2.80241s/20 iters), loss = 0.123122
+I1119 11:25:11.354707  9434 solver.cpp:237]     Train net output #0: loss = 0.123122 (* 1 = 0.123122 loss)
+I1119 11:25:11.354718  9434 sgd_solver.cpp:105] Iteration 5920, lr = 0.0001
+I1119 11:25:14.137163  9434 solver.cpp:218] Iteration 5940 (7.188 iter/s, 2.78242s/20 iters), loss = 0.125101
+I1119 11:25:14.137228  9434 solver.cpp:237]     Train net output #0: loss = 0.125101 (* 1 = 0.125101 loss)
+I1119 11:25:14.137238  9434 sgd_solver.cpp:105] Iteration 5940, lr = 0.0001
+I1119 11:25:16.903637  9434 solver.cpp:218] Iteration 5960 (7.22969 iter/s, 2.76637s/20 iters), loss = 0.123271
+I1119 11:25:16.903700  9434 solver.cpp:237]     Train net output #0: loss = 0.123271 (* 1 = 0.123271 loss)
+I1119 11:25:16.903710  9434 sgd_solver.cpp:105] Iteration 5960, lr = 0.0001
+I1119 11:25:19.680388  9434 solver.cpp:218] Iteration 5980 (7.20293 iter/s, 2.77665s/20 iters), loss = 0.128948
+I1119 11:25:19.680460  9434 solver.cpp:237]     Train net output #0: loss = 0.128948 (* 1 = 0.128948 loss)
+I1119 11:25:19.680472  9434 sgd_solver.cpp:105] Iteration 5980, lr = 0.0001
+I1119 11:25:22.301002  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_6000.caffemodel
+I1119 11:25:23.259414  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_6000.solverstate
+I1119 11:25:23.637657  9434 solver.cpp:218] Iteration 6000 (5.05414 iter/s, 3.95716s/20 iters), loss = 0.12547
+I1119 11:25:23.637718  9434 solver.cpp:237]     Train net output #0: loss = 0.12547 (* 1 = 0.12547 loss)
+I1119 11:25:23.637729  9434 sgd_solver.cpp:105] Iteration 6000, lr = 1e-05
+I1119 11:25:26.397902  9434 solver.cpp:218] Iteration 6020 (7.246 iter/s, 2.76014s/20 iters), loss = 0.120895
+I1119 11:25:26.397967  9434 solver.cpp:237]     Train net output #0: loss = 0.120895 (* 1 = 0.120895 loss)
+I1119 11:25:26.397979  9434 sgd_solver.cpp:105] Iteration 6020, lr = 1e-05
+I1119 11:25:29.202730  9434 solver.cpp:218] Iteration 6040 (7.13083 iter/s, 2.80472s/20 iters), loss = 0.119899
+I1119 11:25:29.202790  9434 solver.cpp:237]     Train net output #0: loss = 0.119899 (* 1 = 0.119899 loss)
+I1119 11:25:29.202800  9434 sgd_solver.cpp:105] Iteration 6040, lr = 1e-05
+I1119 11:25:31.975098  9434 solver.cpp:218] Iteration 6060 (7.2143 iter/s, 2.77227s/20 iters), loss = 0.123922
+I1119 11:25:31.975162  9434 solver.cpp:237]     Train net output #0: loss = 0.123922 (* 1 = 0.123922 loss)
+I1119 11:25:31.975173  9434 sgd_solver.cpp:105] Iteration 6060, lr = 1e-05
+I1119 11:25:34.780881  9434 solver.cpp:218] Iteration 6080 (7.1284 iter/s, 2.80568s/20 iters), loss = 0.119734
+I1119 11:25:34.780946  9434 solver.cpp:237]     Train net output #0: loss = 0.119734 (* 1 = 0.119734 loss)
+I1119 11:25:34.780956  9434 sgd_solver.cpp:105] Iteration 6080, lr = 1e-05
+I1119 11:25:37.436283  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_6100.caffemodel
+I1119 11:25:38.393554  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_6100.solverstate
+I1119 11:25:38.766645  9434 solver.cpp:218] Iteration 6100 (5.018 iter/s, 3.98565s/20 iters), loss = 0.129677
+I1119 11:25:38.766711  9434 solver.cpp:237]     Train net output #0: loss = 0.129677 (* 1 = 0.129677 loss)
+I1119 11:25:38.766723  9434 sgd_solver.cpp:105] Iteration 6100, lr = 1e-05
+I1119 11:25:41.558912  9434 solver.cpp:218] Iteration 6120 (7.16292 iter/s, 2.79216s/20 iters), loss = 0.125192
+I1119 11:25:41.558974  9434 solver.cpp:237]     Train net output #0: loss = 0.125192 (* 1 = 0.125192 loss)
+I1119 11:25:41.558985  9434 sgd_solver.cpp:105] Iteration 6120, lr = 1e-05
+I1119 11:25:44.355399  9434 solver.cpp:218] Iteration 6140 (7.15209 iter/s, 2.79638s/20 iters), loss = 0.121267
+I1119 11:25:44.355463  9434 solver.cpp:237]     Train net output #0: loss = 0.121267 (* 1 = 0.121267 loss)
+I1119 11:25:44.355474  9434 sgd_solver.cpp:105] Iteration 6140, lr = 1e-05
+I1119 11:25:47.127825  9434 solver.cpp:218] Iteration 6160 (7.21417 iter/s, 2.77232s/20 iters), loss = 0.123186
+I1119 11:25:47.127890  9434 solver.cpp:237]     Train net output #0: loss = 0.123186 (* 1 = 0.123186 loss)
+I1119 11:25:47.127902  9434 sgd_solver.cpp:105] Iteration 6160, lr = 1e-05
+I1119 11:25:49.925384  9434 solver.cpp:218] Iteration 6180 (7.14936 iter/s, 2.79745s/20 iters), loss = 0.129392
+I1119 11:25:49.925442  9434 solver.cpp:237]     Train net output #0: loss = 0.129392 (* 1 = 0.129392 loss)
+I1119 11:25:49.925456  9434 sgd_solver.cpp:105] Iteration 6180, lr = 1e-05
+I1119 11:25:52.544904  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_6200.caffemodel
+I1119 11:25:53.511413  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_6200.solverstate
+I1119 11:25:53.932930  9434 solver.cpp:218] Iteration 6200 (4.99072 iter/s, 4.00744s/20 iters), loss = 0.12778
+I1119 11:25:53.932994  9434 solver.cpp:237]     Train net output #0: loss = 0.12778 (* 1 = 0.12778 loss)
+I1119 11:25:53.933007  9434 sgd_solver.cpp:105] Iteration 6200, lr = 1e-05
+I1119 11:25:56.784261  9434 solver.cpp:218] Iteration 6220 (7.01468 iter/s, 2.85116s/20 iters), loss = 0.133828
+I1119 11:25:56.784340  9434 solver.cpp:237]     Train net output #0: loss = 0.133828 (* 1 = 0.133828 loss)
+I1119 11:25:56.784353  9434 sgd_solver.cpp:105] Iteration 6220, lr = 1e-05
+I1119 11:25:59.563149  9434 solver.cpp:218] Iteration 6240 (7.19743 iter/s, 2.77877s/20 iters), loss = 0.12205
+I1119 11:25:59.563212  9434 solver.cpp:237]     Train net output #0: loss = 0.12205 (* 1 = 0.12205 loss)
+I1119 11:25:59.563222  9434 sgd_solver.cpp:105] Iteration 6240, lr = 1e-05
+I1119 11:26:02.350060  9434 solver.cpp:218] Iteration 6260 (7.17668 iter/s, 2.78681s/20 iters), loss = 0.12223
+I1119 11:26:02.350124  9434 solver.cpp:237]     Train net output #0: loss = 0.12223 (* 1 = 0.12223 loss)
+I1119 11:26:02.350136  9434 sgd_solver.cpp:105] Iteration 6260, lr = 1e-05
+I1119 11:26:05.132827  9434 solver.cpp:218] Iteration 6280 (7.18736 iter/s, 2.78266s/20 iters), loss = 0.127225
+I1119 11:26:05.132890  9434 solver.cpp:237]     Train net output #0: loss = 0.127225 (* 1 = 0.127225 loss)
+I1119 11:26:05.132903  9434 sgd_solver.cpp:105] Iteration 6280, lr = 1e-05
+I1119 11:26:07.789882  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_6300.caffemodel
+I1119 11:26:08.746755  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_6300.solverstate
+I1119 11:26:09.122367  9434 solver.cpp:218] Iteration 6300 (5.01326 iter/s, 3.98942s/20 iters), loss = 0.134724
+I1119 11:26:09.122432  9434 solver.cpp:237]     Train net output #0: loss = 0.134724 (* 1 = 0.134724 loss)
+I1119 11:26:09.122447  9434 sgd_solver.cpp:105] Iteration 6300, lr = 1e-05
+I1119 11:26:11.908373  9434 solver.cpp:218] Iteration 6320 (7.17901 iter/s, 2.7859s/20 iters), loss = 0.115793
+I1119 11:26:11.908439  9434 solver.cpp:237]     Train net output #0: loss = 0.115793 (* 1 = 0.115793 loss)
+I1119 11:26:11.908457  9434 sgd_solver.cpp:105] Iteration 6320, lr = 1e-05
+I1119 11:26:14.702051  9434 solver.cpp:218] Iteration 6340 (7.15929 iter/s, 2.79357s/20 iters), loss = 0.126717
+I1119 11:26:14.702116  9434 solver.cpp:237]     Train net output #0: loss = 0.126717 (* 1 = 0.126717 loss)
+I1119 11:26:14.702129  9434 sgd_solver.cpp:105] Iteration 6340, lr = 1e-05
+I1119 11:26:17.423053  9434 solver.cpp:218] Iteration 6360 (7.35052 iter/s, 2.7209s/20 iters), loss = 0.120125
+I1119 11:26:17.423117  9434 solver.cpp:237]     Train net output #0: loss = 0.120125 (* 1 = 0.120125 loss)
+I1119 11:26:17.423130  9434 sgd_solver.cpp:105] Iteration 6360, lr = 1e-05
+I1119 11:26:20.139566  9434 solver.cpp:218] Iteration 6380 (7.36279 iter/s, 2.71636s/20 iters), loss = 0.125183
+I1119 11:26:20.139629  9434 solver.cpp:237]     Train net output #0: loss = 0.125183 (* 1 = 0.125183 loss)
+I1119 11:26:20.139639  9434 sgd_solver.cpp:105] Iteration 6380, lr = 1e-05
+I1119 11:26:22.710080  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_6400.caffemodel
+I1119 11:26:23.678923  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_6400.solverstate
+I1119 11:26:24.058246  9434 solver.cpp:218] Iteration 6400 (5.10391 iter/s, 3.91857s/20 iters), loss = 0.131087
+I1119 11:26:24.058307  9434 solver.cpp:237]     Train net output #0: loss = 0.131087 (* 1 = 0.131087 loss)
+I1119 11:26:24.058318  9434 sgd_solver.cpp:105] Iteration 6400, lr = 1e-05
+I1119 11:26:26.781596  9434 solver.cpp:218] Iteration 6420 (7.34417 iter/s, 2.72325s/20 iters), loss = 0.133125
+I1119 11:26:26.781658  9434 solver.cpp:237]     Train net output #0: loss = 0.133125 (* 1 = 0.133125 loss)
+I1119 11:26:26.781668  9434 sgd_solver.cpp:105] Iteration 6420, lr = 1e-05
+I1119 11:26:29.494858  9434 solver.cpp:218] Iteration 6440 (7.37148 iter/s, 2.71316s/20 iters), loss = 0.134237
+I1119 11:26:29.494921  9434 solver.cpp:237]     Train net output #0: loss = 0.134237 (* 1 = 0.134237 loss)
+I1119 11:26:29.494931  9434 sgd_solver.cpp:105] Iteration 6440, lr = 1e-05
+I1119 11:26:32.203111  9434 solver.cpp:218] Iteration 6460 (7.38511 iter/s, 2.70815s/20 iters), loss = 0.126568
+I1119 11:26:32.203173  9434 solver.cpp:237]     Train net output #0: loss = 0.126568 (* 1 = 0.126568 loss)
+I1119 11:26:32.203183  9434 sgd_solver.cpp:105] Iteration 6460, lr = 1e-05
+I1119 11:26:34.918082  9434 solver.cpp:218] Iteration 6480 (7.36684 iter/s, 2.71487s/20 iters), loss = 0.127068
+I1119 11:26:34.918146  9434 solver.cpp:237]     Train net output #0: loss = 0.127068 (* 1 = 0.127068 loss)
+I1119 11:26:34.918157  9434 sgd_solver.cpp:105] Iteration 6480, lr = 1e-05
+I1119 11:26:37.521543  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_6500.caffemodel
+I1119 11:26:38.485981  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_6500.solverstate
+I1119 11:26:38.862417  9434 solver.cpp:218] Iteration 6500 (5.07071 iter/s, 3.94422s/20 iters), loss = 0.123597
+I1119 11:26:38.862643  9434 solver.cpp:237]     Train net output #0: loss = 0.123597 (* 1 = 0.123597 loss)
+I1119 11:26:38.862659  9434 sgd_solver.cpp:105] Iteration 6500, lr = 1e-05
+I1119 11:26:41.622159  9434 solver.cpp:218] Iteration 6520 (7.24773 iter/s, 2.75948s/20 iters), loss = 0.117565
+I1119 11:26:41.622220  9434 solver.cpp:237]     Train net output #0: loss = 0.117565 (* 1 = 0.117565 loss)
+I1119 11:26:41.622232  9434 sgd_solver.cpp:105] Iteration 6520, lr = 1e-05
+I1119 11:26:44.406762  9434 solver.cpp:218] Iteration 6540 (7.1826 iter/s, 2.78451s/20 iters), loss = 0.126571
+I1119 11:26:44.406827  9434 solver.cpp:237]     Train net output #0: loss = 0.126571 (* 1 = 0.126571 loss)
+I1119 11:26:44.406838  9434 sgd_solver.cpp:105] Iteration 6540, lr = 1e-05
+I1119 11:26:47.211194  9434 solver.cpp:218] Iteration 6560 (7.13185 iter/s, 2.80432s/20 iters), loss = 0.121613
+I1119 11:26:47.211252  9434 solver.cpp:237]     Train net output #0: loss = 0.121613 (* 1 = 0.121613 loss)
+I1119 11:26:47.211263  9434 sgd_solver.cpp:105] Iteration 6560, lr = 1e-05
+I1119 11:26:50.015970  9434 solver.cpp:218] Iteration 6580 (7.13095 iter/s, 2.80468s/20 iters), loss = 0.131605
+I1119 11:26:50.016031  9434 solver.cpp:237]     Train net output #0: loss = 0.131605 (* 1 = 0.131605 loss)
+I1119 11:26:50.016042  9434 sgd_solver.cpp:105] Iteration 6580, lr = 1e-05
+I1119 11:26:52.672660  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_6600.caffemodel
+I1119 11:26:53.632747  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_6600.solverstate
+I1119 11:26:54.009304  9434 solver.cpp:218] Iteration 6600 (5.00849 iter/s, 3.99322s/20 iters), loss = 0.129014
+I1119 11:26:54.009366  9434 solver.cpp:237]     Train net output #0: loss = 0.129014 (* 1 = 0.129014 loss)
+I1119 11:26:54.009377  9434 sgd_solver.cpp:105] Iteration 6600, lr = 1e-05
+I1119 11:26:56.800315  9434 solver.cpp:218] Iteration 6620 (7.16613 iter/s, 2.79091s/20 iters), loss = 0.127372
+I1119 11:26:56.800379  9434 solver.cpp:237]     Train net output #0: loss = 0.127372 (* 1 = 0.127372 loss)
+I1119 11:26:56.800388  9434 sgd_solver.cpp:105] Iteration 6620, lr = 1e-05
+I1119 11:26:59.596514  9434 solver.cpp:218] Iteration 6640 (7.15283 iter/s, 2.79609s/20 iters), loss = 0.130709
+I1119 11:26:59.596576  9434 solver.cpp:237]     Train net output #0: loss = 0.130709 (* 1 = 0.130709 loss)
+I1119 11:26:59.596587  9434 sgd_solver.cpp:105] Iteration 6640, lr = 1e-05
+I1119 11:27:02.398365  9434 solver.cpp:218] Iteration 6660 (7.1384 iter/s, 2.80175s/20 iters), loss = 0.12758
+I1119 11:27:02.398429  9434 solver.cpp:237]     Train net output #0: loss = 0.12758 (* 1 = 0.12758 loss)
+I1119 11:27:02.398442  9434 sgd_solver.cpp:105] Iteration 6660, lr = 1e-05
+I1119 11:27:05.182363  9434 solver.cpp:218] Iteration 6680 (7.18419 iter/s, 2.78389s/20 iters), loss = 0.120293
+I1119 11:27:05.182425  9434 solver.cpp:237]     Train net output #0: loss = 0.120293 (* 1 = 0.120293 loss)
+I1119 11:27:05.182440  9434 sgd_solver.cpp:105] Iteration 6680, lr = 1e-05
+I1119 11:27:07.830507  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_6700.caffemodel
+I1119 11:27:08.809904  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_6700.solverstate
+I1119 11:27:09.184402  9434 solver.cpp:218] Iteration 6700 (4.9976 iter/s, 4.00192s/20 iters), loss = 0.124801
+I1119 11:27:09.184581  9434 solver.cpp:237]     Train net output #0: loss = 0.124801 (* 1 = 0.124801 loss)
+I1119 11:27:09.184594  9434 sgd_solver.cpp:105] Iteration 6700, lr = 1e-05
+I1119 11:27:11.988158  9434 solver.cpp:218] Iteration 6720 (7.13385 iter/s, 2.80354s/20 iters), loss = 0.12998
+I1119 11:27:11.988222  9434 solver.cpp:237]     Train net output #0: loss = 0.12998 (* 1 = 0.12998 loss)
+I1119 11:27:11.988235  9434 sgd_solver.cpp:105] Iteration 6720, lr = 1e-05
+I1119 11:27:14.769297  9434 solver.cpp:218] Iteration 6740 (7.19157 iter/s, 2.78103s/20 iters), loss = 0.13112
+I1119 11:27:14.769356  9434 solver.cpp:237]     Train net output #0: loss = 0.13112 (* 1 = 0.13112 loss)
+I1119 11:27:14.769368  9434 sgd_solver.cpp:105] Iteration 6740, lr = 1e-05
+I1119 11:27:17.553700  9434 solver.cpp:218] Iteration 6760 (7.18312 iter/s, 2.78431s/20 iters), loss = 0.119816
+I1119 11:27:17.553758  9434 solver.cpp:237]     Train net output #0: loss = 0.119816 (* 1 = 0.119816 loss)
+I1119 11:27:17.553772  9434 sgd_solver.cpp:105] Iteration 6760, lr = 1e-05
+I1119 11:27:20.342846  9434 solver.cpp:218] Iteration 6780 (7.17091 iter/s, 2.78905s/20 iters), loss = 0.117346
+I1119 11:27:20.342909  9434 solver.cpp:237]     Train net output #0: loss = 0.117346 (* 1 = 0.117346 loss)
+I1119 11:27:20.342922  9434 sgd_solver.cpp:105] Iteration 6780, lr = 1e-05
+I1119 11:27:22.977563  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_6800.caffemodel
+I1119 11:27:23.976186  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_6800.solverstate
+I1119 11:27:24.354041  9434 solver.cpp:218] Iteration 6800 (4.98619 iter/s, 4.01108s/20 iters), loss = 0.129057
+I1119 11:27:24.354101  9434 solver.cpp:237]     Train net output #0: loss = 0.129057 (* 1 = 0.129057 loss)
+I1119 11:27:24.354115  9434 sgd_solver.cpp:105] Iteration 6800, lr = 1e-05
+I1119 11:27:27.129935  9434 solver.cpp:218] Iteration 6820 (7.20515 iter/s, 2.77579s/20 iters), loss = 0.134681
+I1119 11:27:27.129998  9434 solver.cpp:237]     Train net output #0: loss = 0.134681 (* 1 = 0.134681 loss)
+I1119 11:27:27.130012  9434 sgd_solver.cpp:105] Iteration 6820, lr = 1e-05
+I1119 11:27:29.913014  9434 solver.cpp:218] Iteration 6840 (7.18655 iter/s, 2.78298s/20 iters), loss = 0.122074
+I1119 11:27:29.913080  9434 solver.cpp:237]     Train net output #0: loss = 0.122074 (* 1 = 0.122074 loss)
+I1119 11:27:29.913094  9434 sgd_solver.cpp:105] Iteration 6840, lr = 1e-05
+I1119 11:27:32.667631  9434 solver.cpp:218] Iteration 6860 (7.26081 iter/s, 2.75451s/20 iters), loss = 0.124372
+I1119 11:27:32.667696  9434 solver.cpp:237]     Train net output #0: loss = 0.124372 (* 1 = 0.124372 loss)
+I1119 11:27:32.667707  9434 sgd_solver.cpp:105] Iteration 6860, lr = 1e-05
+I1119 11:27:35.419626  9434 solver.cpp:218] Iteration 6880 (7.26773 iter/s, 2.75189s/20 iters), loss = 0.121654
+I1119 11:27:35.419692  9434 solver.cpp:237]     Train net output #0: loss = 0.121654 (* 1 = 0.121654 loss)
+I1119 11:27:35.419703  9434 sgd_solver.cpp:105] Iteration 6880, lr = 1e-05
+I1119 11:27:38.035365  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_6900.caffemodel
+I1119 11:27:38.997231  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_6900.solverstate
+I1119 11:27:39.373009  9434 solver.cpp:218] Iteration 6900 (5.05911 iter/s, 3.95327s/20 iters), loss = 0.124677
+I1119 11:27:39.373184  9434 solver.cpp:237]     Train net output #0: loss = 0.124677 (* 1 = 0.124677 loss)
+I1119 11:27:39.373195  9434 sgd_solver.cpp:105] Iteration 6900, lr = 1e-05
+I1119 11:27:42.108928  9434 solver.cpp:218] Iteration 6920 (7.31073 iter/s, 2.73571s/20 iters), loss = 0.124222
+I1119 11:27:42.108994  9434 solver.cpp:237]     Train net output #0: loss = 0.124222 (* 1 = 0.124222 loss)
+I1119 11:27:42.109004  9434 sgd_solver.cpp:105] Iteration 6920, lr = 1e-05
+I1119 11:27:44.856524  9434 solver.cpp:218] Iteration 6940 (7.27937 iter/s, 2.74749s/20 iters), loss = 0.124571
+I1119 11:27:44.856585  9434 solver.cpp:237]     Train net output #0: loss = 0.124571 (* 1 = 0.124571 loss)
+I1119 11:27:44.856596  9434 sgd_solver.cpp:105] Iteration 6940, lr = 1e-05
+I1119 11:27:47.657796  9434 solver.cpp:218] Iteration 6960 (7.13987 iter/s, 2.80117s/20 iters), loss = 0.11922
+I1119 11:27:47.657860  9434 solver.cpp:237]     Train net output #0: loss = 0.11922 (* 1 = 0.11922 loss)
+I1119 11:27:47.657871  9434 sgd_solver.cpp:105] Iteration 6960, lr = 1e-05
+I1119 11:27:50.427726  9434 solver.cpp:218] Iteration 6980 (7.22067 iter/s, 2.76983s/20 iters), loss = 0.117118
+I1119 11:27:50.427793  9434 solver.cpp:237]     Train net output #0: loss = 0.117118 (* 1 = 0.117118 loss)
+I1119 11:27:50.427803  9434 sgd_solver.cpp:105] Iteration 6980, lr = 1e-05
+I1119 11:27:53.000921  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_7000.caffemodel
+I1119 11:27:53.976429  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_7000.solverstate
+I1119 11:27:54.355839  9434 solver.cpp:218] Iteration 7000 (5.09166 iter/s, 3.92799s/20 iters), loss = 0.12023
+I1119 11:27:54.355901  9434 solver.cpp:237]     Train net output #0: loss = 0.12023 (* 1 = 0.12023 loss)
+I1119 11:27:54.355911  9434 sgd_solver.cpp:105] Iteration 7000, lr = 1e-05
+I1119 11:27:57.136409  9434 solver.cpp:218] Iteration 7020 (7.19303 iter/s, 2.78047s/20 iters), loss = 0.120886
+I1119 11:27:57.136477  9434 solver.cpp:237]     Train net output #0: loss = 0.120886 (* 1 = 0.120886 loss)
+I1119 11:27:57.136492  9434 sgd_solver.cpp:105] Iteration 7020, lr = 1e-05
+I1119 11:27:59.940752  9434 solver.cpp:218] Iteration 7040 (7.13207 iter/s, 2.80424s/20 iters), loss = 0.123615
+I1119 11:27:59.940815  9434 solver.cpp:237]     Train net output #0: loss = 0.123615 (* 1 = 0.123615 loss)
+I1119 11:27:59.940829  9434 sgd_solver.cpp:105] Iteration 7040, lr = 1e-05
+I1119 11:28:02.733458  9434 solver.cpp:218] Iteration 7060 (7.16178 iter/s, 2.7926s/20 iters), loss = 0.128239
+I1119 11:28:02.733522  9434 solver.cpp:237]     Train net output #0: loss = 0.128239 (* 1 = 0.128239 loss)
+I1119 11:28:02.733533  9434 sgd_solver.cpp:105] Iteration 7060, lr = 1e-05
+I1119 11:28:05.511409  9434 solver.cpp:218] Iteration 7080 (7.19983 iter/s, 2.77784s/20 iters), loss = 0.111859
+I1119 11:28:05.511472  9434 solver.cpp:237]     Train net output #0: loss = 0.111859 (* 1 = 0.111859 loss)
+I1119 11:28:05.511483  9434 sgd_solver.cpp:105] Iteration 7080, lr = 1e-05
+I1119 11:28:08.119705  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_7100.caffemodel
+I1119 11:28:09.095671  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_7100.solverstate
+I1119 11:28:09.475811  9434 solver.cpp:218] Iteration 7100 (5.04505 iter/s, 3.96428s/20 iters), loss = 0.121826
+I1119 11:28:09.475993  9434 solver.cpp:237]     Train net output #0: loss = 0.121826 (* 1 = 0.121826 loss)
+I1119 11:28:09.476006  9434 sgd_solver.cpp:105] Iteration 7100, lr = 1e-05
+I1119 11:28:12.245016  9434 solver.cpp:218] Iteration 7120 (7.22287 iter/s, 2.76898s/20 iters), loss = 0.134616
+I1119 11:28:12.245079  9434 solver.cpp:237]     Train net output #0: loss = 0.134616 (* 1 = 0.134616 loss)
+I1119 11:28:12.245090  9434 sgd_solver.cpp:105] Iteration 7120, lr = 1e-05
+I1119 11:28:14.998358  9434 solver.cpp:218] Iteration 7140 (7.26418 iter/s, 2.75324s/20 iters), loss = 0.131688
+I1119 11:28:14.998422  9434 solver.cpp:237]     Train net output #0: loss = 0.131688 (* 1 = 0.131688 loss)
+I1119 11:28:14.998433  9434 sgd_solver.cpp:105] Iteration 7140, lr = 1e-05
+I1119 11:28:17.709928  9434 solver.cpp:218] Iteration 7160 (7.37609 iter/s, 2.71146s/20 iters), loss = 0.126446
+I1119 11:28:17.709990  9434 solver.cpp:237]     Train net output #0: loss = 0.126446 (* 1 = 0.126446 loss)
+I1119 11:28:17.710001  9434 sgd_solver.cpp:105] Iteration 7160, lr = 1e-05
+I1119 11:28:20.420963  9434 solver.cpp:218] Iteration 7180 (7.37754 iter/s, 2.71093s/20 iters), loss = 0.127029
+I1119 11:28:20.421025  9434 solver.cpp:237]     Train net output #0: loss = 0.127029 (* 1 = 0.127029 loss)
+I1119 11:28:20.421036  9434 sgd_solver.cpp:105] Iteration 7180, lr = 1e-05
+I1119 11:28:22.991780  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_7200.caffemodel
+I1119 11:28:23.957988  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_7200.solverstate
+I1119 11:28:24.337139  9434 solver.cpp:218] Iteration 7200 (5.10717 iter/s, 3.91606s/20 iters), loss = 0.135131
+I1119 11:28:24.337200  9434 solver.cpp:237]     Train net output #0: loss = 0.135131 (* 1 = 0.135131 loss)
+I1119 11:28:24.337211  9434 sgd_solver.cpp:105] Iteration 7200, lr = 1e-05
+I1119 11:28:27.064314  9434 solver.cpp:218] Iteration 7220 (7.33387 iter/s, 2.72707s/20 iters), loss = 0.137362
+I1119 11:28:27.064376  9434 solver.cpp:237]     Train net output #0: loss = 0.137362 (* 1 = 0.137362 loss)
+I1119 11:28:27.064388  9434 sgd_solver.cpp:105] Iteration 7220, lr = 1e-05
+I1119 11:28:29.777962  9434 solver.cpp:218] Iteration 7240 (7.37043 iter/s, 2.71355s/20 iters), loss = 0.136074
+I1119 11:28:29.778029  9434 solver.cpp:237]     Train net output #0: loss = 0.136074 (* 1 = 0.136074 loss)
+I1119 11:28:29.778040  9434 sgd_solver.cpp:105] Iteration 7240, lr = 1e-05
+I1119 11:28:32.558058  9434 solver.cpp:218] Iteration 7260 (7.19428 iter/s, 2.77999s/20 iters), loss = 0.126031
+I1119 11:28:32.558120  9434 solver.cpp:237]     Train net output #0: loss = 0.126031 (* 1 = 0.126031 loss)
+I1119 11:28:32.558132  9434 sgd_solver.cpp:105] Iteration 7260, lr = 1e-05
+I1119 11:28:35.331109  9434 solver.cpp:218] Iteration 7280 (7.21254 iter/s, 2.77295s/20 iters), loss = 0.121223
+I1119 11:28:35.331168  9434 solver.cpp:237]     Train net output #0: loss = 0.121223 (* 1 = 0.121223 loss)
+I1119 11:28:35.331181  9434 sgd_solver.cpp:105] Iteration 7280, lr = 1e-05
+I1119 11:28:37.948145  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_7300.caffemodel
+I1119 11:28:38.911065  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_7300.solverstate
+I1119 11:28:39.285413  9434 solver.cpp:218] Iteration 7300 (5.05792 iter/s, 3.95419s/20 iters), loss = 0.131764
+I1119 11:28:39.285472  9434 solver.cpp:237]     Train net output #0: loss = 0.131764 (* 1 = 0.131764 loss)
+I1119 11:28:39.285485  9434 sgd_solver.cpp:105] Iteration 7300, lr = 1e-05
+I1119 11:28:42.046283  9434 solver.cpp:218] Iteration 7320 (7.24435 iter/s, 2.76077s/20 iters), loss = 0.123982
+I1119 11:28:42.046464  9434 solver.cpp:237]     Train net output #0: loss = 0.123982 (* 1 = 0.123982 loss)
+I1119 11:28:42.046476  9434 sgd_solver.cpp:105] Iteration 7320, lr = 1e-05
+I1119 11:28:44.804160  9434 solver.cpp:218] Iteration 7340 (7.25254 iter/s, 2.75766s/20 iters), loss = 0.127452
+I1119 11:28:44.804226  9434 solver.cpp:237]     Train net output #0: loss = 0.127452 (* 1 = 0.127452 loss)
+I1119 11:28:44.804237  9434 sgd_solver.cpp:105] Iteration 7340, lr = 1e-05
+I1119 11:28:47.565378  9434 solver.cpp:218] Iteration 7360 (7.24346 iter/s, 2.76111s/20 iters), loss = 0.129912
+I1119 11:28:47.565436  9434 solver.cpp:237]     Train net output #0: loss = 0.129912 (* 1 = 0.129912 loss)
+I1119 11:28:47.565448  9434 sgd_solver.cpp:105] Iteration 7360, lr = 1e-05
+I1119 11:28:50.337677  9434 solver.cpp:218] Iteration 7380 (7.21449 iter/s, 2.7722s/20 iters), loss = 0.131675
+I1119 11:28:50.337741  9434 solver.cpp:237]     Train net output #0: loss = 0.131675 (* 1 = 0.131675 loss)
+I1119 11:28:50.337752  9434 sgd_solver.cpp:105] Iteration 7380, lr = 1e-05
+I1119 11:28:52.969442  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_7400.caffemodel
+I1119 11:28:53.934680  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_7400.solverstate
+I1119 11:28:54.313877  9434 solver.cpp:218] Iteration 7400 (5.03008 iter/s, 3.97608s/20 iters), loss = 0.120853
+I1119 11:28:54.313941  9434 solver.cpp:237]     Train net output #0: loss = 0.120853 (* 1 = 0.120853 loss)
+I1119 11:28:54.313952  9434 sgd_solver.cpp:105] Iteration 7400, lr = 1e-05
+I1119 11:28:57.107786  9434 solver.cpp:218] Iteration 7420 (7.1587 iter/s, 2.7938s/20 iters), loss = 0.130197
+I1119 11:28:57.107851  9434 solver.cpp:237]     Train net output #0: loss = 0.130197 (* 1 = 0.130197 loss)
+I1119 11:28:57.107861  9434 sgd_solver.cpp:105] Iteration 7420, lr = 1e-05
+I1119 11:28:59.922523  9434 solver.cpp:218] Iteration 7440 (7.10573 iter/s, 2.81463s/20 iters), loss = 0.120934
+I1119 11:28:59.922585  9434 solver.cpp:237]     Train net output #0: loss = 0.120934 (* 1 = 0.120934 loss)
+I1119 11:28:59.922596  9434 sgd_solver.cpp:105] Iteration 7440, lr = 1e-05
+I1119 11:29:02.735882  9434 solver.cpp:218] Iteration 7460 (7.1092 iter/s, 2.81326s/20 iters), loss = 0.133729
+I1119 11:29:02.735949  9434 solver.cpp:237]     Train net output #0: loss = 0.133729 (* 1 = 0.133729 loss)
+I1119 11:29:02.735960  9434 sgd_solver.cpp:105] Iteration 7460, lr = 1e-05
+I1119 11:29:05.527559  9434 solver.cpp:218] Iteration 7480 (7.16443 iter/s, 2.79157s/20 iters), loss = 0.120219
+I1119 11:29:05.527621  9434 solver.cpp:237]     Train net output #0: loss = 0.120219 (* 1 = 0.120219 loss)
+I1119 11:29:05.527631  9434 sgd_solver.cpp:105] Iteration 7480, lr = 1e-05
+I1119 11:29:08.162176  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_7500.caffemodel
+I1119 11:29:09.099298  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_7500.solverstate
+I1119 11:29:09.469234  9434 solver.cpp:218] Iteration 7500 (5.07413 iter/s, 3.94156s/20 iters), loss = 0.127308
+I1119 11:29:09.469298  9434 solver.cpp:237]     Train net output #0: loss = 0.127308 (* 1 = 0.127308 loss)
+I1119 11:29:09.469310  9434 sgd_solver.cpp:105] Iteration 7500, lr = 1e-05
+I1119 11:29:12.257534  9434 solver.cpp:218] Iteration 7520 (7.1731 iter/s, 2.78819s/20 iters), loss = 0.124919
+I1119 11:29:12.257764  9434 solver.cpp:237]     Train net output #0: loss = 0.124919 (* 1 = 0.124919 loss)
+I1119 11:29:12.257812  9434 sgd_solver.cpp:105] Iteration 7520, lr = 1e-05
+I1119 11:29:15.062944  9434 solver.cpp:218] Iteration 7540 (7.12976 iter/s, 2.80514s/20 iters), loss = 0.131311
+I1119 11:29:15.063009  9434 solver.cpp:237]     Train net output #0: loss = 0.131311 (* 1 = 0.131311 loss)
+I1119 11:29:15.063019  9434 sgd_solver.cpp:105] Iteration 7540, lr = 1e-05
+I1119 11:29:17.866559  9434 solver.cpp:218] Iteration 7560 (7.13391 iter/s, 2.80351s/20 iters), loss = 0.112575
+I1119 11:29:17.866622  9434 solver.cpp:237]     Train net output #0: loss = 0.112575 (* 1 = 0.112575 loss)
+I1119 11:29:17.866633  9434 sgd_solver.cpp:105] Iteration 7560, lr = 1e-05
+I1119 11:29:20.663512  9434 solver.cpp:218] Iteration 7580 (7.15091 iter/s, 2.79685s/20 iters), loss = 0.128094
+I1119 11:29:20.663573  9434 solver.cpp:237]     Train net output #0: loss = 0.128094 (* 1 = 0.128094 loss)
+I1119 11:29:20.663583  9434 sgd_solver.cpp:105] Iteration 7580, lr = 1e-05
+I1119 11:29:23.287986  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_7600.caffemodel
+I1119 11:29:24.225220  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_7600.solverstate
+I1119 11:29:24.597249  9434 solver.cpp:218] Iteration 7600 (5.08437 iter/s, 3.93362s/20 iters), loss = 0.133441
+I1119 11:29:24.597316  9434 solver.cpp:237]     Train net output #0: loss = 0.133441 (* 1 = 0.133441 loss)
+I1119 11:29:24.597329  9434 sgd_solver.cpp:105] Iteration 7600, lr = 1e-05
+I1119 11:29:27.351171  9434 solver.cpp:218] Iteration 7620 (7.26265 iter/s, 2.75382s/20 iters), loss = 0.130262
+I1119 11:29:27.351239  9434 solver.cpp:237]     Train net output #0: loss = 0.130262 (* 1 = 0.130262 loss)
+I1119 11:29:27.351250  9434 sgd_solver.cpp:105] Iteration 7620, lr = 1e-05
+I1119 11:29:30.127951  9434 solver.cpp:218] Iteration 7640 (7.20287 iter/s, 2.77667s/20 iters), loss = 0.124777
+I1119 11:29:30.128015  9434 solver.cpp:237]     Train net output #0: loss = 0.124777 (* 1 = 0.124777 loss)
+I1119 11:29:30.128026  9434 sgd_solver.cpp:105] Iteration 7640, lr = 1e-05
+I1119 11:29:32.914767  9434 solver.cpp:218] Iteration 7660 (7.17692 iter/s, 2.78671s/20 iters), loss = 0.122512
+I1119 11:29:32.914829  9434 solver.cpp:237]     Train net output #0: loss = 0.122512 (* 1 = 0.122512 loss)
+I1119 11:29:32.914840  9434 sgd_solver.cpp:105] Iteration 7660, lr = 1e-05
+I1119 11:29:35.711534  9434 solver.cpp:218] Iteration 7680 (7.15138 iter/s, 2.79666s/20 iters), loss = 0.122484
+I1119 11:29:35.711599  9434 solver.cpp:237]     Train net output #0: loss = 0.122484 (* 1 = 0.122484 loss)
+I1119 11:29:35.711609  9434 sgd_solver.cpp:105] Iteration 7680, lr = 1e-05
+I1119 11:29:38.329946  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_7700.caffemodel
+I1119 11:29:39.267149  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_7700.solverstate
+I1119 11:29:39.637442  9434 solver.cpp:218] Iteration 7700 (5.09451 iter/s, 3.92579s/20 iters), loss = 0.131147
+I1119 11:29:39.637502  9434 solver.cpp:237]     Train net output #0: loss = 0.131147 (* 1 = 0.131147 loss)
+I1119 11:29:39.637512  9434 sgd_solver.cpp:105] Iteration 7700, lr = 1e-05
+I1119 11:29:42.414988  9434 solver.cpp:218] Iteration 7720 (7.20086 iter/s, 2.77745s/20 iters), loss = 0.12548
+I1119 11:29:42.415189  9434 solver.cpp:237]     Train net output #0: loss = 0.12548 (* 1 = 0.12548 loss)
+I1119 11:29:42.415202  9434 sgd_solver.cpp:105] Iteration 7720, lr = 1e-05
+I1119 11:29:45.213554  9434 solver.cpp:218] Iteration 7740 (7.14713 iter/s, 2.79833s/20 iters), loss = 0.122663
+I1119 11:29:45.213618  9434 solver.cpp:237]     Train net output #0: loss = 0.122663 (* 1 = 0.122663 loss)
+I1119 11:29:45.213629  9434 sgd_solver.cpp:105] Iteration 7740, lr = 1e-05
+I1119 11:29:47.977823  9434 solver.cpp:218] Iteration 7760 (7.23546 iter/s, 2.76416s/20 iters), loss = 0.127529
+I1119 11:29:47.977885  9434 solver.cpp:237]     Train net output #0: loss = 0.127529 (* 1 = 0.127529 loss)
+I1119 11:29:47.977896  9434 sgd_solver.cpp:105] Iteration 7760, lr = 1e-05
+I1119 11:29:50.750049  9434 solver.cpp:218] Iteration 7780 (7.21469 iter/s, 2.77212s/20 iters), loss = 0.122696
+I1119 11:29:50.750116  9434 solver.cpp:237]     Train net output #0: loss = 0.122696 (* 1 = 0.122696 loss)
+I1119 11:29:50.750128  9434 sgd_solver.cpp:105] Iteration 7780, lr = 1e-05
+I1119 11:29:53.373121  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_7800.caffemodel
+I1119 11:29:54.310465  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_7800.solverstate
+I1119 11:29:54.683852  9434 solver.cpp:218] Iteration 7800 (5.08429 iter/s, 3.93368s/20 iters), loss = 0.131893
+I1119 11:29:54.683913  9434 solver.cpp:237]     Train net output #0: loss = 0.131893 (* 1 = 0.131893 loss)
+I1119 11:29:54.683926  9434 sgd_solver.cpp:105] Iteration 7800, lr = 1e-05
+I1119 11:29:57.492023  9434 solver.cpp:218] Iteration 7820 (7.12233 iter/s, 2.80807s/20 iters), loss = 0.129645
+I1119 11:29:57.492089  9434 solver.cpp:237]     Train net output #0: loss = 0.129645 (* 1 = 0.129645 loss)
+I1119 11:29:57.492100  9434 sgd_solver.cpp:105] Iteration 7820, lr = 1e-05
+I1119 11:30:00.291960  9434 solver.cpp:218] Iteration 7840 (7.14329 iter/s, 2.79983s/20 iters), loss = 0.132601
+I1119 11:30:00.292024  9434 solver.cpp:237]     Train net output #0: loss = 0.132601 (* 1 = 0.132601 loss)
+I1119 11:30:00.292037  9434 sgd_solver.cpp:105] Iteration 7840, lr = 1e-05
+I1119 11:30:03.098083  9434 solver.cpp:218] Iteration 7860 (7.12754 iter/s, 2.80602s/20 iters), loss = 0.119189
+I1119 11:30:03.098145  9434 solver.cpp:237]     Train net output #0: loss = 0.119189 (* 1 = 0.119189 loss)
+I1119 11:30:03.098156  9434 sgd_solver.cpp:105] Iteration 7860, lr = 1e-05
+I1119 11:30:05.882323  9434 solver.cpp:218] Iteration 7880 (7.18356 iter/s, 2.78413s/20 iters), loss = 0.128844
+I1119 11:30:05.882385  9434 solver.cpp:237]     Train net output #0: loss = 0.128844 (* 1 = 0.128844 loss)
+I1119 11:30:05.882397  9434 sgd_solver.cpp:105] Iteration 7880, lr = 1e-05
+I1119 11:30:08.491026  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_7900.caffemodel
+I1119 11:30:09.461990  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_7900.solverstate
+I1119 11:30:09.834661  9434 solver.cpp:218] Iteration 7900 (5.06044 iter/s, 3.95222s/20 iters), loss = 0.133262
+I1119 11:30:09.834723  9434 solver.cpp:237]     Train net output #0: loss = 0.133262 (* 1 = 0.133262 loss)
+I1119 11:30:09.834734  9434 sgd_solver.cpp:105] Iteration 7900, lr = 1e-05
+I1119 11:30:12.634496  9434 solver.cpp:218] Iteration 7920 (7.14354 iter/s, 2.79973s/20 iters), loss = 0.134185
+I1119 11:30:12.634654  9434 solver.cpp:237]     Train net output #0: loss = 0.134185 (* 1 = 0.134185 loss)
+I1119 11:30:12.634668  9434 sgd_solver.cpp:105] Iteration 7920, lr = 1e-05
+I1119 11:30:15.439630  9434 solver.cpp:218] Iteration 7940 (7.13027 iter/s, 2.80494s/20 iters), loss = 0.135723
+I1119 11:30:15.439695  9434 solver.cpp:237]     Train net output #0: loss = 0.135723 (* 1 = 0.135723 loss)
+I1119 11:30:15.439707  9434 sgd_solver.cpp:105] Iteration 7940, lr = 1e-05
+I1119 11:30:18.245740  9434 solver.cpp:218] Iteration 7960 (7.12757 iter/s, 2.806s/20 iters), loss = 0.13464
+I1119 11:30:18.245807  9434 solver.cpp:237]     Train net output #0: loss = 0.13464 (* 1 = 0.13464 loss)
+I1119 11:30:18.245817  9434 sgd_solver.cpp:105] Iteration 7960, lr = 1e-05
+I1119 11:30:21.007302  9434 solver.cpp:218] Iteration 7980 (7.24256 iter/s, 2.76145s/20 iters), loss = 0.128308
+I1119 11:30:21.007364  9434 solver.cpp:237]     Train net output #0: loss = 0.128308 (* 1 = 0.128308 loss)
+I1119 11:30:21.007375  9434 sgd_solver.cpp:105] Iteration 7980, lr = 1e-05
+I1119 11:30:23.638330  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_8000.caffemodel
+I1119 11:30:24.600503  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_8000.solverstate
+I1119 11:30:24.981149  9434 solver.cpp:218] Iteration 8000 (5.03305 iter/s, 3.97373s/20 iters), loss = 0.123331
+I1119 11:30:24.981214  9434 solver.cpp:237]     Train net output #0: loss = 0.123331 (* 1 = 0.123331 loss)
+I1119 11:30:24.981225  9434 sgd_solver.cpp:105] Iteration 8000, lr = 1e-05
+I1119 11:30:27.783440  9434 solver.cpp:218] Iteration 8020 (7.13728 iter/s, 2.80219s/20 iters), loss = 0.125479
+I1119 11:30:27.783505  9434 solver.cpp:237]     Train net output #0: loss = 0.125479 (* 1 = 0.125479 loss)
+I1119 11:30:27.783516  9434 sgd_solver.cpp:105] Iteration 8020, lr = 1e-05
+I1119 11:30:30.545907  9434 solver.cpp:218] Iteration 8040 (7.24018 iter/s, 2.76236s/20 iters), loss = 0.115316
+I1119 11:30:30.545970  9434 solver.cpp:237]     Train net output #0: loss = 0.115316 (* 1 = 0.115316 loss)
+I1119 11:30:30.545981  9434 sgd_solver.cpp:105] Iteration 8040, lr = 1e-05
+I1119 11:30:33.330828  9434 solver.cpp:218] Iteration 8060 (7.1818 iter/s, 2.78482s/20 iters), loss = 0.119933
+I1119 11:30:33.330893  9434 solver.cpp:237]     Train net output #0: loss = 0.119933 (* 1 = 0.119933 loss)
+I1119 11:30:33.330904  9434 sgd_solver.cpp:105] Iteration 8060, lr = 1e-05
+I1119 11:30:36.136847  9434 solver.cpp:218] Iteration 8080 (7.12781 iter/s, 2.80591s/20 iters), loss = 0.120745
+I1119 11:30:36.136910  9434 solver.cpp:237]     Train net output #0: loss = 0.120745 (* 1 = 0.120745 loss)
+I1119 11:30:36.136921  9434 sgd_solver.cpp:105] Iteration 8080, lr = 1e-05
+I1119 11:30:38.792690  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_8100.caffemodel
+I1119 11:30:39.763882  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_8100.solverstate
+I1119 11:30:40.137413  9434 solver.cpp:218] Iteration 8100 (4.99944 iter/s, 4.00045s/20 iters), loss = 0.123548
+I1119 11:30:40.137475  9434 solver.cpp:237]     Train net output #0: loss = 0.123548 (* 1 = 0.123548 loss)
+I1119 11:30:40.137486  9434 sgd_solver.cpp:105] Iteration 8100, lr = 1e-05
+I1119 11:30:42.931241  9434 solver.cpp:218] Iteration 8120 (7.15891 iter/s, 2.79372s/20 iters), loss = 0.129298
+I1119 11:30:42.931404  9434 solver.cpp:237]     Train net output #0: loss = 0.129298 (* 1 = 0.129298 loss)
+I1119 11:30:42.931416  9434 sgd_solver.cpp:105] Iteration 8120, lr = 1e-05
+I1119 11:30:45.712839  9434 solver.cpp:218] Iteration 8140 (7.19064 iter/s, 2.78139s/20 iters), loss = 0.132834
+I1119 11:30:45.712904  9434 solver.cpp:237]     Train net output #0: loss = 0.132834 (* 1 = 0.132834 loss)
+I1119 11:30:45.712915  9434 sgd_solver.cpp:105] Iteration 8140, lr = 1e-05
+I1119 11:30:48.462795  9434 solver.cpp:218] Iteration 8160 (7.27312 iter/s, 2.74985s/20 iters), loss = 0.132297
+I1119 11:30:48.462860  9434 solver.cpp:237]     Train net output #0: loss = 0.132297 (* 1 = 0.132297 loss)
+I1119 11:30:48.462872  9434 sgd_solver.cpp:105] Iteration 8160, lr = 1e-05
+I1119 11:30:51.243197  9434 solver.cpp:218] Iteration 8180 (7.19348 iter/s, 2.7803s/20 iters), loss = 0.133423
+I1119 11:30:51.243261  9434 solver.cpp:237]     Train net output #0: loss = 0.133423 (* 1 = 0.133423 loss)
+I1119 11:30:51.243273  9434 sgd_solver.cpp:105] Iteration 8180, lr = 1e-05
+I1119 11:30:53.868628  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_8200.caffemodel
+I1119 11:30:54.825683  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_8200.solverstate
+I1119 11:30:55.200757  9434 solver.cpp:218] Iteration 8200 (5.05377 iter/s, 3.95744s/20 iters), loss = 0.132402
+I1119 11:30:55.200816  9434 solver.cpp:237]     Train net output #0: loss = 0.132402 (* 1 = 0.132402 loss)
+I1119 11:30:55.200827  9434 sgd_solver.cpp:105] Iteration 8200, lr = 1e-05
+I1119 11:30:57.994403  9434 solver.cpp:218] Iteration 8220 (7.15937 iter/s, 2.79354s/20 iters), loss = 0.13444
+I1119 11:30:57.994467  9434 solver.cpp:237]     Train net output #0: loss = 0.13444 (* 1 = 0.13444 loss)
+I1119 11:30:57.994478  9434 sgd_solver.cpp:105] Iteration 8220, lr = 1e-05
+I1119 11:31:00.787123  9434 solver.cpp:218] Iteration 8240 (7.16174 iter/s, 2.79262s/20 iters), loss = 0.127812
+I1119 11:31:00.787184  9434 solver.cpp:237]     Train net output #0: loss = 0.127812 (* 1 = 0.127812 loss)
+I1119 11:31:00.787194  9434 sgd_solver.cpp:105] Iteration 8240, lr = 1e-05
+I1119 11:31:03.552027  9434 solver.cpp:218] Iteration 8260 (7.23379 iter/s, 2.7648s/20 iters), loss = 0.11982
+I1119 11:31:03.552093  9434 solver.cpp:237]     Train net output #0: loss = 0.11982 (* 1 = 0.11982 loss)
+I1119 11:31:03.552104  9434 sgd_solver.cpp:105] Iteration 8260, lr = 1e-05
+I1119 11:31:06.340517  9434 solver.cpp:218] Iteration 8280 (7.17262 iter/s, 2.78838s/20 iters), loss = 0.12946
+I1119 11:31:06.340584  9434 solver.cpp:237]     Train net output #0: loss = 0.12946 (* 1 = 0.12946 loss)
+I1119 11:31:06.340595  9434 sgd_solver.cpp:105] Iteration 8280, lr = 1e-05
+I1119 11:31:08.986878  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_8300.caffemodel
+I1119 11:31:09.945766  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_8300.solverstate
+I1119 11:31:10.320207  9434 solver.cpp:218] Iteration 8300 (5.02567 iter/s, 3.97957s/20 iters), loss = 0.120359
+I1119 11:31:10.320271  9434 solver.cpp:237]     Train net output #0: loss = 0.120359 (* 1 = 0.120359 loss)
+I1119 11:31:10.320281  9434 sgd_solver.cpp:105] Iteration 8300, lr = 1e-05
+I1119 11:31:13.108163  9434 solver.cpp:218] Iteration 8320 (7.17398 iter/s, 2.78785s/20 iters), loss = 0.12674
+I1119 11:31:13.108381  9434 solver.cpp:237]     Train net output #0: loss = 0.12674 (* 1 = 0.12674 loss)
+I1119 11:31:13.108392  9434 sgd_solver.cpp:105] Iteration 8320, lr = 1e-05
+I1119 11:31:15.914022  9434 solver.cpp:218] Iteration 8340 (7.12862 iter/s, 2.80559s/20 iters), loss = 0.126725
+I1119 11:31:15.914088  9434 solver.cpp:237]     Train net output #0: loss = 0.126725 (* 1 = 0.126725 loss)
+I1119 11:31:15.914098  9434 sgd_solver.cpp:105] Iteration 8340, lr = 1e-05
+I1119 11:31:18.717128  9434 solver.cpp:218] Iteration 8360 (7.13522 iter/s, 2.803s/20 iters), loss = 0.129188
+I1119 11:31:18.717192  9434 solver.cpp:237]     Train net output #0: loss = 0.129188 (* 1 = 0.129188 loss)
+I1119 11:31:18.717203  9434 sgd_solver.cpp:105] Iteration 8360, lr = 1e-05
+I1119 11:31:21.514096  9434 solver.cpp:218] Iteration 8380 (7.15087 iter/s, 2.79686s/20 iters), loss = 0.119482
+I1119 11:31:21.514159  9434 solver.cpp:237]     Train net output #0: loss = 0.119482 (* 1 = 0.119482 loss)
+I1119 11:31:21.514170  9434 sgd_solver.cpp:105] Iteration 8380, lr = 1e-05
+I1119 11:31:24.138964  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_8400.caffemodel
+I1119 11:31:25.097175  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_8400.solverstate
+I1119 11:31:25.474383  9434 solver.cpp:218] Iteration 8400 (5.05029 iter/s, 3.96017s/20 iters), loss = 0.12017
+I1119 11:31:25.474449  9434 solver.cpp:237]     Train net output #0: loss = 0.12017 (* 1 = 0.12017 loss)
+I1119 11:31:25.474462  9434 sgd_solver.cpp:105] Iteration 8400, lr = 1e-05
+I1119 11:31:28.273346  9434 solver.cpp:218] Iteration 8420 (7.14578 iter/s, 2.79886s/20 iters), loss = 0.120865
+I1119 11:31:28.273412  9434 solver.cpp:237]     Train net output #0: loss = 0.120865 (* 1 = 0.120865 loss)
+I1119 11:31:28.273423  9434 sgd_solver.cpp:105] Iteration 8420, lr = 1e-05
+I1119 11:31:31.076759  9434 solver.cpp:218] Iteration 8440 (7.13443 iter/s, 2.80331s/20 iters), loss = 0.136252
+I1119 11:31:31.076822  9434 solver.cpp:237]     Train net output #0: loss = 0.136252 (* 1 = 0.136252 loss)
+I1119 11:31:31.076833  9434 sgd_solver.cpp:105] Iteration 8440, lr = 1e-05
+I1119 11:31:33.879441  9434 solver.cpp:218] Iteration 8460 (7.13629 iter/s, 2.80258s/20 iters), loss = 0.124351
+I1119 11:31:33.879504  9434 solver.cpp:237]     Train net output #0: loss = 0.124351 (* 1 = 0.124351 loss)
+I1119 11:31:33.879515  9434 sgd_solver.cpp:105] Iteration 8460, lr = 1e-05
+I1119 11:31:36.687206  9434 solver.cpp:218] Iteration 8480 (7.12336 iter/s, 2.80766s/20 iters), loss = 0.125303
+I1119 11:31:36.687266  9434 solver.cpp:237]     Train net output #0: loss = 0.125303 (* 1 = 0.125303 loss)
+I1119 11:31:36.687276  9434 sgd_solver.cpp:105] Iteration 8480, lr = 1e-05
+I1119 11:31:39.342213  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_8500.caffemodel
+I1119 11:31:40.301578  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_8500.solverstate
+I1119 11:31:40.676327  9434 solver.cpp:218] Iteration 8500 (5.01378 iter/s, 3.98901s/20 iters), loss = 0.127576
+I1119 11:31:40.676388  9434 solver.cpp:237]     Train net output #0: loss = 0.127576 (* 1 = 0.127576 loss)
+I1119 11:31:40.676400  9434 sgd_solver.cpp:105] Iteration 8500, lr = 1e-05
+I1119 11:31:43.479205  9434 solver.cpp:218] Iteration 8520 (7.13578 iter/s, 2.80278s/20 iters), loss = 0.122351
+I1119 11:31:43.479351  9434 solver.cpp:237]     Train net output #0: loss = 0.122351 (* 1 = 0.122351 loss)
+I1119 11:31:43.479362  9434 sgd_solver.cpp:105] Iteration 8520, lr = 1e-05
+I1119 11:31:46.283962  9434 solver.cpp:218] Iteration 8540 (7.13121 iter/s, 2.80457s/20 iters), loss = 0.117285
+I1119 11:31:46.284027  9434 solver.cpp:237]     Train net output #0: loss = 0.117285 (* 1 = 0.117285 loss)
+I1119 11:31:46.284039  9434 sgd_solver.cpp:105] Iteration 8540, lr = 1e-05
+I1119 11:31:49.088446  9434 solver.cpp:218] Iteration 8560 (7.13172 iter/s, 2.80437s/20 iters), loss = 0.127194
+I1119 11:31:49.088515  9434 solver.cpp:237]     Train net output #0: loss = 0.127194 (* 1 = 0.127194 loss)
+I1119 11:31:49.088527  9434 sgd_solver.cpp:105] Iteration 8560, lr = 1e-05
+I1119 11:31:51.873543  9434 solver.cpp:218] Iteration 8580 (7.18136 iter/s, 2.78499s/20 iters), loss = 0.118422
+I1119 11:31:51.873600  9434 solver.cpp:237]     Train net output #0: loss = 0.118422 (* 1 = 0.118422 loss)
+I1119 11:31:51.873612  9434 sgd_solver.cpp:105] Iteration 8580, lr = 1e-05
+I1119 11:31:54.520114  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_8600.caffemodel
+I1119 11:31:55.497197  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_8600.solverstate
+I1119 11:31:55.882258  9434 solver.cpp:218] Iteration 8600 (4.98927 iter/s, 4.0086s/20 iters), loss = 0.132057
+I1119 11:31:55.882316  9434 solver.cpp:237]     Train net output #0: loss = 0.132057 (* 1 = 0.132057 loss)
+I1119 11:31:55.882329  9434 sgd_solver.cpp:105] Iteration 8600, lr = 1e-05
+I1119 11:31:58.669673  9434 solver.cpp:218] Iteration 8620 (7.17536 iter/s, 2.78732s/20 iters), loss = 0.125294
+I1119 11:31:58.669735  9434 solver.cpp:237]     Train net output #0: loss = 0.125294 (* 1 = 0.125294 loss)
+I1119 11:31:58.669746  9434 sgd_solver.cpp:105] Iteration 8620, lr = 1e-05
+I1119 11:32:01.440558  9434 solver.cpp:218] Iteration 8640 (7.21818 iter/s, 2.77078s/20 iters), loss = 0.122387
+I1119 11:32:01.440621  9434 solver.cpp:237]     Train net output #0: loss = 0.122387 (* 1 = 0.122387 loss)
+I1119 11:32:01.440634  9434 sgd_solver.cpp:105] Iteration 8640, lr = 1e-05
+I1119 11:32:04.236361  9434 solver.cpp:218] Iteration 8660 (7.15385 iter/s, 2.7957s/20 iters), loss = 0.132638
+I1119 11:32:04.236421  9434 solver.cpp:237]     Train net output #0: loss = 0.132638 (* 1 = 0.132638 loss)
+I1119 11:32:04.236433  9434 sgd_solver.cpp:105] Iteration 8660, lr = 1e-05
+I1119 11:32:07.022231  9434 solver.cpp:218] Iteration 8680 (7.17934 iter/s, 2.78577s/20 iters), loss = 0.128954
+I1119 11:32:07.022294  9434 solver.cpp:237]     Train net output #0: loss = 0.128954 (* 1 = 0.128954 loss)
+I1119 11:32:07.022305  9434 sgd_solver.cpp:105] Iteration 8680, lr = 1e-05
+I1119 11:32:09.675693  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_8700.caffemodel
+I1119 11:32:10.642220  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_8700.solverstate
+I1119 11:32:11.023684  9434 solver.cpp:218] Iteration 8700 (4.99833 iter/s, 4.00134s/20 iters), loss = 0.122762
+I1119 11:32:11.023749  9434 solver.cpp:237]     Train net output #0: loss = 0.122762 (* 1 = 0.122762 loss)
+I1119 11:32:11.023759  9434 sgd_solver.cpp:105] Iteration 8700, lr = 1e-05
+I1119 11:32:13.808012  9434 solver.cpp:218] Iteration 8720 (7.18333 iter/s, 2.78422s/20 iters), loss = 0.132604
+I1119 11:32:13.808238  9434 solver.cpp:237]     Train net output #0: loss = 0.132604 (* 1 = 0.132604 loss)
+I1119 11:32:13.808256  9434 sgd_solver.cpp:105] Iteration 8720, lr = 1e-05
+I1119 11:32:16.587755  9434 solver.cpp:218] Iteration 8740 (7.19557 iter/s, 2.77949s/20 iters), loss = 0.128299
+I1119 11:32:16.587821  9434 solver.cpp:237]     Train net output #0: loss = 0.128299 (* 1 = 0.128299 loss)
+I1119 11:32:16.587833  9434 sgd_solver.cpp:105] Iteration 8740, lr = 1e-05
+I1119 11:32:19.312583  9434 solver.cpp:218] Iteration 8760 (7.34021 iter/s, 2.72472s/20 iters), loss = 0.131035
+I1119 11:32:19.312645  9434 solver.cpp:237]     Train net output #0: loss = 0.131035 (* 1 = 0.131035 loss)
+I1119 11:32:19.312656  9434 sgd_solver.cpp:105] Iteration 8760, lr = 1e-05
+I1119 11:32:22.041065  9434 solver.cpp:218] Iteration 8780 (7.33036 iter/s, 2.72838s/20 iters), loss = 0.122756
+I1119 11:32:22.041129  9434 solver.cpp:237]     Train net output #0: loss = 0.122756 (* 1 = 0.122756 loss)
+I1119 11:32:22.041141  9434 sgd_solver.cpp:105] Iteration 8780, lr = 1e-05
+I1119 11:32:24.652514  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_8800.caffemodel
+I1119 11:32:25.651127  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_8800.solverstate
+I1119 11:32:26.030021  9434 solver.cpp:218] Iteration 8800 (5.01399 iter/s, 3.98884s/20 iters), loss = 0.125701
+I1119 11:32:26.030084  9434 solver.cpp:237]     Train net output #0: loss = 0.125701 (* 1 = 0.125701 loss)
+I1119 11:32:26.030094  9434 sgd_solver.cpp:105] Iteration 8800, lr = 1e-05
+I1119 11:32:28.823586  9434 solver.cpp:218] Iteration 8820 (7.15957 iter/s, 2.79346s/20 iters), loss = 0.125888
+I1119 11:32:28.823647  9434 solver.cpp:237]     Train net output #0: loss = 0.125888 (* 1 = 0.125888 loss)
+I1119 11:32:28.823660  9434 sgd_solver.cpp:105] Iteration 8820, lr = 1e-05
+I1119 11:32:31.629226  9434 solver.cpp:218] Iteration 8840 (7.12876 iter/s, 2.80554s/20 iters), loss = 0.126949
+I1119 11:32:31.629290  9434 solver.cpp:237]     Train net output #0: loss = 0.126949 (* 1 = 0.126949 loss)
+I1119 11:32:31.629302  9434 sgd_solver.cpp:105] Iteration 8840, lr = 1e-05
+I1119 11:32:34.434545  9434 solver.cpp:218] Iteration 8860 (7.12958 iter/s, 2.80521s/20 iters), loss = 0.12137
+I1119 11:32:34.434608  9434 solver.cpp:237]     Train net output #0: loss = 0.12137 (* 1 = 0.12137 loss)
+I1119 11:32:34.434620  9434 sgd_solver.cpp:105] Iteration 8860, lr = 1e-05
+I1119 11:32:37.239143  9434 solver.cpp:218] Iteration 8880 (7.13141 iter/s, 2.8045s/20 iters), loss = 0.110836
+I1119 11:32:37.239207  9434 solver.cpp:237]     Train net output #0: loss = 0.110836 (* 1 = 0.110836 loss)
+I1119 11:32:37.239217  9434 sgd_solver.cpp:105] Iteration 8880, lr = 1e-05
+I1119 11:32:39.816416  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_8900.caffemodel
+I1119 11:32:40.786155  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_8900.solverstate
+I1119 11:32:41.164899  9434 solver.cpp:218] Iteration 8900 (5.09471 iter/s, 3.92564s/20 iters), loss = 0.119525
+I1119 11:32:41.164960  9434 solver.cpp:237]     Train net output #0: loss = 0.119525 (* 1 = 0.119525 loss)
+I1119 11:32:41.164971  9434 sgd_solver.cpp:105] Iteration 8900, lr = 1e-05
+I1119 11:32:43.952222  9434 solver.cpp:218] Iteration 8920 (7.17561 iter/s, 2.78722s/20 iters), loss = 0.125189
+I1119 11:32:43.952463  9434 solver.cpp:237]     Train net output #0: loss = 0.125189 (* 1 = 0.125189 loss)
+I1119 11:32:43.952474  9434 sgd_solver.cpp:105] Iteration 8920, lr = 1e-05
+I1119 11:32:46.733546  9434 solver.cpp:218] Iteration 8940 (7.19155 iter/s, 2.78104s/20 iters), loss = 0.127637
+I1119 11:32:46.733608  9434 solver.cpp:237]     Train net output #0: loss = 0.127637 (* 1 = 0.127637 loss)
+I1119 11:32:46.733620  9434 sgd_solver.cpp:105] Iteration 8940, lr = 1e-05
+I1119 11:32:49.513401  9434 solver.cpp:218] Iteration 8960 (7.19489 iter/s, 2.77975s/20 iters), loss = 0.132868
+I1119 11:32:49.513465  9434 solver.cpp:237]     Train net output #0: loss = 0.132868 (* 1 = 0.132868 loss)
+I1119 11:32:49.513476  9434 sgd_solver.cpp:105] Iteration 8960, lr = 1e-05
+I1119 11:32:52.285178  9434 solver.cpp:218] Iteration 8980 (7.21586 iter/s, 2.77167s/20 iters), loss = 0.131096
+I1119 11:32:52.285243  9434 solver.cpp:237]     Train net output #0: loss = 0.131096 (* 1 = 0.131096 loss)
+I1119 11:32:52.285254  9434 sgd_solver.cpp:105] Iteration 8980, lr = 1e-05
+I1119 11:32:54.936477  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_9000.caffemodel
+I1119 11:32:55.957681  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_9000.solverstate
+I1119 11:32:56.338412  9434 solver.cpp:218] Iteration 9000 (4.93454 iter/s, 4.05306s/20 iters), loss = 0.122953
+I1119 11:32:56.338495  9434 solver.cpp:237]     Train net output #0: loss = 0.122953 (* 1 = 0.122953 loss)
+I1119 11:32:56.338523  9434 sgd_solver.cpp:105] Iteration 9000, lr = 1e-06
+I1119 11:32:59.131212  9434 solver.cpp:218] Iteration 9020 (7.16158 iter/s, 2.79268s/20 iters), loss = 0.126593
+I1119 11:32:59.131274  9434 solver.cpp:237]     Train net output #0: loss = 0.126593 (* 1 = 0.126593 loss)
+I1119 11:32:59.131286  9434 sgd_solver.cpp:105] Iteration 9020, lr = 1e-06
+I1119 11:33:01.913429  9434 solver.cpp:218] Iteration 9040 (7.18878 iter/s, 2.78211s/20 iters), loss = 0.125524
+I1119 11:33:01.913492  9434 solver.cpp:237]     Train net output #0: loss = 0.125524 (* 1 = 0.125524 loss)
+I1119 11:33:01.913503  9434 sgd_solver.cpp:105] Iteration 9040, lr = 1e-06
+I1119 11:33:04.702850  9434 solver.cpp:218] Iteration 9060 (7.17021 iter/s, 2.78932s/20 iters), loss = 0.136381
+I1119 11:33:04.702915  9434 solver.cpp:237]     Train net output #0: loss = 0.136381 (* 1 = 0.136381 loss)
+I1119 11:33:04.702929  9434 sgd_solver.cpp:105] Iteration 9060, lr = 1e-06
+I1119 11:33:07.471813  9434 solver.cpp:218] Iteration 9080 (7.22319 iter/s, 2.76886s/20 iters), loss = 0.123749
+I1119 11:33:07.471879  9434 solver.cpp:237]     Train net output #0: loss = 0.123749 (* 1 = 0.123749 loss)
+I1119 11:33:07.471890  9434 sgd_solver.cpp:105] Iteration 9080, lr = 1e-06
+I1119 11:33:10.086606  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_9100.caffemodel
+I1119 11:33:11.047281  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_9100.solverstate
+I1119 11:33:11.423454  9434 solver.cpp:218] Iteration 9100 (5.06134 iter/s, 3.95152s/20 iters), loss = 0.127681
+I1119 11:33:11.423513  9434 solver.cpp:237]     Train net output #0: loss = 0.127681 (* 1 = 0.127681 loss)
+I1119 11:33:11.423524  9434 sgd_solver.cpp:105] Iteration 9100, lr = 1e-06
+I1119 11:33:14.210494  9434 solver.cpp:218] Iteration 9120 (7.17633 iter/s, 2.78694s/20 iters), loss = 0.130287
+I1119 11:33:14.210669  9434 solver.cpp:237]     Train net output #0: loss = 0.130287 (* 1 = 0.130287 loss)
+I1119 11:33:14.210680  9434 sgd_solver.cpp:105] Iteration 9120, lr = 1e-06
+I1119 11:33:17.015547  9434 solver.cpp:218] Iteration 9140 (7.13054 iter/s, 2.80484s/20 iters), loss = 0.123756
+I1119 11:33:17.015606  9434 solver.cpp:237]     Train net output #0: loss = 0.123756 (* 1 = 0.123756 loss)
+I1119 11:33:17.015619  9434 sgd_solver.cpp:105] Iteration 9140, lr = 1e-06
+I1119 11:33:19.792469  9434 solver.cpp:218] Iteration 9160 (7.20248 iter/s, 2.77682s/20 iters), loss = 0.130918
+I1119 11:33:19.792531  9434 solver.cpp:237]     Train net output #0: loss = 0.130918 (* 1 = 0.130918 loss)
+I1119 11:33:19.792543  9434 sgd_solver.cpp:105] Iteration 9160, lr = 1e-06
+I1119 11:33:22.597537  9434 solver.cpp:218] Iteration 9180 (7.13022 iter/s, 2.80496s/20 iters), loss = 0.130685
+I1119 11:33:22.597597  9434 solver.cpp:237]     Train net output #0: loss = 0.130685 (* 1 = 0.130685 loss)
+I1119 11:33:22.597609  9434 sgd_solver.cpp:105] Iteration 9180, lr = 1e-06
+I1119 11:33:25.254218  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_9200.caffemodel
+I1119 11:33:26.216645  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_9200.solverstate
+I1119 11:33:26.591825  9434 solver.cpp:218] Iteration 9200 (5.0073 iter/s, 3.99417s/20 iters), loss = 0.12241
+I1119 11:33:26.591889  9434 solver.cpp:237]     Train net output #0: loss = 0.12241 (* 1 = 0.12241 loss)
+I1119 11:33:26.591900  9434 sgd_solver.cpp:105] Iteration 9200, lr = 1e-06
+I1119 11:33:29.376292  9434 solver.cpp:218] Iteration 9220 (7.18297 iter/s, 2.78436s/20 iters), loss = 0.114769
+I1119 11:33:29.376358  9434 solver.cpp:237]     Train net output #0: loss = 0.114769 (* 1 = 0.114769 loss)
+I1119 11:33:29.376368  9434 sgd_solver.cpp:105] Iteration 9220, lr = 1e-06
+I1119 11:33:32.186763  9434 solver.cpp:218] Iteration 9240 (7.11652 iter/s, 2.81036s/20 iters), loss = 0.126299
+I1119 11:33:32.186828  9434 solver.cpp:237]     Train net output #0: loss = 0.126299 (* 1 = 0.126299 loss)
+I1119 11:33:32.186839  9434 sgd_solver.cpp:105] Iteration 9240, lr = 1e-06
+I1119 11:33:34.967571  9434 solver.cpp:218] Iteration 9260 (7.19243 iter/s, 2.7807s/20 iters), loss = 0.133089
+I1119 11:33:34.967631  9434 solver.cpp:237]     Train net output #0: loss = 0.133089 (* 1 = 0.133089 loss)
+I1119 11:33:34.967643  9434 sgd_solver.cpp:105] Iteration 9260, lr = 1e-06
+I1119 11:33:37.758028  9434 solver.cpp:218] Iteration 9280 (7.16755 iter/s, 2.79035s/20 iters), loss = 0.124147
+I1119 11:33:37.758092  9434 solver.cpp:237]     Train net output #0: loss = 0.124147 (* 1 = 0.124147 loss)
+I1119 11:33:37.758103  9434 sgd_solver.cpp:105] Iteration 9280, lr = 1e-06
+I1119 11:33:40.409972  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_9300.caffemodel
+I1119 11:33:41.387636  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_9300.solverstate
+I1119 11:33:41.764375  9434 solver.cpp:218] Iteration 9300 (4.99223 iter/s, 4.00623s/20 iters), loss = 0.125873
+I1119 11:33:41.764441  9434 solver.cpp:237]     Train net output #0: loss = 0.125873 (* 1 = 0.125873 loss)
+I1119 11:33:41.764490  9434 sgd_solver.cpp:105] Iteration 9300, lr = 1e-06
+I1119 11:33:44.562463  9434 solver.cpp:218] Iteration 9320 (7.14801 iter/s, 2.79798s/20 iters), loss = 0.121421
+I1119 11:33:44.562639  9434 solver.cpp:237]     Train net output #0: loss = 0.121421 (* 1 = 0.121421 loss)
+I1119 11:33:44.562652  9434 sgd_solver.cpp:105] Iteration 9320, lr = 1e-06
+I1119 11:33:47.367522  9434 solver.cpp:218] Iteration 9340 (7.13053 iter/s, 2.80484s/20 iters), loss = 0.119699
+I1119 11:33:47.367585  9434 solver.cpp:237]     Train net output #0: loss = 0.119699 (* 1 = 0.119699 loss)
+I1119 11:33:47.367597  9434 sgd_solver.cpp:105] Iteration 9340, lr = 1e-06
+I1119 11:33:50.167723  9434 solver.cpp:218] Iteration 9360 (7.14261 iter/s, 2.8001s/20 iters), loss = 0.111503
+I1119 11:33:50.167786  9434 solver.cpp:237]     Train net output #0: loss = 0.111503 (* 1 = 0.111503 loss)
+I1119 11:33:50.167798  9434 sgd_solver.cpp:105] Iteration 9360, lr = 1e-06
+I1119 11:33:52.957535  9434 solver.cpp:218] Iteration 9380 (7.16921 iter/s, 2.78971s/20 iters), loss = 0.127499
+I1119 11:33:52.957597  9434 solver.cpp:237]     Train net output #0: loss = 0.127499 (* 1 = 0.127499 loss)
+I1119 11:33:52.957609  9434 sgd_solver.cpp:105] Iteration 9380, lr = 1e-06
+I1119 11:33:55.613274  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_9400.caffemodel
+I1119 11:33:56.572554  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_9400.solverstate
+I1119 11:33:56.951428  9434 solver.cpp:218] Iteration 9400 (5.00779 iter/s, 3.99378s/20 iters), loss = 0.123207
+I1119 11:33:56.951491  9434 solver.cpp:237]     Train net output #0: loss = 0.123207 (* 1 = 0.123207 loss)
+I1119 11:33:56.951503  9434 sgd_solver.cpp:105] Iteration 9400, lr = 1e-06
+I1119 11:33:59.744887  9434 solver.cpp:218] Iteration 9420 (7.15985 iter/s, 2.79336s/20 iters), loss = 0.123764
+I1119 11:33:59.744953  9434 solver.cpp:237]     Train net output #0: loss = 0.123764 (* 1 = 0.123764 loss)
+I1119 11:33:59.744966  9434 sgd_solver.cpp:105] Iteration 9420, lr = 1e-06
+I1119 11:34:02.535451  9434 solver.cpp:218] Iteration 9440 (7.16728 iter/s, 2.79046s/20 iters), loss = 0.140931
+I1119 11:34:02.535513  9434 solver.cpp:237]     Train net output #0: loss = 0.140931 (* 1 = 0.140931 loss)
+I1119 11:34:02.535526  9434 sgd_solver.cpp:105] Iteration 9440, lr = 1e-06
+I1119 11:34:05.320770  9434 solver.cpp:218] Iteration 9460 (7.18077 iter/s, 2.78522s/20 iters), loss = 0.120636
+I1119 11:34:05.320837  9434 solver.cpp:237]     Train net output #0: loss = 0.120636 (* 1 = 0.120636 loss)
+I1119 11:34:05.320850  9434 sgd_solver.cpp:105] Iteration 9460, lr = 1e-06
+I1119 11:34:08.128228  9434 solver.cpp:218] Iteration 9480 (7.12415 iter/s, 2.80735s/20 iters), loss = 0.12514
+I1119 11:34:08.128293  9434 solver.cpp:237]     Train net output #0: loss = 0.12514 (* 1 = 0.12514 loss)
+I1119 11:34:08.128309  9434 sgd_solver.cpp:105] Iteration 9480, lr = 1e-06
+I1119 11:34:10.766288  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_9500.caffemodel
+I1119 11:34:11.723034  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_9500.solverstate
+I1119 11:34:12.098084  9434 solver.cpp:218] Iteration 9500 (5.03812 iter/s, 3.96974s/20 iters), loss = 0.127697
+I1119 11:34:12.098148  9434 solver.cpp:237]     Train net output #0: loss = 0.127697 (* 1 = 0.127697 loss)
+I1119 11:34:12.098161  9434 sgd_solver.cpp:105] Iteration 9500, lr = 1e-06
+I1119 11:34:14.845494  9434 solver.cpp:218] Iteration 9520 (7.27986 iter/s, 2.7473s/20 iters), loss = 0.124801
+I1119 11:34:14.845727  9434 solver.cpp:237]     Train net output #0: loss = 0.124801 (* 1 = 0.124801 loss)
+I1119 11:34:14.845742  9434 sgd_solver.cpp:105] Iteration 9520, lr = 1e-06
+I1119 11:34:17.589951  9434 solver.cpp:218] Iteration 9540 (7.28813 iter/s, 2.74419s/20 iters), loss = 0.125496
+I1119 11:34:17.590014  9434 solver.cpp:237]     Train net output #0: loss = 0.125496 (* 1 = 0.125496 loss)
+I1119 11:34:17.590026  9434 sgd_solver.cpp:105] Iteration 9540, lr = 1e-06
+I1119 11:34:20.316777  9434 solver.cpp:218] Iteration 9560 (7.33482 iter/s, 2.72672s/20 iters), loss = 0.113981
+I1119 11:34:20.316840  9434 solver.cpp:237]     Train net output #0: loss = 0.113981 (* 1 = 0.113981 loss)
+I1119 11:34:20.316851  9434 sgd_solver.cpp:105] Iteration 9560, lr = 1e-06
+I1119 11:34:23.087570  9434 solver.cpp:218] Iteration 9580 (7.21842 iter/s, 2.77069s/20 iters), loss = 0.120318
+I1119 11:34:23.087635  9434 solver.cpp:237]     Train net output #0: loss = 0.120318 (* 1 = 0.120318 loss)
+I1119 11:34:23.087646  9434 sgd_solver.cpp:105] Iteration 9580, lr = 1e-06
+I1119 11:34:25.672101  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_9600.caffemodel
+I1119 11:34:26.634397  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_9600.solverstate
+I1119 11:34:27.011986  9434 solver.cpp:218] Iteration 9600 (5.09645 iter/s, 3.9243s/20 iters), loss = 0.114703
+I1119 11:34:27.012048  9434 solver.cpp:237]     Train net output #0: loss = 0.114703 (* 1 = 0.114703 loss)
+I1119 11:34:27.012058  9434 sgd_solver.cpp:105] Iteration 9600, lr = 1e-06
+I1119 11:34:29.771894  9434 solver.cpp:218] Iteration 9620 (7.24689 iter/s, 2.75981s/20 iters), loss = 0.132818
+I1119 11:34:29.771958  9434 solver.cpp:237]     Train net output #0: loss = 0.132818 (* 1 = 0.132818 loss)
+I1119 11:34:29.771970  9434 sgd_solver.cpp:105] Iteration 9620, lr = 1e-06
+I1119 11:34:32.529633  9434 solver.cpp:218] Iteration 9640 (7.25259 iter/s, 2.75764s/20 iters), loss = 0.124784
+I1119 11:34:32.529695  9434 solver.cpp:237]     Train net output #0: loss = 0.124784 (* 1 = 0.124784 loss)
+I1119 11:34:32.529707  9434 sgd_solver.cpp:105] Iteration 9640, lr = 1e-06
+I1119 11:34:35.250716  9434 solver.cpp:218] Iteration 9660 (7.35029 iter/s, 2.72098s/20 iters), loss = 0.119958
+I1119 11:34:35.250779  9434 solver.cpp:237]     Train net output #0: loss = 0.119958 (* 1 = 0.119958 loss)
+I1119 11:34:35.250790  9434 sgd_solver.cpp:105] Iteration 9660, lr = 1e-06
+I1119 11:34:37.972244  9434 solver.cpp:218] Iteration 9680 (7.34909 iter/s, 2.72142s/20 iters), loss = 0.132817
+I1119 11:34:37.972307  9434 solver.cpp:237]     Train net output #0: loss = 0.132817 (* 1 = 0.132817 loss)
+I1119 11:34:37.972319  9434 sgd_solver.cpp:105] Iteration 9680, lr = 1e-06
+I1119 11:34:40.552515  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_9700.caffemodel
+I1119 11:34:41.535159  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_9700.solverstate
+I1119 11:34:41.910307  9434 solver.cpp:218] Iteration 9700 (5.07879 iter/s, 3.93795s/20 iters), loss = 0.128821
+I1119 11:34:41.910369  9434 solver.cpp:237]     Train net output #0: loss = 0.128821 (* 1 = 0.128821 loss)
+I1119 11:34:41.910384  9434 sgd_solver.cpp:105] Iteration 9700, lr = 1e-06
+I1119 11:34:44.705382  9434 solver.cpp:218] Iteration 9720 (7.15571 iter/s, 2.79497s/20 iters), loss = 0.125146
+I1119 11:34:44.705447  9434 solver.cpp:237]     Train net output #0: loss = 0.125146 (* 1 = 0.125146 loss)
+I1119 11:34:44.705461  9434 sgd_solver.cpp:105] Iteration 9720, lr = 1e-06
+I1119 11:34:47.499277  9434 solver.cpp:218] Iteration 9740 (7.15874 iter/s, 2.79379s/20 iters), loss = 0.133367
+I1119 11:34:47.499444  9434 solver.cpp:237]     Train net output #0: loss = 0.133367 (* 1 = 0.133367 loss)
+I1119 11:34:47.499459  9434 sgd_solver.cpp:105] Iteration 9740, lr = 1e-06
+I1119 11:34:50.303889  9434 solver.cpp:218] Iteration 9760 (7.13164 iter/s, 2.8044s/20 iters), loss = 0.126668
+I1119 11:34:50.303952  9434 solver.cpp:237]     Train net output #0: loss = 0.126668 (* 1 = 0.126668 loss)
+I1119 11:34:50.303964  9434 sgd_solver.cpp:105] Iteration 9760, lr = 1e-06
+I1119 11:34:53.109217  9434 solver.cpp:218] Iteration 9780 (7.12955 iter/s, 2.80522s/20 iters), loss = 0.126778
+I1119 11:34:53.109282  9434 solver.cpp:237]     Train net output #0: loss = 0.126778 (* 1 = 0.126778 loss)
+I1119 11:34:53.109293  9434 sgd_solver.cpp:105] Iteration 9780, lr = 1e-06
+I1119 11:34:55.766264  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_9800.caffemodel
+I1119 11:34:56.721982  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_9800.solverstate
+I1119 11:34:57.097646  9434 solver.cpp:218] Iteration 9800 (5.01465 iter/s, 3.98831s/20 iters), loss = 0.127641
+I1119 11:34:57.097710  9434 solver.cpp:237]     Train net output #0: loss = 0.127641 (* 1 = 0.127641 loss)
+I1119 11:34:57.097721  9434 sgd_solver.cpp:105] Iteration 9800, lr = 1e-06
+I1119 11:34:59.901027  9434 solver.cpp:218] Iteration 9820 (7.13451 iter/s, 2.80328s/20 iters), loss = 0.125242
+I1119 11:34:59.901091  9434 solver.cpp:237]     Train net output #0: loss = 0.125242 (* 1 = 0.125242 loss)
+I1119 11:34:59.901103  9434 sgd_solver.cpp:105] Iteration 9820, lr = 1e-06
+I1119 11:35:02.709007  9434 solver.cpp:218] Iteration 9840 (7.12283 iter/s, 2.80787s/20 iters), loss = 0.126503
+I1119 11:35:02.709069  9434 solver.cpp:237]     Train net output #0: loss = 0.126503 (* 1 = 0.126503 loss)
+I1119 11:35:02.709081  9434 sgd_solver.cpp:105] Iteration 9840, lr = 1e-06
+I1119 11:35:05.510561  9434 solver.cpp:218] Iteration 9860 (7.13916 iter/s, 2.80145s/20 iters), loss = 0.129572
+I1119 11:35:05.510622  9434 solver.cpp:237]     Train net output #0: loss = 0.129572 (* 1 = 0.129572 loss)
+I1119 11:35:05.510633  9434 sgd_solver.cpp:105] Iteration 9860, lr = 1e-06
+I1119 11:35:08.306237  9434 solver.cpp:218] Iteration 9880 (7.15416 iter/s, 2.79558s/20 iters), loss = 0.113243
+I1119 11:35:08.306300  9434 solver.cpp:237]     Train net output #0: loss = 0.113243 (* 1 = 0.113243 loss)
+I1119 11:35:08.306313  9434 sgd_solver.cpp:105] Iteration 9880, lr = 1e-06
+I1119 11:35:10.953016  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_9900.caffemodel
+I1119 11:35:11.911826  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_9900.solverstate
+I1119 11:35:12.287016  9434 solver.cpp:218] Iteration 9900 (5.02429 iter/s, 3.98066s/20 iters), loss = 0.128485
+I1119 11:35:12.287080  9434 solver.cpp:237]     Train net output #0: loss = 0.128485 (* 1 = 0.128485 loss)
+I1119 11:35:12.287091  9434 sgd_solver.cpp:105] Iteration 9900, lr = 1e-06
+I1119 11:35:15.092902  9434 solver.cpp:218] Iteration 9920 (7.12814 iter/s, 2.80578s/20 iters), loss = 0.11671
+I1119 11:35:15.092964  9434 solver.cpp:237]     Train net output #0: loss = 0.11671 (* 1 = 0.11671 loss)
+I1119 11:35:15.092975  9434 sgd_solver.cpp:105] Iteration 9920, lr = 1e-06
+I1119 11:35:17.876355  9434 solver.cpp:218] Iteration 9940 (7.18559 iter/s, 2.78335s/20 iters), loss = 0.117047
+I1119 11:35:17.876513  9434 solver.cpp:237]     Train net output #0: loss = 0.117047 (* 1 = 0.117047 loss)
+I1119 11:35:17.876525  9434 sgd_solver.cpp:105] Iteration 9940, lr = 1e-06
+I1119 11:35:20.633466  9434 solver.cpp:218] Iteration 9960 (7.25449 iter/s, 2.75691s/20 iters), loss = 0.123935
+I1119 11:35:20.633530  9434 solver.cpp:237]     Train net output #0: loss = 0.123935 (* 1 = 0.123935 loss)
+I1119 11:35:20.633543  9434 sgd_solver.cpp:105] Iteration 9960, lr = 1e-06
+I1119 11:35:23.369110  9434 solver.cpp:218] Iteration 9980 (7.31117 iter/s, 2.73554s/20 iters), loss = 0.136994
+I1119 11:35:23.369173  9434 solver.cpp:237]     Train net output #0: loss = 0.136994 (* 1 = 0.136994 loss)
+I1119 11:35:23.369184  9434 sgd_solver.cpp:105] Iteration 9980, lr = 1e-06
+I1119 11:35:25.958909  9434 solver.cpp:447] Snapshotting to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_10000.caffemodel
+I1119 11:35:26.959586  9434 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_10000.solverstate
+I1119 11:35:27.327672  9434 solver.cpp:310] Iteration 10000, loss = 0.123202
+I1119 11:35:27.327725  9434 solver.cpp:315] Optimization Done.
+I1119 11:35:27.327730  9434 caffe.cpp:259] Optimization Done.

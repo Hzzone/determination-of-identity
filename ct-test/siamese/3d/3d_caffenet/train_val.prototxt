@@ -9,7 +9,7 @@ layer {
   }
   hdf5_data_param {
     source: "../train.txt"
-    batch_size: 4
+    batch_size: 1
   }
 }
 layer {
@@ -69,8 +69,8 @@ layer {
   top: "pool1"
   pooling3d_param {
     pool: MAX
-    kernel_size: 2
-    kernel_depth: 2
+    kernel_size: 3
+    kernel_depth: 3
     stride: 2
     temporal_stride: 2
   }
@@ -121,8 +121,8 @@ layer {
   top: "pool2"
   pooling3d_param {
     pool: MAX
-    kernel_size: 2
-    kernel_depth: 2
+    kernel_size: 3
+    kernel_depth: 3
     stride: 2
     temporal_stride: 2
   }
@@ -143,7 +143,7 @@ layer {
     decay_mult: 0
   }
   convolution3d_param {
-    num_output: 384
+    num_output: 256
     kernel_size: 3
     kernel_depth: 3
     stride: 1
@@ -251,8 +251,8 @@ layer {
   top: "pool5"
   pooling3d_param {
     pool: MAX
-    kernel_size: 2
-    kernel_depth: 2
+    kernel_size: 3
+    kernel_depth: 3
     stride: 2
     temporal_stride: 2
   }
@@ -273,7 +273,7 @@ layer {
     decay_mult: 0
   }
   inner_product_param {
-    num_output: 1024
+    num_output: 128
     weight_filler {
       type: "gaussian"
       std: 0.005
@@ -315,7 +315,7 @@ layer {
     decay_mult: 0
   }
   inner_product_param {
-    num_output: 1024
+    num_output: 128
     weight_filler {
       type: "gaussian"
       std: 0.005
@@ -415,8 +415,8 @@ layer {
   top: "pool1_p"
   pooling3d_param {
     pool: MAX
-    kernel_size: 2
-    kernel_depth: 2
+    kernel_size: 3
+    kernel_depth: 3
     stride: 2
     temporal_stride: 2
   }
@@ -467,8 +467,8 @@ layer {
   top: "pool2_p"
   pooling3d_param {
     pool: MAX
-    kernel_size: 2
-    kernel_depth: 2
+    kernel_size: 3
+    kernel_depth: 3
     stride: 2
     temporal_stride: 2
   }
@@ -489,7 +489,7 @@ layer {
     decay_mult: 0
   }
   convolution3d_param {
-    num_output: 384
+    num_output: 256
     kernel_size: 3
     kernel_depth: 3
     stride: 1
@@ -597,8 +597,8 @@ layer {
   top: "pool5_p"
   pooling3d_param {
     pool: MAX
-    kernel_size: 2
-    kernel_depth: 2
+    kernel_size: 3
+    kernel_depth: 3
     stride: 2
     temporal_stride: 2
   }
@@ -619,7 +619,7 @@ layer {
     decay_mult: 0
   }
   inner_product_param {
-    num_output: 1024
+    num_output: 128
     weight_filler {
       type: "gaussian"
       std: 0.005
@@ -661,7 +661,7 @@ layer {
     decay_mult: 0
   }
   inner_product_param {
-    num_output: 1024
+    num_output: 128
     weight_filler {
       type: "gaussian"
       std: 0.005

@@ -18,3 +18,4 @@
 /ct-test/siamese/train/
 *.caffemodel_features.txt
 profile.log
+*/features
