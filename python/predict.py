@@ -54,7 +54,8 @@ def read_file_and_output_accuracy(features_file):
         _same = f.readlines()
     _same = [x.split(" ") for x in _same]
     _diff = [x.split(" ") for x in _diff][:len(_same)]
-    x_values = pylab.arange(0.99999999, 1.0, 0.00000000001)
+    interval = 0.00000000001
+    x_values = pylab.arange(0.99999, 1.0+interval, interval)
     max_accuracy = 0
     max_accuracy_threshold = 0
     same_distance = []
@@ -62,14 +63,18 @@ def read_file_and_output_accuracy(features_file):
     for r in _same:
         same_distance.append(distance.cosine_distnace(samples[r[0]], samples[r[1]]))
     for r in _diff:
+        # print r
         diff_distance.append(distance.cosine_distnace(samples[r[0]], samples[r[1]]))
 	# print same_distance
 	# print diff_distance
+	# print len(same_distance)
+	# print len(diff_distance)
     total = len(_same)+len(_diff)
     same_distance = np.array(same_distance)
     diff_distance = np.array(diff_distance)
+    # print same_distance, diff_distance
     for threshold in x_values:
-        s = np.sum(same_distance>=threshold) + np.sum(diff_distance<threshold)
+        s = np.sum(same_distance >= threshold) + np.sum(diff_distance<threshold)
         acc = float(s)/total
         if acc >= max_accuracy:
             max_accuracy = acc
@@ -148,6 +153,15 @@ if __name__ == "__main__":
 	# write_model_dir_features("/home/hzzone/1tb/id-model/classification/2d/2d_caffenet", "/home/hzzone/determination-of-identity/ct-test/classification/2d/2d_caffenet/features", test_data_source="/home/hzzone/1tb/id-data/test", deploy_file="/home/hzzone/determination-of-identity/ct-test/classification/2d/2d_caffenet/deploy.prototxt", LAST_LAYER_NAME="fc7", is_3d=False)
 	# write_model_dir_features("/home/hzzone/1tb/id-model/siamese/2d/2d_alexnet", "/home/hzzone/determination-of-identity/ct-test/siamese/2d/2d_alexnet/features", test_data_source="/home/hzzone/1tb/id-data/test", deploy_file="/home/hzzone/determination-of-identity/ct-test/siamese/2d/2d_alexnet/deploy.prototxt", LAST_LAYER_NAME="fc8", is_3d=False)
 	# write_model_dir_features("/home/hzzone/1tb/id-model/siamese/2d/2d_caffenet", "/home/hzzone/determination-of-identity/ct-test/siamese/2d/2d_caffenet/features", test_data_source="/home/hzzone/1tb/id-data/test", deploy_file="/home/hzzone/determination-of-identity/ct-test/siamese/2d/2d_caffenet/deploy.prototxt", LAST_LAYER_NAME="fc8", is_3d=False)
-	for file_name in os.listdir("/home/hzzone/determination-of-identity/ct-test/classification/3d/3d_alexnet/features"):
-		read_file_and_output_accuracy(os.path.join("/home/hzzone/determination-of-identity/ct-test/classification/3d/3d_alexnet/features", file_name))
-
+	# source1 = "/home/hzzone/determination-of-identity/ct-test/classification/3d/3d_alexnet/features"
+	# source2 = "/home/hzzone/determination-of-identity/ct-test/classification/3d/3d_caffenet/features"
+	# source3 = "/home/hzzone/determination-of-identity/ct-test/classification/2d/2d_alexnet/features"
+	# source4 = "/home/hzzone/determination-of-identity/ct-test/classification/2d/2d_caffenet/features"
+	# source5 = "/home/hzzone/determination-of-identity/ct-test/siamese/3d/3d_alexnet/features"
+	# source6 = "/home/hzzone/determination-of-identity/ct-test/siamese/3d/3d_caffenet/features"
+	# source7 = "/home/hzzone/determination-of-identity/ct-test/siamese/2d/2d_alexnet/features"
+	# source8 = "/home/hzzone/determination-of-identity/ct-test/siamese/2d/2d_caffenet/features"
+	# for file_name in os.listdir(source7):
+	# 	read_file_and_output_accuracy(os.path.join(source7, file_name))
+	
+	ordinary_predict_dataset(caffemodel="/home/hzzone/1tb/id-model/siamese/2d/2d_alexnet/2d_siamese_alexnet_train_iter_2000.caffemodel", save_features_file="./train_features.txt", source="/home/hzzone/1tb/id-data/train", deploy_file="/home/hzzone/determination-of-identity/ct-test/siamese/2d/2d_alexnet/deploy.prototxt", LAST_LAYER_NAME="fc8", is_3d=False)

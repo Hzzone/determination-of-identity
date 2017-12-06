@@ -19,3 +19,4 @@
 *.caffemodel_features.txt
 profile.log
 */features
+/accuracy.md
